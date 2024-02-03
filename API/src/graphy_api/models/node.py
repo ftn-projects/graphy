@@ -1,7 +1,7 @@
 from typing import Dict
 
 
-class Node:
+class Node(object):
     def __init__(self, node_id: str, value: Dict[str, any] = None):
         self.__id: str = node_id
         self.__value: Dict[str, any] = value
