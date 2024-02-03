@@ -3,7 +3,7 @@ from node import Node
 from edge import Edge
 
 
-class Graph:
+class Graph(object):
     def __init__(self):
         self.__nodes: List[Node] = []
         self.__edges: List[Edge] = []

@@ -1,7 +1,7 @@
 from node import Node
 
 
-class Edge:
+class Edge(object):
     def __init__(self, source: Node, destination: Node, value: str = None):
         self.__source: Node = source
         self.__destination: Node = destination
