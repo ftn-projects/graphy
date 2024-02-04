@@ -23,3 +23,6 @@ class VisualizerObserver:
         if event_type in self._observers:
             for observer in self._observers[event_type]:
                 observer(event_type, data)
+
+
+visualizer_observer = VisualizerObserver()
