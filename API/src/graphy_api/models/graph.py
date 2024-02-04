@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Dict
 from .node import Node
 from .edge import Edge
 

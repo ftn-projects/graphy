@@ -24,8 +24,7 @@ def create_graph(request):
         edge = Edge(source_node, destination_node, f"Edge from {source_node.id} to {destination_node.id}")
         graph.add_edge(edge)
 
-    # Serialize the graph data to JSON
-    serialized_nodes = [{'id': node.id, 'name': node.value['name']} for node in graph.nodes]
+    serialized_nodes = [{'id': node.id, 'value': node.value} for node in graph.nodes]
     serialized_edges = [{'source': edge.source.id, 'target': edge.destination.id, 'value': edge.value} for edge in
                         graph.edges]
 
