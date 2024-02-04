@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Visualization</title>
+    <style>
+        .node {
+            fill: blue;
+            stroke: #fff;
+            text-anchor: middle;
+        }
+
+        .link.connected {
+            stroke: red !important;
+            stroke-width: 3;
+        }
+
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+            stroke-width: 1;
+        }
+
+        .label {
+            fill: white;
+            font-family: Arial, sans-serif;
+            font-size: 1em;
+            text-anchor: middle;
+        }
+    </style>
+</head>
+<body>
+<h1>Graph Visualization</h1>
+<svg width="800" height="600"></svg>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+    // Parse the graph data passed from the view function
+    var graphData = JSON.parse('{{ graph_json | safe }}');
+
+
+    // Create force simulation
+    var simulation = d3.forceSimulation()
+        .nodes(graphData.nodes)
+        .force("link", d3.forceLink(graphData.edges).id(function (d) {
+            return d.id;
+        }))
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(400, 300))
+        .force("collide", d3.forceCollide().radius(function (d) {
+            return getRadius(d.weight) * 2;
+        }).iterations(5)); // Adjust the radius as needed; // Center the simulation in the SVG container
+
+    // Draw edges
+    var link = d3.select("svg")
+        .selectAll(".link")
+        .data(graphData.edges)
+        .enter().append("line")
+        .attr("class", "link");
+
+    // Draw nodes
+    var node = d3.select("svg")
+        .selectAll(".node")
+        .data(graphData.nodes)
+        .enter().append("circle")
+        .attr("class", "node")
+        .attr("text-anchor", "middle")
+        .attr("r", function (d) {
+            d.weight = link.filter(function (l) {
+                return l.source.index == d.index || l.target.index == d.index
+            }).size();
+            return getRadius(d.weight);
+        })
+        .on("click", function (event, d) {
+            var selectedNodeId = d.index;
+
+            link.attr("class", function (l) {
+                if (l.source.index === selectedNodeId || l.target.index === selectedNodeId) {
+                    return "link connected"; // Add connected class
+                } else {
+                    return "link";
+                }
+            });
+        });
+
+    // Add node labels
+    var nodeLabels = d3.select("svg")
+        .selectAll(".label")
+        .data(graphData.nodes)
+        .enter().append("text")
+        .attr("class", "label")
+        .attr("dy", -15)
+        .style("text-anchor", "middle")
+        .text(function (d) {
+            return d.id;
+        });
+
+    // Update node and edge positions during simulation
+    simulation.nodes(graphData.nodes).on("tick", ticked);
+    simulation.force("link").links(graphData.edges);
+
+    // Define drag behavior
+    var drag = d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended);
+
+    // Apply drag behavior to nodes
+    node.call(drag);
+
+    function getRadius(d){
+        var minradius = 15;
+        return minradius + (d * 4);
+    }
+
+
+    // Drag start function
+    function dragstarted(event, d) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+    }
+
+    // Drag function
+    function dragged(event, d) {
+        d.fx = event.x;
+        d.fy = event.y;
+    }
+
+    // Drag end function
+    function dragended(event, d) {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+    }
+
+
+    function ticked() {
+
+        link.attr("x1", function (d) {
+            return d.source.x;
+        })
+            .attr("y1", function (d) {
+                return d.source.y;
+            })
+            .attr("x2", function (d) {
+                return d.target.x;
+            })
+            .attr("y2", function (d) {
+                return d.target.y;
+            });
+
+        node.attr("cx", function (d) {
+            return d.x;
+        })
+            .attr("cy", function (d) {
+                return d.y;
+            });
+
+        nodeLabels.attr("x", function (d) {
+            return d.x;
+        })
+            .attr("y", function (d) {
+                return d.y;
+            }).attr("dy", ".35em");
+
+    }
+</script>
+</body>
+</html>

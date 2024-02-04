@@ -1,6 +1,6 @@
 from typing import List
-from node import Node
-from edge import Edge
+from .node import Node
+from .edge import Edge
 
 
 class Graph(object):
