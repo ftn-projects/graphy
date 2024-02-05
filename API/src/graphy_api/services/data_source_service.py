@@ -1,6 +1,6 @@
 from abc import abstractmethod
-from graphy_api.services import ServiceBase
-from graphy_api.services.reader import SourceReader
+from .service_base import ServiceBase
+from .reader.source_reader import SourceReader
 
 
 class DataSourceService(ServiceBase):

@@ -1,0 +1,39 @@
+<!-- platform_home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Home</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+
+        #plugin-container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    Test
+</header>
+
+<div class="container">
+    <div id="plugin-container">
+        {{ plugin_content|safe }}
+    </div>
+</div>
+</body>
+</html>

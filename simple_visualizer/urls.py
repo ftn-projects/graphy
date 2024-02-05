@@ -20,5 +20,7 @@ from . import views
 
 urlpatterns = [
     path('', views.create_graph, name='create_graph'),
+    path('notify/<int:selected_node_id>/', views.on_node_selected, name='send_notification'),
+    path('selected_node/', views.return_selected_node, name='return_selected_node'),
     path('admin/', admin.site.urls)
 ]
