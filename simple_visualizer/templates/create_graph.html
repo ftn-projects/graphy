@@ -80,7 +80,7 @@
                 }
             });
 
-            let url = `/notify/${selectedNodeId}/`;  // Construct the URL
+            let url = `simple/notify/${selectedNodeId}/`;  // Construct the URL
             fetch(url)
                 .then(response => {
                     if (!response.ok) {
@@ -109,7 +109,7 @@
     simulation.nodes(graphData.nodes).on("tick", ticked);
     simulation.force("link").links(graphData.edges);
 
-    var zoom = d3.zoom().scaleExtent([1, 5]);
+    var zoom = d3.zoom().scaleExtent([0.5, 5]);
 
     d3.select("svg").call(zoom);
 
@@ -160,7 +160,7 @@
     }
 
     function fetchSelectedNode() {
-        fetch("/selected_node/")
+        fetch("simple/selected_node/")
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');

@@ -6,8 +6,8 @@ import random
 graph = Graph()
 
 # Define the number of nodes and edges in the graph
-num_nodes = 20
-num_edges = 30
+num_nodes = 250
+num_edges = 400
 
 # Create nodes with random names
 for i in range(num_nodes):
@@ -26,6 +26,7 @@ for _ in range(num_edges):
 
 def home(request):
     global graph
-    plugin_content = plugin_create_graph(request, graph).content.decode()
-    print(plugin_content)
+    response = plugin_create_graph(request, graph)
+    plugin_content = response.content.decode()
+
     return render(request, 'platform_home.html', {'plugin_content': plugin_content})
