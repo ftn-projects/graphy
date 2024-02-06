@@ -24,12 +24,12 @@
         pointer-events: none;
     }
 
-    .container {
+    .container-simple {
         width: 100%;
         height: 100%;
     }
 </style>
-<svg class="container"></svg>
+<svg class="container-simple"></svg>
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
@@ -108,6 +108,17 @@
     // Update node and edge positions during simulation
     simulation.nodes(graphData.nodes).on("tick", ticked);
     simulation.force("link").links(graphData.edges);
+
+    var zoom = d3.zoom().scaleExtent([1, 5]);
+
+    d3.select("svg").call(zoom);
+
+    zoom.on("zoom", function (event) {
+        var currentZoom = event.transform.k;
+        node.attr("transform", d3.zoomTransform(this));
+        link.attr("transform", d3.zoomTransform(this));
+        nodeLabels.attr("transform", d3.zoomTransform(this));
+    });
 
     // Define drag behavior
     var drag = d3.drag()

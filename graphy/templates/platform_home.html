@@ -19,20 +19,72 @@
             height: 100vh;
         }
 
-        #plugin-container {
-            width: 100%;
-            height: 100%;
+        .all-plugins-container {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid blue;
         }
+
+        .main-plugin-container {
+            flex: 1;
+        }
+
+        .vertical-plugin-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display:flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .search-section-container {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tree-plugin-container {
+            border: 1px solid forestgreen;
+        }
+
+        .bird-plugin-container {
+            border: 1px solid lightskyblue;
+        }
+
+        .main-plugin-container {
+            border: 1px solid black;
+        }
+
+        .tree-plugin-container, .bird-plugin-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+        }
+
+
     </style>
 </head>
 <body>
-<header>
-    Test
-</header>
-
 <div class="container">
-    <div id="plugin-container">
-        {{ plugin_content|safe }}
+    <div class="search-section-container">
+        Hypothetical Search and Filter Section
+    </div>
+    <div class="all-plugins-container">
+        <div class="vertical-plugin-container">
+            <div class="tree-plugin-container">Hypothetical Tree View</div>
+            <div class="bird-plugin-container">Hypothetical Bird View</div>
+        </div>
+        <div class="main-plugin-container">
+            {{ plugin_content|safe }}
+        </div>
     </div>
 </div>
 </body>
