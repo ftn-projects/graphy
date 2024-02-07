@@ -7,7 +7,7 @@ class UtilService:
         self.__dateformat = dateformat
 
     def parse_any(self, value: str) -> any:
-        funcs = [int, float, UtilService.parse_date]
+        funcs = [int, float, self.parse_date]
         for f in funcs:
             try:
                 return f(value)
