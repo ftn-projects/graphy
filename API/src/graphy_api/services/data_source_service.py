@@ -1,9 +1,10 @@
-from abc import abstractmethod
+from abc import abstractmethod, ABCMeta
 from graphy_api.services import ServiceBase
 from graphy_api.services.reader import SourceReader
+from graphy_api.models import Graph
 
 
-class DataSourceService(ServiceBase):
+class DataSourceService(ServiceBase, metaclass=ABCMeta):
     def __init__(self):
         self.__reader: SourceReader | None = None
 
@@ -15,14 +16,9 @@ class DataSourceService(ServiceBase):
     def reader(self, reader: SourceReader) -> None:
         self.__reader = reader
 
-    @abstractmethod
-    def identifier(self):
-        pass
+    def load(self) -> Graph:
+        return self._load_string(self.__reader.read())
 
     @abstractmethod
-    def name(self):
-        pass
-
-    @abstractmethod
-    def load(self):
+    def _load_string(self, text: str) -> Graph:
         pass
