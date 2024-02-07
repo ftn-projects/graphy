@@ -1,0 +1,19 @@
+from dateutil.parser import parse
+from datetime import datetime
+
+
+class UtilService:
+    def __init__(self, dateformat: str = None):
+        self.__dateformat = dateformat
+
+    def parse_any(self, value: str) -> any:
+        funcs = [int, float, UtilService.parse_date]
+        for f in funcs:
+            try:
+                return f(value)
+            except ValueError:
+                pass
+        return value
+
+    def parse_date(self, value: str) -> datetime:
+        return parse(value, fuzzy='true')
