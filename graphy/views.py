@@ -6,8 +6,8 @@ import random
 graph = Graph()
 
 # Define the number of nodes and edges in the graph
-num_nodes = 250
-num_edges = 400
+num_nodes = 200
+num_edges = 250
 
 # Create nodes with random names
 for i in range(num_nodes):
