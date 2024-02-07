@@ -31,9 +31,7 @@
     }
 </style>
 <div class="simple-svg-container">
-    <svg id="container-simple" class="container-simple">
-
-    </svg>
+    <svg id="container-simple" class="container-simple"></svg>
 </div>
 
 <script src="{% static 'js_observer.js' %}"></script>
@@ -44,7 +42,7 @@
     // Parse the graph data passed from the view function
     var graphData = JSON.parse('{{ graph_json | safe }}');
 
-
+    var svg = d3.select(".container-simple");
     // Create force simulation
     var simulation = d3.forceSimulation()
         .nodes(graphData.nodes)
@@ -58,14 +56,14 @@
         }).iterations(5)); // Adjust the radius as needed; // Center the simulation in the SVG container
 
     // Draw edges
-    var link = d3.select(".container-simple")
+    var link = svg
         .selectAll(".link")
         .data(graphData.edges)
         .enter().append("line")
         .attr("class", "link");
 
     // Draw nodes
-    var node = d3.select(".container-simple")
+    var node = svg
         .selectAll(".node")
         .data(graphData.nodes)
         .enter().append("circle")
@@ -92,7 +90,7 @@
 
 
     // Add node labels
-    var nodeLabels = d3.select(".container-simple")
+    var nodeLabels = svg
         .selectAll(".label")
         .data(graphData.nodes)
         .enter().append("text")
@@ -109,27 +107,14 @@
 
     var zoom = d3.zoom().scaleExtent([0.5, 5]);
 
-    d3.select(".container-simple").call(zoom);
+    svg.call(zoom);
+
 
 
     function sendDataToMinimap() {
-
         var minimapData = {
-            nodes: graphData.nodes.map(function (node) {
-                return {
-                    id: node.id,
-                    x: node.x,
-                    y: node.y,
-                    radius: getRadius(node.weight)
-                };
-            }),
-            edges: graphData.edges.map(function (edge) {
-                return {
-                    source: edge.source.index,
-                    target: edge.target.index
-                };
-            }),
-            zoom: d3.zoomTransform(d3.select(".container-simple").node())
+            mainSVG: svg,
+            zoom: d3.zoomTransform(svg.node())
         };
 
         visualizer_observer.notify(EventType.HTML_CHANGED, minimapData);

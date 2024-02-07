@@ -98,98 +98,57 @@
     visualizer_observer.attach(EventType.HTML_CHANGED, on_data_changed);
 
     function on_data_changed(event, data) {
-        // Remove any existing minimap
-        d3.select(".bird-plugin-container svg").remove();
-
-        // Create a new SVG for the minimap
-        var minimapSvg = d3.select(".bird-plugin-container")
-            .append("svg")
+        var svgOld = data.mainSVG;
+        d3.select(".bird-plugin-container").select("svg").remove();
+        var mini = d3.select(".bird-plugin-container").append("svg")
             .attr("width", "100%")
-            .attr("height", "100%");
+            .attr("height", "100%")
+            .style("border", "1px solid black");
 
-        var zoomData = data.zoom;
+        var miniContent = mini.append("g")
+            .attr("class", "mini-content")
 
-        var svgWidth = parseInt(minimapSvg.style("width"));
-        var svgHeight = parseInt(minimapSvg.style("height"));
+        var svgWidth = parseInt(mini.style("width"));
+        var svgHeight = parseInt(mini.style("height"));
 
-        // Find the bounding box of the nodes
-        var minX = d3.min(data.nodes, function (d) {
-            return d.x;
+        var minX = d3.min(svgOld.selectAll("*"), function (d) {
+            return d.getBBox().x + d.getBBox().width / 2;
         });
-        var maxX = d3.max(data.nodes, function (d) {
-            return d.x;
+        var maxX = d3.max(svgOld.selectAll("*"), function (d) {
+            return d.getBBox().x + d.getBBox().width / 2;
         });
-        var minY = d3.min(data.nodes, function (d) {
-            return d.y;
+        var minY = d3.min(svgOld.selectAll("*"), function (d) {
+            return d.getBBox().y + d.getBBox().height / 2;
         });
-        var maxY = d3.max(data.nodes, function (d) {
-            return d.y;
+        var maxY = d3.max(svgOld.selectAll("*"), function (d) {
+            return d.getBBox().y + d.getBBox().height / 2;
         });
 
-        // Calculate the width and height of the bounding box
         var width = maxX - minX;
         var height = maxY - minY;
 
-        // Calculate the scale factor to fit the bounding box within the minimap
         var scaleFactor = Math.min(svgWidth / width, svgHeight / height);
 
-        // Calculate the translation to center the bounding box within the minimap
         var translateX = -minX * scaleFactor + (svgWidth - width * scaleFactor) / 2;
         var translateY = -minY * scaleFactor + (svgHeight - height * scaleFactor) / 2;
 
-        // Apply the scale and translation to the minimap
-        var g = minimapSvg.append("g")
-            .attr("transform", "translate(" + translateX + "," + translateY + ") scale(" + scaleFactor + ")");
+        svgOld.selectAll("*").each(function () {
+            var clone = this.cloneNode(true);
+            d3.select(clone).attr("transform", "translate(" + translateX + "," + translateY + ") scale(" + scaleFactor + ")");
+            miniContent.node().appendChild(clone);
+        });
 
-        // Draw nodes
-        g.selectAll(".node")
-            .data(data.nodes)
-            .enter().append("circle")
-            .attr("class", "node")
-            .attr("cx", function (d) {
-                return d.x;
-            })
-            .attr("cy", function (d) {
-                return d.y;
-            })
-            .attr("r", function (d) {
-                return d.radius;
-            })
-            .style("fill", "blue");
 
-        // Draw edges
-        g.selectAll(".link")
-            .data(data.edges)
-            .enter().append("line")
-            .attr("class", "link")
-            .attr("x1", function (d) {
-                return data.nodes[d.source].x;
-            })
-            .attr("y1", function (d) {
-                return data.nodes[d.source].y;
-            })
-            .attr("x2", function (d) {
-                return data.nodes[d.target].x;
-            })
-            .attr("y2", function (d) {
-                return data.nodes[d.target].y;
-            })
-            .style("stroke", "black")
-            .style("stroke-width", 2);
-
-        // Draw viewport rectangle
-        drawViewportRect(zoomData);
+        drawViewportRect(data.zoom, translateX, translateY, scaleFactor);
     }
 
-    function drawViewportRect(transform) {
-        // Get the dimensions of the main SVG container
+
+    function drawViewportRect(transform, translateX, translateY, scaleFactora) {
         var svgWidth = parseInt(d3.select(".container-simple").style("width"));
         var svgHeight = parseInt(d3.select(".container-simple").style("height"));
 
-        // Calculate the scale factor based on the zoom transformation
         var scaleFactor = transform.k;
 
-        // Calculate the visible area (viewport) of the main graph
         var visibleWidth = svgWidth / scaleFactor;
         var visibleHeight = svgHeight / scaleFactor;
         var visibleX = -transform.x / scaleFactor;
@@ -205,8 +164,11 @@
             .attr("height", visibleHeight)
             .style("fill", "none")
             .style("stroke", "red")
-            .style("stroke-width", 5);
+            .style("stroke-width", 5)
+        .attr("transform", "translate(" + translateX + "," + translateY + ") scale(" + scaleFactora + ")");
     }
+
+
 
 </script>
 
