@@ -1,6 +1,6 @@
 from typing import List
-from node import Node
-from edge import Edge
+from .node import Node
+from .edge import Edge
 
 
 class Graph(object):
@@ -21,3 +21,9 @@ class Graph(object):
 
     def add_edge(self, edge: Edge) -> None:
         self.__edges.append(edge)
+
+    def find_node(self, tag: str) -> Node | None:
+        for node in self.__nodes:
+            if node.id == tag:
+                return node
+        return None

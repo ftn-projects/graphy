@@ -2,10 +2,9 @@ from typing import Dict
 
 
 class Node(object):
-    def __init__(self, node_id: str, value: Dict[str, any] = None):
+    def __init__(self, node_id: str):
         self.__id: str = node_id
-        self.__value: Dict[str, any] = value
-
+        self.__value: Dict[str, any] = {}
     @property
     def id(self) -> str:
         return self.__id

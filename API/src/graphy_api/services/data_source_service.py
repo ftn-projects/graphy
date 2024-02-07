@@ -5,19 +5,22 @@ from graphy_api.models import Graph
 
 
 class DataSourceService(ServiceBase, metaclass=ABCMeta):
+    def __init__(self):
+        self.__reader = None
+
     def init(self):
-        self.reader: SourceReader | None = None
+        self.__reader: SourceReader | None = None
 
     @property
     def reader(self) -> SourceReader | None:
-        return self.reader
+        return self.__reader
 
     @reader.setter
     def reader(self, reader: SourceReader) -> None:
-        self.reader = reader
+        self.__reader = reader
 
     def load(self) -> Graph:
-        return self._load_string(self.reader.read())
+        return self._load_string(self.__reader.read())
 
     @abstractmethod
     def _load_string(self, text: str) -> Graph:
