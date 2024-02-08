@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List
 from .node import Node
 from .edge import Edge
 
@@ -21,3 +21,16 @@ class Graph(object):
 
     def add_edge(self, edge: Edge) -> None:
         self.__edges.append(edge)
+
+    def remove_node(self, node: Node) -> None:
+        node.parent.children.remove(node)
+        self.__nodes.remove(node)
+
+    def remove_edge(self, edge: Edge) -> None:
+        self.__edges.remove(edge)
+
+    def find_node(self, tag: str) -> Node | None:
+        for node in self.__nodes:
+            if node.id == tag:
+                return node
+        return None
