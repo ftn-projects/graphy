@@ -58,8 +58,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, "graphy", "templates"),
-            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'Platform', 'templates'),
+            os.path.join(BASE_DIR, 'SimpleVisualizer', 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {

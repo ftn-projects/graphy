@@ -5,10 +5,19 @@ from typing import Dict, List
 
 class Node(object):
     def __init__(self, name: str) -> None:
+        self.__id: int = -1
         self.__name: str = name
         self.__properties: Dict[str, any] = {}
         self.__parent: Node | None = None
         self.__children: List[Node] = []
+
+    @property
+    def id(self) -> int:
+        return self.__id
+
+    @id.setter
+    def id(self, node_id: int) -> None:
+        self.__id = node_id
 
     @property
     def name(self) -> str:
@@ -45,6 +54,13 @@ class Node(object):
         while key in self.__properties:
             key = '_' + key
         self.__properties[key] = value
+
+    def clone(self) -> Node:
+        n = Node(self.name)
+        n.properties = {}
+        for k, v in self.properties:
+            n.properties[k] = v
+        return n
 
     def __str__(self) -> str:
         properties_str = ', '.join(f'{key}={value}' for key, value in self.__properties.items())

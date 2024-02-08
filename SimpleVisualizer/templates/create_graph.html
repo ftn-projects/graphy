@@ -40,6 +40,7 @@
 
     visualizer_observer.notify(EventType.NODE_SELECTED)
     // Parse the graph data passed from the view function
+    console.log('aaaa')
     var graphData = JSON.parse('{{ graph_json | safe }}');
 
     var svg = d3.select(".container-simple");
@@ -47,7 +48,7 @@
     var simulation = d3.forceSimulation()
         .nodes(graphData.nodes)
         .force("link", d3.forceLink(graphData.edges).id(function (d) {
-            return d.name;
+            return d.id;
         }))
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(400, 300))
@@ -100,7 +101,7 @@
         .attr("dy", -15)
         .style("text-anchor", "middle")
         .text(function (d) {
-            return d.name;
+            return d.name === '' ? d.id : d.name;
         });
 
     // Update node and edge positions during simulation

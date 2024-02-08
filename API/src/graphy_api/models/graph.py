@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import List
 from .node import Node
 from .edge import Edge
@@ -17,6 +18,7 @@ class Graph(object):
         return self.__edges
 
     def add_node(self, node: Node) -> None:
+        node.id = self.size + 1
         self.__nodes.append(node)
 
     def add_edge(self, edge: Edge) -> None:
@@ -34,3 +36,16 @@ class Graph(object):
             if node.name == tag:
                 return node
         return None
+
+    @property
+    def size(self) -> int:
+        return len(self.nodes)
+
+    def get_unordered(self) -> Graph:
+        g = Graph()
+        for node in self.__nodes:
+            g.add_node(node.clone())
+        for edge in self.__edges:
+            if edge not in g.edges and edge.reversed() not in g.edges:
+                g.add_edge(edge.clone())
+        return g

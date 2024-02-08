@@ -3,10 +3,14 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "graphy-rdf-data-source"
+name = "graphy-platform"
 version = "0.1"
 dependencies = [
-    "rdflib"
+    "graphy-api",
+    "graphy-json-data-source",
+    "graphy-xml-data-source",
+    "graphy-rdf-data-source",
+    "graphy-simple-visualizer",
 ]
 
 [tool.setuptools.packages.find]

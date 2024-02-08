@@ -1,1 +1,1 @@
-from .views import create_graph
+from .simple_visualizer_service import SimpleVisualizerService

@@ -82,8 +82,10 @@ class JsonDataSourceService(DataSourceService):
             for k in [k for k in node.properties if k[0] == '@']:
                 node.properties.pop(k)
 
-    def identifier(self) -> str:
-        return 'JsonDataSourceService'
+    @staticmethod
+    def identifier() -> str:
+        return 'JSON'
 
-    def name(self) -> str:
-        return 'Json source'
+    @staticmethod
+    def name() -> str:
+        return 'json data source'

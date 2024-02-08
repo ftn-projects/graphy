@@ -1,3 +1,4 @@
+from __future__ import annotations
 from .node import Node
 
 
@@ -22,6 +23,12 @@ class Edge(object):
     @value.setter
     def value(self, value: str) -> None:
         self.__value = value
+
+    def clone(self) -> Edge:
+        return Edge(self.source.clone(), self.destination.clone(), self.value)
+
+    def reversed(self) -> Edge:
+        return Edge(self.destination.clone(), self.source.clone(), self.value)
 
     def __str__(self) -> str:
         return f"Grana(<{self.source.name}> <{self.value}> <{self.destination.name}>)"

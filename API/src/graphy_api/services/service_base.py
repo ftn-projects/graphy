@@ -2,10 +2,12 @@ from abc import ABC, abstractmethod
 
 
 class ServiceBase(ABC):
+    @staticmethod
     @abstractmethod
-    def identifier(self) -> str:
+    def identifier() -> str:
         pass
 
+    @staticmethod
     @abstractmethod
-    def name(self) -> str:
+    def name() -> str:
         pass

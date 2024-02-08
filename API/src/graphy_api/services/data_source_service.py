@@ -6,24 +6,14 @@ from ..models.graph import Graph
 
 
 class DataSourceService(ServiceBase, metaclass=ABCMeta):
-    def __init__(self) -> None:
+    def __init__(self):
         self.__reader: SourceReader | None = None
         self.__util: UtilService | None = None
 
-    @property
-    def reader(self) -> SourceReader | None:
-        return self.__reader
-
-    @reader.setter
-    def reader(self, reader: SourceReader) -> None:
+    def set_reader(self, reader: SourceReader) -> None:
         self.__reader = reader
 
-    @property
-    def util(self) -> UtilService | None:
-        return self.__util
-
-    @util.setter
-    def util(self, util: UtilService) -> None:
+    def set_util(self, util: UtilService) -> None:
         self.__util = util
 
     def load(self) -> Graph:

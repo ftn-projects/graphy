@@ -14,11 +14,13 @@ class XmlDataSourceService(DataSourceService):
         self.cyclic_graph(graph)
         return graph
 
-    def identifier(self) -> str:
-        return "XmlDataSourceService"
+    @staticmethod
+    def identifier() -> str:
+        return "XML"
 
-    def name(self) -> str:
-        return "XML source"
+    @staticmethod
+    def name() -> str:
+        return "xml data source"
 
     def parse_node(self, root: eT.Element, graph: Graph) -> Node:
         node = Node(root.tag)

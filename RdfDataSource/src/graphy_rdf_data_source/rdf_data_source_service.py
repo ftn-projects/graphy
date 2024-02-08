@@ -35,8 +35,10 @@ class RdfDataSourceService(DataSourceService):
 
         return graph
 
-    def identifier(self) -> str:
-        return "RdfDataSourceService"
+    @staticmethod
+    def identifier() -> str:
+        return "RDF"
 
-    def name(self) -> str:
-        return "RDF source"
+    @staticmethod
+    def name() -> str:
+        return "rdf data source"
