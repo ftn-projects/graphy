@@ -23,7 +23,7 @@ for _ in range(num_edges):
     destination_node = random.choice(graph.nodes)
     while source_node == destination_node:  # Ensure no self-loops
         destination_node = random.choice(graph.nodes)
-    edge = Edge(source_node, destination_node, f"Edge from {source_node.id} to {destination_node.id}")
+    edge = Edge(source_node, destination_node, f"Edge from {source_node.name} to {destination_node.name}")
     graph.add_edge(edge)
 
 
