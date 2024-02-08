@@ -58,8 +58,8 @@ class XmlDataSourceService(DataSourceService):
     def cyclic_graph(self, graph: Graph):
         removed = []
         for node in graph.nodes:
-            if "reference" in node.value:
-                referenced = self.find_reference(node, node.value["reference"])
+            if "reference" in node.properties:
+                referenced = self.find_reference(node, node.properties["reference"])
                 graph.add_edge(Edge(node.parent, referenced))
                 graph.remove_edge(Edge(node.parent, node))
                 removed.append(node)

@@ -13,7 +13,7 @@ num_edges = 250
 for i in range(num_nodes):
     node_properties = {"name": f"Node {i}"}
     node = Node(str(i))
-    node.value = node_properties
+    node.properties = node_properties
 
     graph.add_node(node)
 
