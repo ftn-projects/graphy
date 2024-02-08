@@ -15,7 +15,7 @@ def create_graph(request, graph=None):
         return render(request, 'create_graph.html', {'graph_json': graph_json})
 
     last_selected_node = None
-    serialized_nodes = [{'name': node.name, 'value': node.value} for node in graph.nodes]
+    serialized_nodes = [{'name': node.name, 'properties': node.properties} for node in graph.nodes]
     serialized_edges = [{'source': edge.source.name, 'target': edge.destination.name, 'value': edge.value} for edge in
                         graph.edges]
     graph_data = {
