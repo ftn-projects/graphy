@@ -86,6 +86,8 @@
                 }
             });
 
+            visualizer_observer.notify(EventType.NODE_SELECTED, selectedNodeId);
+
         });
 
 
@@ -108,7 +110,6 @@
     var zoom = d3.zoom().scaleExtent([0.5, 5]);
 
     svg.call(zoom);
-
 
 
     function sendDataToMinimap() {
@@ -171,9 +172,11 @@
     }
 
 
-    function set_selected_node(selected_node) {
+    visualizer_observer.attach(EventType.NODE_SELECTED, set_selected_node)
+
+    function set_selected_node(event, selected_node) {
         if (selected_node) {
-            console.log("Selected node: ", selected_node);
+            console.log("Selected node has been set in simple visualizer: ", selected_node);
             link.attr("class", function (l) {
                 if (l.source.index === selected_node || l.target.index === selected_node) {
                     return "link connected";
