@@ -8,7 +8,7 @@ class FileSourceReader(SourceReader):
         self.__filepath: str = filepath
 
     def read(self) -> str:
-        if os.path.isfile(self.__filepath):
+        if not os.path.isfile(self.__filepath):
             raise FileNotFoundError(f"{self.__filepath} does not exist.")
 
         with open(self.__filepath) as f:

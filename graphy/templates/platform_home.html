@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Home</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .all-plugins-container {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid blue;
+        }
+
+        .main-plugin-container {
+            flex: 1;
+        }
+
+        .vertical-plugin-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .search-section-container {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tree-plugin-container {
+            border: 1px solid forestgreen;
+        }
+
+        .bird-plugin-container {
+            border: 1px solid lightskyblue;
+        }
+
+        .main-plugin-container {
+            border: 1px solid black;
+        }
+
+        .tree-plugin-container, .bird-plugin-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+        }
+
+        .bird-plugin-svg {
+            width: 100%; /* Adjust width as needed */
+            height: 100%; /* Adjust height as needed */
+        }
+
+    </style>
+</head>
+<body>
+<script src="{% static 'js_observer.js' %}"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<div class="container">
+    <div class="search-section-container">
+        Hypothetical Search and Filter Section
+    </div>
+    <div class="all-plugins-container">
+        <div class="vertical-plugin-container">
+            <div class="tree-plugin-container">Hypothetical Tree View</div>
+            <div class="bird-plugin-container">
+
+            </div>
+        </div>
+        <div class="main-plugin-container">
+            {{ plugin_content|safe }}
+        </div>
+    </div>
+</div>
+<script>
+    visualizer_observer.attach(EventType.HTML_CHANGED, on_data_changed);
+
+    function on_data_changed(event, data) {
+        var svgOld = data.mainSVG;
+        d3.select(".bird-plugin-container").select("svg").remove();
+        var mini = d3.select(".bird-plugin-container").append("svg")
+            .attr("width", "100%")
+            .attr("height", "100%")
+            .style("border", "1px solid black");
+
+        var miniContent = mini.append("g")
+            .attr("class", "mini-content")
+
+        var svgWidth = parseInt(mini.style("width"));
+        var svgHeight = parseInt(mini.style("height"));
+
+        var minX = d3.min(svgOld.selectAll("*"), function (d) {
+            return d.getBBox().x + d.getBBox().width / 2;
+        });
+        var maxX = d3.max(svgOld.selectAll("*"), function (d) {
+            return d.getBBox().x + d.getBBox().width / 2;
+        });
+        var minY = d3.min(svgOld.selectAll("*"), function (d) {
+            return d.getBBox().y + d.getBBox().height / 2;
+        });
+        var maxY = d3.max(svgOld.selectAll("*"), function (d) {
+            return d.getBBox().y + d.getBBox().height / 2;
+        });
+
+        var width = maxX - minX;
+        var height = maxY - minY;
+
+        var scaleFactor = Math.min(svgWidth / width, svgHeight / height);
+
+        var translateX = -minX * scaleFactor + (svgWidth - width * scaleFactor) / 2;
+        var translateY = -minY * scaleFactor + (svgHeight - height * scaleFactor) / 2;
+
+        svgOld.selectAll("*").each(function () {
+            var clone = this.cloneNode(true);
+            d3.select(clone).attr("transform", "translate(" + translateX + "," + translateY + ") scale(" + scaleFactor + ")");
+            miniContent.node().appendChild(clone);
+        });
+
+
+        drawViewportRect(data.zoom, translateX, translateY, scaleFactor);
+    }
+
+
+
+    function drawViewportRect(transform, translateX, translateY, scaleFactora) {
+        var svgWidth = parseInt(d3.select(".container-simple").style("width"));
+        var svgHeight = parseInt(d3.select(".container-simple").style("height"));
+
+        var scaleFactor = transform.k;
+
+        var visibleWidth = svgWidth / scaleFactor;
+        var visibleHeight = svgHeight / scaleFactor;
+        var visibleX = -transform.x / scaleFactor;
+        var visibleY = -transform.y / scaleFactor;
+
+        var g = d3.select(".bird-plugin-container svg g");
+
+        viewportRect = g.append("rect")
+            .attr("class", "viewport-rect")
+            .attr("x", visibleX)
+            .attr("y", visibleY)
+            .attr("width", visibleWidth)
+            .attr("height", visibleHeight)
+            .style("fill", "none")
+            .style("stroke", "red")
+            .style("stroke-width", 5)
+            .attr("transform", "translate(" + translateX + "," + translateY + ") scale(" + scaleFactora + ")");
+    }
+
+
+</script>
+
+</body>
+</html>

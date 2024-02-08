@@ -3,11 +3,8 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "graphy-api"
+name = "graphy-xml-data-source"
 version = "0.1"
-dependencies = [
-    "python-dateutil"
-]
 
 [tool.setuptools.packages.find]
 where = ["src"]
