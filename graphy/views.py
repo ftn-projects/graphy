@@ -11,7 +11,10 @@ num_edges = 250
 
 # Create nodes with random names
 for i in range(num_nodes):
-    node = Node(str(i), {"name": f"Node {i}"})
+    node_properties = {"name": f"Node {i}"}
+    node = Node(str(i))
+    node.value = node_properties
+
     graph.add_node(node)
 
 # Create random edges between nodes
