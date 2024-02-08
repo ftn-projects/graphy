@@ -23,5 +23,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),  # Use the home view
-    path('simple/', include('simple_visualizer.urls'))
+    path('simple/', include('SimpleVisualizer.src.graphy_simple_visualizer.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

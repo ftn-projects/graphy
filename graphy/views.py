@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from simple_visualizer.views import create_graph as plugin_create_graph
-from API.src.graphy_api import Graph, Node, Edge
+from graphy_simple_visualizer import create_graph as plugin_create_graph
+from graphy_api import Graph, Node, Edge
 import random
 
 graph = Graph()
