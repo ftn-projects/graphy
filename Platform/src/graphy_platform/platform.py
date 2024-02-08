@@ -10,6 +10,7 @@ from graphy_xml_data_source import *
 from graphy_rdf_data_source import *
 
 from graphy_simple_visualizer import *
+from graphy_block_visualizer import *
 
 
 data_source_services = {
@@ -19,7 +20,8 @@ data_source_services = {
 }
 
 visualizer_services = {
-    SimpleVisualizerService.identifier(): SimpleVisualizerService()
+    SimpleVisualizerService.identifier(): SimpleVisualizerService(),
+    BlockVisualizerService.identifier(): BlockVisualizerService()
 }
 
 

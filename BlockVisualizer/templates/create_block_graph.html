@@ -59,7 +59,7 @@
     var simulation = d3.forceSimulation()
         .nodes(graphData.nodes)
         .force("link", d3.forceLink(graphData.edges).id(function (d) {
-            return d.name;
+            return d.id;
         }))
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(400, 300))
@@ -100,10 +100,10 @@
 
    node.each(function(d) {
     var floatY = d.y + 10; // Initial y position for the first property
-    var properties = Object.keys(d.value);
+    var properties = Object.keys(d.properties);
 
     properties.forEach(function(property, i) {
-        var value = d.value[property];
+        var value = d.properties[property];
 
         // Append a rectangle for the property
         svg.append("rect")
@@ -261,7 +261,7 @@
     .style("text-anchor", "middle"); // Set text-anchor to center the text horizontally
 
         node.each(function(d) {
-        var floatY = d.y + 10 - Object.keys(d.value).length * 20;
+        var floatY = d.y + 10 - Object.keys(d.properties).length * 20;
         var rect=d3.selectAll("#node_property_"+d.name);
         var values=d3.selectAll("#node_property_label_"+d.name);
         rect.each(function() {
@@ -270,7 +270,7 @@
             .attr("y", floatY);
         floatY+=20;
         });
-        floatY = d.y + 10 - (Object.keys(d.value).length - 1) * 20;
+        floatY = d.y + 10 - (Object.keys(d.properties).length - 1) * 20;
         values.each(function(){
             d3.select(this)
                 .attr("x",d.x)

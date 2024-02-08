@@ -1,1 +1,1 @@
-from .views import create_graph
+from .block_visualizer_service import BlockVisualizerService
