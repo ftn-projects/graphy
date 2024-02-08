@@ -4,7 +4,7 @@ from .edge import Edge
 
 
 class Graph(object):
-    def __init__(self):
+    def __init__(self) -> None:
         self.__nodes: List[Node] = []
         self.__edges: List[Edge] = []
 
@@ -31,6 +31,6 @@ class Graph(object):
 
     def find_node(self, tag: str) -> Node | None:
         for node in self.__nodes:
-            if node.id == tag:
+            if node.name == tag:
                 return node
         return None

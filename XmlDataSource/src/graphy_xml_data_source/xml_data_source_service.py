@@ -77,7 +77,7 @@ class XmlDataSourceService(DataSourceService):
         node_tag = spliced[-1].split("[")[0]
         order = spliced[-1].split('[')[1][:-1]
 
-        filtered = [n for n in kids if n.id == node_tag]
+        filtered = [n for n in kids if n.name == node_tag]
         return filtered[int(order) - 1]
 
     def string_cleanup(self, text: str) -> str:

@@ -2,7 +2,7 @@ from .node import Node
 
 
 class Edge(object):
-    def __init__(self, source: Node, destination: Node, value: str = None):
+    def __init__(self, source: Node, destination: Node, value: str = None) -> None:
         self.__source: Node = source
         self.__destination: Node = destination
         self.__value: str = value
@@ -24,10 +24,10 @@ class Edge(object):
         self.__value = value
 
     def __str__(self) -> str:
-        return f"Grana(<{self.source.id}> <{self.value}> <{self.destination.id}>)"
+        return f"Grana(<{self.source.name}> <{self.value}> <{self.destination.name}>)"
 
     def __repr__(self) -> str:
-        return f"Grana(<{self.source.id}> <{self.value}> <{self.destination.id}>)"
+        return f"Grana(<{self.source.name}> <{self.value}> <{self.destination.name}>)"
 
     def __eq__(self, other) -> bool:
         if isinstance(other, Edge):

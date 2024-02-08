@@ -4,19 +4,19 @@ from typing import Dict, List
 
 
 class Node(object):
-    def __init__(self, node_id: str):
-        self.__id: str = node_id
+    def __init__(self, name: str) -> None:
+        self.__name: str = name
         self.__value: Dict[str, any] = {}
-        self.__parent: Node|None = None
+        self.__parent: Node | None = None
         self.__children: List[Node] = []
 
     @property
-    def id(self) -> str:
-        return self.__id
+    def name(self) -> str:
+        return self.__name
 
-    @id.setter
-    def id(self, node_id: str) -> None:
-        self.__id = node_id
+    @name.setter
+    def name(self, name: str) -> None:
+        self.__name = name
 
     @property
     def value(self) -> Dict[str, any]:
@@ -27,7 +27,7 @@ class Node(object):
         self.__value = value
 
     @property
-    def parent(self) -> Node|None:
+    def parent(self) -> Node | None:
         return self.__parent
 
     @parent.setter
@@ -46,19 +46,19 @@ class Node(object):
 
     def __str__(self) -> str:
         properties_str = ', '.join(f'{key}={value}' for key, value in self.__value.items())
-        return f"\nNode <{self.__id}>:\n  - {properties_str}"
+        return f"\nNode <{self.__name}>:\n  - {properties_str}"
 
     def __repr__(self) -> str:
         properties_str = ', '.join(f'{key}={value}' for key, value in self.__value.items())
-        return f"\nNode <{self.__id}>:\n  - {properties_str}"
+        return f"\nNode <{self.__name}>:\n  - {properties_str}"
 
     def __eq__(self, other) -> bool:
         if not isinstance(other, Node):
             return False
-        return self.id == other.id and self.dict_eq(self.value, other.value)
+        return self.name == other.name and self.dict_eq(self.value, other.value)
 
     def __hash__(self) -> int:
-        return hash((self.id, self.hashable_dict(self.value)))
+        return hash((self.name, self.hashable_dict(self.value)))
 
     @staticmethod
     def dict_eq(dict1, dict2):

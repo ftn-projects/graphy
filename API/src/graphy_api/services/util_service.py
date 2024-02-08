@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 class UtilService:
-    def __init__(self, dateformat: str = None):
+    def __init__(self, dateformat: str = None) -> None:
         self.__dateformat = dateformat
 
     def parse_any(self, value: str) -> any:
