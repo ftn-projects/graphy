@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from graphy_simple_visualizer import create_graph as plugin_create_graph
+import graphy_block_visualizer
 from graphy_api import Graph, Node, Edge
 import random
 
@@ -11,7 +12,8 @@ num_edges = 250
 
 # Create nodes with random names
 for i in range(num_nodes):
-    node_properties = {"name": f"Node {i}"}
+    node_properties = {"name": f"Node {i}",
+                       "color": random.choice(["red", "green", "blue"])}
     node = Node(str(i))
     node.properties = node_properties
 
@@ -29,7 +31,7 @@ for _ in range(num_edges):
 
 def home(request):
     global graph
-    response = plugin_create_graph(request, graph)
+    response = graphy_block_visualizer.create_graph(request, graph)
     plugin_content = response.content.decode()
 
     return render(request, 'platform_home.html', {'plugin_content': plugin_content})
