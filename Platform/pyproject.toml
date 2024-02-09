@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphy-platform"
+version = "0.1"
+dependencies = [
+    "graphy-api",
+    "graphy-json-data-source",
+    "graphy-xml-data-source",
+    "graphy-rdf-data-source",
+    "graphy-simple-visualizer",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false

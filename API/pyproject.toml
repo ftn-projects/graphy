@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphy-api"
+version = "0.1"
+dependencies = [
+    "python-dateutil"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false

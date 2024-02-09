@@ -1,0 +1,139 @@
+{% load static %}
+<style>
+    .package {
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    .attributes {
+        display: none;
+        margin-left: 20px;
+    }
+    .child {
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    #explorer {
+        height:400px;
+    }
+</style>
+<div id="explorer"></div>
+<script src="{% static 'js_observer.js' %}"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+    // Assuming the graphDataTree variable is correctly populated with JSON data
+    var graphDataTree = {{ graph | safe }};
+
+    console.log(graphDataTree); // Log the graphDataTree to inspect its structure
+
+    function createNodeElement(node) {
+        const container = document.createElement("div");
+        container.classList.add("package");
+
+        const idElement = document.createElement("div");
+        idElement.textContent = "ID: " + node.id;
+        container.appendChild(idElement);
+
+        const attributesElement = document.createElement("div");
+        attributesElement.classList.add("attributes");
+        for (const [key, value] of Object.entries(node)) {
+    if (key !== "id") { // Exclude ID
+        if (key === "properties" && typeof value === "object") {
+            for (const [propKey, propValue] of Object.entries(value)) {
+                const propertyElement = document.createElement("div");
+                propertyElement.textContent = `${propKey}: ${propValue}`;
+                attributesElement.appendChild(propertyElement);
+            }
+        } else if (Array.isArray(value) && value.length > 0) { // Check if it's a non-empty array
+            value.forEach(childId => {
+                const childElement = document.createElement("div");
+                childElement.classList.add("child");
+                childElement.textContent = `Child:${childId}`;
+                childElement.dataset.childId = childId; // Set data attribute for child id
+                childElement.addEventListener("click", (event) => {
+                    event.stopPropagation(); // Stop the click event from propagating to the parent container
+                    const clickedNode = graphDataTree.nodes.find(node => node.id === childId);
+                    if (clickedNode) {
+                        console.log("Opening node:", clickedNode);
+                        const newNodeElement = createNodeElement(clickedNode);
+                        container.appendChild(newNodeElement); // Append the new node element to the parent container
+                        addEventListenersToNode(newNodeElement); // Add event listeners to the newly created node
+                        // Remove the clicked child element from the parent's attributes
+                        childElement.remove();
+                    } else {
+                        console.log("Node not found:", childId);
+                    }
+                });
+                attributesElement.appendChild(childElement);
+            });
+        } else if (typeof value !== 'object') {
+            const attributeElement = document.createElement("div");
+            attributeElement.textContent = `${key}: ${value}`;
+            attributesElement.appendChild(attributeElement);
+        }
+    }
+}
+        container.appendChild(attributesElement);
+
+        container.addEventListener("click", (event) => {
+            event.stopPropagation();
+            toggleVisibility(container);
+            visualizer_observer.notify(EventType.NODE_SELECTED,node.id)
+        });
+
+        return container;
+    }
+
+    function toggleVisibility(element) {
+        const attributesElement = element.querySelector('.attributes');
+        if (attributesElement.style.display === "none") {
+            attributesElement.style.display = "block";
+            element.querySelectorAll('.child').forEach(childElement => {
+                childElement.style.display = "block";
+            });
+            element.querySelectorAll('.package').forEach(childPackage => {
+                childPackage.style.display = "block";
+            });
+        } else {
+            attributesElement.style.display = "none";
+            element.querySelectorAll('.child').forEach(childElement => {
+                childElement.style.display = "none";
+            });
+            element.querySelectorAll('.package').forEach(childPackage => {
+                childPackage.style.display = "none";
+            });
+        }
+    }
+
+    function addEventListenersToNode(nodeElement) {
+        const childElements = nodeElement.querySelectorAll('.child');
+        childElements.forEach(childElement => {
+            childElement.addEventListener("click", (event) => {
+                event.stopPropagation(); // Stop the click event from propagating to the parent container
+                const childId = childElement.dataset.childId;
+                const clickedNode = graphDataTree.nodes.find(node => node.id === childId);
+                if (clickedNode) {
+                    console.log("Opening node:", clickedNode);
+                    const newNodeElement = createNodeElement(clickedNode);
+                    nodeElement.appendChild(newNodeElement); // Append the new node element to the parent node
+                    addEventListenersToNode(newNodeElement); // Add event listeners to the newly created node
+                    // Remove the clicked child element from the parent's attributes
+                    childElement.remove();
+                } else {
+                    console.log("Node not found:", childId);
+                }
+            });
+        });
+    }
+
+    function createPackageExplorer(data, parentElement) {
+        data.forEach(item => {
+            const nodeElement = createNodeElement(item);
+            parentElement.appendChild(nodeElement);
+            addEventListenersToNode(nodeElement); // Add event listeners to the created node
+        });
+    }
+
+    // Initialize the package explorer
+    const explorerElement = document.getElementById("explorer");
+    createPackageExplorer(graphDataTree.nodes, explorerElement);
+</script>
