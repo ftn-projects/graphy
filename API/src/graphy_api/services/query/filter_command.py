@@ -27,12 +27,26 @@ class FilterCommand(Command):
     def parameter(self) -> any:
         return self.__parse(self.__query[2])
 
-    def fulfills(self, value_name: str, attribute_value: any) -> bool:
-        return value_name == self.value and any([
+    def fulfills(self, attribute_key: str, attribute_value: any) -> bool:
+        if isinstance(attribute_value, str):
+            attribute_value = attribute_value.lower()
+
+        b = attribute_key.lower() == self.value and any([
             self.operator == "=" and attribute_value == self.parameter,
-            self.operator == "<" and attribute_value < self.parameter,
-            self.operator == "<=" and attribute_value <= self.parameter,
-            self.operator == ">" and attribute_value > self.parameter,
-            self.operator == ">=" and attribute_value >= self.parameter,
             self.operator == "!=" and attribute_value != self.parameter
         ])
+        if b:
+            return b
+        try:
+            return attribute_key.lower() == self.value and any([
+                self.operator == "<" and attribute_value < self.parameter,
+                self.operator == "<=" and attribute_value <= self.parameter,
+                self.operator == ">" and attribute_value > self.parameter,
+                self.operator == ">=" and attribute_value >= self.parameter
+            ])
+        except TypeError:
+            return False
+
+    def serialize(self) -> str:
+        return self.value + " " + self.operator + " " + str(self.parameter)
+

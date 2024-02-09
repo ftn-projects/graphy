@@ -9,7 +9,7 @@ class Command(ABC):
     def query(self) -> Graph:
         result = Graph()
         for node in self._graph.nodes:
-            for k, v in node.value:
+            for k, v in node.properties.items():
                 if self.fulfills(k, v):
                     result.add_node(node)
                     break
@@ -22,4 +22,8 @@ class Command(ABC):
 
     @abstractmethod
     def fulfills(self, attribute_key: str, attribute_value: any) -> bool:
+        pass
+
+    @abstractmethod
+    def serialize(self) -> str:
         pass

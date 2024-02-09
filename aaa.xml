@@ -2,7 +2,7 @@
     <Person>
         <name>Alice</name>
         <address>
-            <street>123 Main St</street>
+            <street>123</street>
             <owner>
                 <!--Use XPath to reference Peter as owner-->
                 <Person reference="../../../../Person[2]"/>

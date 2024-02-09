@@ -8,5 +8,8 @@ class SearchCommand(Command):
         self.__param = param
 
     def fulfills(self, attribute_key: str, attribute_value: any) -> bool:
-        return self.__param in str(attribute_key) or self.__param in str(attribute_value)
+        return self.__param in attribute_key.lower() or self.__param in str(attribute_value).lower()
+
+    def serialize(self) -> str:
+        return self.__param
 

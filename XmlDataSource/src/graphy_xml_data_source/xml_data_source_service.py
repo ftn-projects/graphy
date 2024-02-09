@@ -82,7 +82,7 @@ class XmlDataSourceService(DataSourceService):
         filtered = [n for n in kids if n.name == node_tag]
         return filtered[int(order) - 1]
 
-    def string_cleanup(self, text: str) -> str:
+    def string_cleanup(self, text: str) -> any:
         text.replace("\n", "")
         tokens = text.split()
-        return " ".join(tokens)
+        return self._util.parse_any(" ".join(tokens))
