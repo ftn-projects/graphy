@@ -1,4 +1,5 @@
 import json
+import traceback
 
 from django.core.handlers.wsgi import WSGIRequest
 from django.http import HttpResponse
@@ -74,7 +75,7 @@ def get_initial(request, workspace_id: int):
         workspace.reset_graph()
         return redirect('http://127.0.0.1:8000/' + str(workspace_id))
     except BaseException as e:
-        return get_with_error(request, workspace_id, str(e))
+        return get_with_error(request, workspace_id, e)
 
 
 def load(request: WSGIRequest, workspace_id: int) -> HttpResponse:
@@ -85,7 +86,7 @@ def load(request: WSGIRequest, workspace_id: int) -> HttpResponse:
         workspace.load_graph()
         return redirect('http://127.0.0.1:8000/' + str(workspace_id))
     except BaseException as e:
-        return get_with_error(request, workspace_id, str(e))
+        return get_with_error(request, workspace_id, e)
 
 
 def change_visualizer(request: WSGIRequest, workspace_id: int) -> HttpResponse:
@@ -93,11 +94,12 @@ def change_visualizer(request: WSGIRequest, workspace_id: int) -> HttpResponse:
         workspace = platform.get_workspace(workspace_id)
         workspace.set_visualizer_plugin(request.GET.get('type', ''))
         return redirect('http://127.0.0.1:8000/' + str(workspace_id))
-    except BaseException as e:
-        return get_with_error(request, workspace_id, str(e))
+    except Exception as e:
+        return get_with_error(request, workspace_id, e)
 
 
-def get_with_error(request: WSGIRequest, workspace_id: int, message: str) -> HttpResponse:
-    plugin_content = render(request, 'error_view.html', {'message': message})
+def get_with_error(request: WSGIRequest, workspace_id: int, e: Exception) -> HttpResponse:
+    print(traceback.format_exc())
+    plugin_content = render(request, 'error_view.html', {'message': str(e)})
     tree_view = render(request, 'tree_view.html')
     return get_workspace_view(request, workspace_id, plugin_content, tree_view)
