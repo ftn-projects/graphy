@@ -44,10 +44,12 @@ def get_workspace_view(
             'filepath': workspace.filepath,
             'data_source': workspace.source_plugin.identifier(),
             'visualizer': workspace.visualizer_plugin.identifier(),
-            'applied_queries': json.dumps(queries)
+            'applied_queries': json.dumps(queries),
+            'node_count': workspace.graph_stats['nodes'],
+            'edge_count': workspace.graph_stats['edges']
         })
     except BaseException as e:
-        return get_with_error(request, workspace_id, str(e))
+        return get_with_error(request, workspace_id, e)
 
 
 def get_search(request: WSGIRequest, workspace_id: int) -> HttpResponse:
@@ -66,7 +68,7 @@ def get_search(request: WSGIRequest, workspace_id: int) -> HttpResponse:
 
         return redirect('http://127.0.0.1:8000/' + str(workspace_id))
     except BaseException as e:
-        return get_with_error(request, workspace_id, str(e))
+        return get_with_error(request, workspace_id, e)
 
 
 def get_initial(request, workspace_id: int):
@@ -94,11 +96,11 @@ def change_visualizer(request: WSGIRequest, workspace_id: int) -> HttpResponse:
         workspace = platform.get_workspace(workspace_id)
         workspace.set_visualizer_plugin(request.GET.get('type', ''))
         return redirect('http://127.0.0.1:8000/' + str(workspace_id))
-    except Exception as e:
+    except BaseException as e:
         return get_with_error(request, workspace_id, e)
 
 
-def get_with_error(request: WSGIRequest, workspace_id: int, e: Exception) -> HttpResponse:
+def get_with_error(request: WSGIRequest, workspace_id: int, e: BaseException) -> HttpResponse:
     print(traceback.format_exc())
     plugin_content = render(request, 'error_view.html', {'message': str(e)})
     tree_view = render(request, 'tree_view.html')

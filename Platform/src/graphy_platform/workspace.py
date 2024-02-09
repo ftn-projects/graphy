@@ -68,7 +68,8 @@ class Workspace:
     def load_graph(self) -> None:
         self.__source_plugin.set_reader(FileSourceReader(self.__filepath))
         self.__graph = self.__source_plugin.load()
-        self.__initial_graph = self.__graph
+        self.__initial_graph = self.__source_plugin.load()
+        print(self.graph_stats)
 
     def render_graph_view(self, request: WSGIRequest) -> HttpResponse:
         return self.__visualizer_plugin.create_view(request, self.__graph)
@@ -119,3 +120,9 @@ class Workspace:
     def reset_graph(self):
         self.__graph = self.__initial_graph
         self.__applied_queries = []
+
+    @property
+    def graph_stats(self):
+        if self.__graph is not None:
+            return {'nodes': self.__graph.size, 'edges': len(self.__graph.edges)}
+        return {'nodes': 0, 'edges': 0}

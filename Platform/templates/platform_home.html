@@ -44,11 +44,13 @@
 
         .action-button {
             padding: 4px;
+            width: 80px;
+            text-align: center;
         }
 
         .section {
             display: flex;
-            padding: 15px;
+            padding: 8px;
             padding-inline: 50px;
             gap: 40px;
         }
@@ -57,16 +59,25 @@
             height: min-content;
             display: flex;
             flex-direction: row;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
 
         .right-upper-container {
             display: flex;
             flex-direction: column;
+            flex: 1;
         }
 
         .visualizer-section {
             width: 350px;
             row-span: 2;
+            padding-inline: 10px;
+        }
+
+        .visualizer-legend {
+            height: 100%;
+            width: 100%;
         }
 
         .file-browsing-section {
@@ -86,6 +97,10 @@
         }
 
         #path-input {
+            flex: 1;
+        }
+
+        #search-input {
             flex: 1;
         }
 
@@ -126,7 +141,7 @@
 <div class="container">
     <div class="upper-section-container">
         <div class="visualizer-section">
-            <fieldset>
+            <fieldset class="visualizer-legend">
                 <legend>Visualizer type</legend>
                 <input type="radio" id="simple-radio" name="visualizer-group" onclick="onChangeVisualizer()">
                 <label for="simple-radio">Simple</label>
@@ -148,7 +163,8 @@
                         <option value="RDF">RDF</option>
                     </select>
                 </div>
-                <button class="action-button" onclick="onLoad()">Load</button>
+                <button class="action-button" onclick="onLoad()">LOAD</button>
+                <button class="action-button" onclick="onNewTab()">NEW TAB</button>
             </div>
             <div class="search-filter-section section">
 
@@ -176,7 +192,11 @@
                 <button class="action-button" onclick="onSearch()">SEARCH</button>
                 <button class="action-button" onclick="onReset()">RESET</button>
             </div>
-            <label class="section" id="queries">Applied queries: </label>
+            <div class="path-input-container section">
+                <label id="nodes">Nodes: </label>
+                <label id="edges">Edges: </label>
+                <label id="queries">Applied queries: </label>
+            </div>
         </div>
     </div>
     <div class="all-plugins-container">
@@ -218,6 +238,10 @@
         blockVisualizer.checked = true;
 
     queryLabel.appendChild(document.createTextNode(applied_queries.join(', ')));
+    document.getElementById('nodes').appendChild(
+        document.createTextNode('{{ node_count | safe }}'));
+    document.getElementById('edges').appendChild(
+        document.createTextNode('{{ edge_count | safe }}'));
 
     function onChangeVisualizer() {
         let visualizerType = simpleVisualizer.checked ? 'SIMPLE' : 'BLOCK';
@@ -239,12 +263,20 @@
         document.location.href = baseUrl() + '/search?search=' + search + '&attribute=' + filter + '&operator=' + select + '&filter=' + param;
     }
 
-    function onReset(){
+    function onReset() {
         document.location.href = baseUrl() + '/clearSearch';
     }
 
+    function onNewTab() {
+        window.open(hostUrl(), '_blank');
+    }
+
     function baseUrl() {
-        return 'http://127.0.0.1:8000/' + workspace_id;
+        return hostUrl() + '/' + workspace_id;
+    }
+
+    function hostUrl() {
+        return 'http://127.0.0.1:8000';
     }
 
 </script>
