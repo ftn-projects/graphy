@@ -73,7 +73,7 @@
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(400, 300))
         .force("collide", d3.forceCollide().radius(function (d) {
-            return getRadius(d.weight) * 2;
+            return getRadius(d.weight) * 3;
         }).iterations(5)); // Adjust the radius as needed; // Center the simulation in the SVG container
 
     // Draw edges
