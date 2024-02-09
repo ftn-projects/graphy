@@ -1,7 +1,7 @@
 {% load static %}
 <style>
     .node {
-        fill: blue;
+        fill: #5e5eef;
         stroke: #fff;
         text-anchor: middle;
     }
@@ -17,12 +17,18 @@
         stroke-width: 1;
     }
 
-    .label {
-        fill: white;
+    .label, .link-label {
+        fill: black;
+        font-weight: bold;
         font-family: Arial, sans-serif;
         font-size: 1em;
         text-anchor: middle;
         pointer-events: none;
+    }
+
+    .link-label{
+        fill: #353838;
+        font-size: 0.8em;
     }
 
     .simple-svg-container, .container-simple {
@@ -91,8 +97,17 @@
 
         });
 
+    var edgeLabels = svg
+        .selectAll(".link-label")
+        .data(graphData.edges)
+        .enter().append("text")
+        .attr("class", "link-label")
+        .attr("dy", -5)
+        .style("text-anchor", "middle")
+        .text(function (d) {
+            return "aaaa";
+        });
 
-    // Add node labels
     var nodeLabels = svg
         .selectAll(".label")
         .data(graphData.nodes)
@@ -129,6 +144,7 @@
         node.attr("transform", d3.zoomTransform(this));
         link.attr("transform", d3.zoomTransform(this));
         nodeLabels.attr("transform", d3.zoomTransform(this));
+        edgeLabels.attr("transform", d3.zoomTransform(this));
     });
 
 
@@ -218,5 +234,13 @@
             .attr("y", function (d) {
                 return d.y;
             }).attr("dy", ".35em");
+
+        edgeLabels.attr("x", function (d) {
+            return (d.source.x + d.target.x) / 2;
+        })
+            .attr("y", function (d) {
+                return (d.source.y + d.target.y) / 2;
+            });
+
     }
 </script>

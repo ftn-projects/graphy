@@ -9,7 +9,7 @@ platform = Platform()
 def get_view(request):
     filepath = 'aaa.xml'  # request.GET['filepath']
     data_source = 'XML'  # request.GET['data_source']
-    visualizer = 'BLOCK'  # request.GET['visualizer']
+    visualizer = 'SIMPLE'  # request.GET['visualizer']
     platform.set_sources(filepath, data_source, visualizer)
 
     platform.load_graph()
