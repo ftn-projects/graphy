@@ -14,6 +14,13 @@ class Command(ABC):
                     result.add_node(node)
                     break
 
+        for node in self._graph.nodes:
+            children = []
+            for child in node.children:
+                if child in result.nodes:
+                    children.append(child)
+            node.children = children
+
         for edge in self._graph.edges:
             if edge.source in result.nodes and edge.destination in result.nodes:
                 result.add_edge(edge)

@@ -33,36 +33,42 @@
         const attributesElement = document.createElement("div");
         attributesElement.classList.add("attributes");
         for (const [key, value] of Object.entries(node)) {
-            if (key !== "id") { // Exclude ID
-                if (Array.isArray(value) && value.length > 0) { // Check if it's a non-empty array
-                    value.forEach(childId => {
-                        const childElement = document.createElement("div");
-                        childElement.classList.add("child");
-                        childElement.textContent = `Child:${childId}`;
-                        childElement.dataset.childId = childId; // Set data attribute for child id
-                        childElement.addEventListener("click", (event) => {
-                            event.stopPropagation(); // Stop the click event from propagating to the parent container
-                            const clickedNode = graphDataTree.nodes.find(node => node.id === childId);
-                            if (clickedNode) {
-                                console.log("Opening node:", clickedNode);
-                                const newNodeElement = createNodeElement(clickedNode);
-                                container.appendChild(newNodeElement); // Append the new node element to the parent container
-                                addEventListenersToNode(newNodeElement); // Add event listeners to the newly created node
-                                // Remove the clicked child element from the parent's attributes
-                                childElement.remove();
-                            } else {
-                                console.log("Node not found:", childId);
-                            }
-                        });
-                        attributesElement.appendChild(childElement);
-                    });
-                } else if (typeof value !== 'object') {
-                    const attributeElement = document.createElement("div");
-                    attributeElement.textContent = `${key}: ${value}`;
-                    attributesElement.appendChild(attributeElement);
-                }
+    if (key !== "id") { // Exclude ID
+        if (key === "properties" && typeof value === "object") {
+            for (const [propKey, propValue] of Object.entries(value)) {
+                const propertyElement = document.createElement("div");
+                propertyElement.textContent = `${propKey}: ${propValue}`;
+                attributesElement.appendChild(propertyElement);
             }
+        } else if (Array.isArray(value) && value.length > 0) { // Check if it's a non-empty array
+            value.forEach(childId => {
+                const childElement = document.createElement("div");
+                childElement.classList.add("child");
+                childElement.textContent = `Child:${childId}`;
+                childElement.dataset.childId = childId; // Set data attribute for child id
+                childElement.addEventListener("click", (event) => {
+                    event.stopPropagation(); // Stop the click event from propagating to the parent container
+                    const clickedNode = graphDataTree.nodes.find(node => node.id === childId);
+                    if (clickedNode) {
+                        console.log("Opening node:", clickedNode);
+                        const newNodeElement = createNodeElement(clickedNode);
+                        container.appendChild(newNodeElement); // Append the new node element to the parent container
+                        addEventListenersToNode(newNodeElement); // Add event listeners to the newly created node
+                        // Remove the clicked child element from the parent's attributes
+                        childElement.remove();
+                    } else {
+                        console.log("Node not found:", childId);
+                    }
+                });
+                attributesElement.appendChild(childElement);
+            });
+        } else if (typeof value !== 'object') {
+            const attributeElement = document.createElement("div");
+            attributeElement.textContent = `${key}: ${value}`;
+            attributesElement.appendChild(attributeElement);
         }
+    }
+}
         container.appendChild(attributesElement);
 
         container.addEventListener("click", (event) => {

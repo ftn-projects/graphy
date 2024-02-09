@@ -47,6 +47,10 @@ class Node(object):
     def children(self) -> List[Node]:
         return self.__children
 
+    @children.setter
+    def children(self, children: List[Node]) -> None:
+        self.__children = children
+
     def add_child(self, child: Node) -> None:
         self.__children.append(child)
 
@@ -61,6 +65,7 @@ class Node(object):
         n.properties = {}
         for k, v in self.properties.items():
             n.properties[k] = v
+        n.children = self.__children
         return n
 
     def __str__(self) -> str:
