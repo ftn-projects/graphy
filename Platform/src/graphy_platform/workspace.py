@@ -90,16 +90,12 @@ class Workspace:
                     n.properties[k] = str(v)
             formatted_nodes.append(n)
 
-        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties}
+        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties,
+                             'childs': [childNode.id for childNode in node.children]}
                             for node in formatted_nodes]
-        serialized_edges = [{'source': edge.source.id, 'target': edge.destination.id, 'value': edge.value}
-                            for edge in self.__graph.edges]
-        graph_data = {
-            'nodes': serialized_nodes,
-            'edges': serialized_edges
-        }
-
+        graph_data = {'nodes': serialized_nodes}
         graph_json = json.dumps(graph_data)
+
         return render(request, 'tree_view.html', {'graph': graph_json})
 
     def set_source_plugin(self, data_source: str) -> None:
