@@ -217,16 +217,16 @@
         var svgHeight = parseInt(mini.style("height"));
 
         var minX = d3.min(svgOld.selectAll("*"), function (d) {
-            return d.getBBox().x + d.getBBox().width / 2;
+            return d.getBBox().x - 50;
         });
         var maxX = d3.max(svgOld.selectAll("*"), function (d) {
-            return d.getBBox().x + d.getBBox().width / 2;
+            return d.getBBox().x + d.getBBox().width + 50;
         });
         var minY = d3.min(svgOld.selectAll("*"), function (d) {
-            return d.getBBox().y + d.getBBox().height / 2;
+            return d.getBBox().y - 50;
         });
         var maxY = d3.max(svgOld.selectAll("*"), function (d) {
-            return d.getBBox().y + d.getBBox().height / 2;
+            return d.getBBox().y + d.getBBox().height + 50;
         });
 
         var width = maxX - minX;
