@@ -18,4 +18,4 @@ class UtilService:
     def parse_date(self, value: str) -> datetime:
         if self.__dateformat is not None:
             return datetime.strptime(value, self.__dateformat)
-        return parse(value, fuzzy='true')
+        return parse(value, fuzzy=True)
