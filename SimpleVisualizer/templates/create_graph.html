@@ -57,14 +57,11 @@
 <script>
 
     visualizer_observer.notify(EventType.NODE_SELECTED)
-    // Parse the graph data passed from the view function
-
     var graphData = JSON.parse('{{ graph_json | safe }}');
 
     var tooltip = d3.select(".tooltip");
 
     var svg = d3.select(".container-simple");
-    // Create force simulation
     var simulation = d3.forceSimulation()
         .nodes(graphData.nodes)
         .force("link", d3.forceLink(graphData.edges).id(function (d) {
@@ -74,16 +71,14 @@
         .force("center", d3.forceCenter(400, 300))
         .force("collide", d3.forceCollide().radius(function (d) {
             return getRadius(d.weight) * 3;
-        }).iterations(5)); // Adjust the radius as needed; // Center the simulation in the SVG container
+        }).iterations(5));
 
-    // Draw edges
     var link = svg
         .selectAll(".link")
         .data(graphData.edges)
         .enter().append("line")
         .attr("class", "link");
 
-    // Draw nodes
     var node = svg
         .selectAll(".node")
         .data(graphData.nodes)
@@ -101,7 +96,7 @@
 
             link.attr("class", function (l) {
                 if (l.source.index === selectedNodeId || l.target.index === selectedNodeId) {
-                    return "link connected"; // Add connected class
+                    return "link connected";
                 } else {
                     return "link";
                 }
@@ -113,7 +108,6 @@
 
 
     node.on("mouseover", function (event, d) {
-        // Show tooltip
         tooltip.style("display", "block")
             .html(function () {
                 var html = "Node: " + d.name + "<br>";
@@ -128,7 +122,6 @@
             .style("top", (event.pageY - 10) + "px");
     })
         .on("mouseout", function () {
-            // Hide tooltip
             tooltip.style("display", "none");
         });
 
@@ -157,7 +150,6 @@
             return d.name === '' ? d.id : d.name;
         });
 
-    // Update node and edge positions during simulation
     simulation.nodes(graphData.nodes).on("tick", ticked);
     simulation.force("link").links(graphData.edges);
 
@@ -177,7 +169,6 @@
 
 
     zoom.on("zoom", function (event) {
-        var currentZoom = event.transform.k;
         node.attr("transform", d3.zoomTransform(this));
         link.attr("transform", d3.zoomTransform(this));
         nodeLabels.attr("transform", d3.zoomTransform(this));
@@ -185,13 +176,11 @@
     });
 
 
-    // Define drag behavior
     var drag = d3.drag()
         .on("start", dragstarted)
         .on("drag", dragged)
         .on("end", dragended);
 
-    // Apply drag behavior to nodes
     node.call(drag);
 
 
@@ -201,20 +190,17 @@
     }
 
 
-    // Drag start function
     function dragstarted(event, d) {
         if (!event.active) simulation.alphaTarget(0.3).restart();
         d.fx = d.x;
         d.fy = d.y;
     }
 
-    // Drag function
     function dragged(event, d) {
         d.fx = event.x;
         d.fy = event.y;
     }
 
-    // Drag end function
     function dragended(event, d) {
         if (!event.active) simulation.alphaTarget(0);
         d.fx = null;
