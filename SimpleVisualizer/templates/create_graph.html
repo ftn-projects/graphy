@@ -73,7 +73,7 @@
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(400, 300))
         .force("collide", d3.forceCollide().radius(function (d) {
-            return getRadius(d.weight) * 2;
+            return getRadius(d.weight) * 3;
         }).iterations(5)); // Adjust the radius as needed; // Center the simulation in the SVG container
 
     // Draw edges
@@ -161,7 +161,7 @@
     simulation.nodes(graphData.nodes).on("tick", ticked);
     simulation.force("link").links(graphData.edges);
 
-    var zoom = d3.zoom().scaleExtent([0.5, 5]);
+    var zoom = d3.zoom().scaleExtent([0.1, 5]);
 
     svg.call(zoom);
 
@@ -175,7 +175,6 @@
         visualizer_observer.notify(EventType.HTML_CHANGED, minimapData);
     }
 
-    setInterval(sendDataToMinimap, 100);
 
     zoom.on("zoom", function (event) {
         var currentZoom = event.transform.k;
@@ -279,6 +278,8 @@
             .attr("y", function (d) {
                 return (d.source.y + d.target.y) / 2;
             });
+
+        sendDataToMinimap();
 
     }
 </script>

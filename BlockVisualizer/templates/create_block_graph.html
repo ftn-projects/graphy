@@ -169,7 +169,7 @@
         visualizer_observer.notify(EventType.HTML_CHANGED, minimapData);
     }
 
-    setInterval(sendDataToMinimap, 100);
+
 
     zoom.on("zoom", function (event) {
         var currentZoom = event.transform.k;
@@ -284,5 +284,7 @@
 
         node.attr("x", function(d) { return d.x - 50; })
         .attr("y", function(d) { return d.y - 10; })
+
+        sendDataToMinimap();
     }
 </script>
