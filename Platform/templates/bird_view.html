@@ -35,6 +35,8 @@
         var width = maxX - minX;
         var height = maxY - minY;
 
+        if (!width || !height) return;
+
         var scaleFactor = Math.min(svgWidth / width, svgHeight / height);
 
         var translateX = -minX * scaleFactor + (svgWidth - width * scaleFactor) / 2;

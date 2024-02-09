@@ -55,6 +55,7 @@
 <script src="{% static 'js_observer.js' %}"></script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
+
     visualizer_observer.notify(EventType.NODE_SELECTED)
     var graphData = JSON.parse('{{ graph_json | safe }}');
 
@@ -185,7 +186,7 @@
 
     function getRadius(d) {
         var minradius = 15;
-        return minradius + (d * 4);
+        return Math.min(minradius + (d * 4), 100);
     }
 
 

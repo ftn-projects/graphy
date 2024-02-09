@@ -1,1 +1,1 @@
-from .platform import Platform
+from .workspace import Workspace
