@@ -1,902 +1,571 @@
-<table ID="supplier">
-<T>
-<S_SUPPKEY>1</S_SUPPKEY>
-<S_NAME>Supplier#000000001</S_NAME>
-<S_ADDRESS> N kD4on9OM Ipw3,gf0JBoQDd7tgrzrddZ</S_ADDRESS>
-<S_NATIONKEY>17</S_NATIONKEY>
-<S_PHONE>27-918-335-1736</S_PHONE>
-<S_ACCTBAL>5755.94</S_ACCTBAL>
-<S_COMMENT>requests haggle carefully. accounts sublate finally. carefully ironic pa</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>2</S_SUPPKEY>
-<S_NAME>Supplier#000000002</S_NAME>
-<S_ADDRESS>89eJ5ksX3ImxJQBvxObC,</S_ADDRESS>
-<S_NATIONKEY>5</S_NATIONKEY>
-<S_PHONE>15-679-861-2259</S_PHONE>
-<S_ACCTBAL>4032.68</S_ACCTBAL>
-<S_COMMENT>furiously stealthy frays thrash alongside of the slyly express deposits. blithely regular req</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>3</S_SUPPKEY>
-<S_NAME>Supplier#000000003</S_NAME>
-<S_ADDRESS>q1,G3Pj6OjIuUYfUoH18BFTKP5aU9bEV3</S_ADDRESS>
-<S_NATIONKEY>1</S_NATIONKEY>
-<S_PHONE>11-383-516-1199</S_PHONE>
-<S_ACCTBAL>4192.40</S_ACCTBAL>
-<S_COMMENT>furiously regular instructions impress slyly! carefu</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>4</S_SUPPKEY>
-<S_NAME>Supplier#000000004</S_NAME>
-<S_ADDRESS>Bk7ah4CK8SYQTepEmvMkkgMwg</S_ADDRESS>
-<S_NATIONKEY>15</S_NATIONKEY>
-<S_PHONE>25-843-787-7479</S_PHONE>
-<S_ACCTBAL>4641.08</S_ACCTBAL>
-<S_COMMENT>final ideas cajole. furiously close dep</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>5</S_SUPPKEY>
-<S_NAME>Supplier#000000005</S_NAME>
-<S_ADDRESS>Gcdm2rJRzl5qlTVzc</S_ADDRESS>
-<S_NATIONKEY>11</S_NATIONKEY>
-<S_PHONE>21-151-690-3663</S_PHONE>
-<S_ACCTBAL>-283.84</S_ACCTBAL>
-<S_COMMENT>carefully silent instructions are slyly according t</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>6</S_SUPPKEY>
-<S_NAME>Supplier#000000006</S_NAME>
-<S_ADDRESS>tQxuVm7s7CnK</S_ADDRESS>
-<S_NATIONKEY>14</S_NATIONKEY>
-<S_PHONE>24-696-997-4969</S_PHONE>
-<S_ACCTBAL>1365.79</S_ACCTBAL>
-<S_COMMENT>even requests wake carefully! fluffily final pinto beans run slyly among t</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>7</S_SUPPKEY>
-<S_NAME>Supplier#000000007</S_NAME>
-<S_ADDRESS>s,4TicNGB4uO6PaSqNBUq</S_ADDRESS>
-<S_NATIONKEY>23</S_NATIONKEY>
-<S_PHONE>33-990-965-2201</S_PHONE>
-<S_ACCTBAL>6820.35</S_ACCTBAL>
-<S_COMMENT>carefully express packages believe furiously after the fur</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>8</S_SUPPKEY>
-<S_NAME>Supplier#000000008</S_NAME>
-<S_ADDRESS>9Sq4bBH2FQEmaFOocY45sRTxo6yuoG</S_ADDRESS>
-<S_NATIONKEY>17</S_NATIONKEY>
-<S_PHONE>27-498-742-3860</S_PHONE>
-<S_ACCTBAL>7627.85</S_ACCTBAL>
-<S_COMMENT>carefully express escapades are slyly </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>9</S_SUPPKEY>
-<S_NAME>Supplier#000000009</S_NAME>
-<S_ADDRESS>1KhUgZegwM3ua7dsYmekYBsK</S_ADDRESS>
-<S_NATIONKEY>10</S_NATIONKEY>
-<S_PHONE>20-403-398-8662</S_PHONE>
-<S_ACCTBAL>5302.37</S_ACCTBAL>
-<S_COMMENT>slyly regular decoys mold slyly ironic dugouts. requests are carefully-- carefully</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>10</S_SUPPKEY>
-<S_NAME>Supplier#000000010</S_NAME>
-<S_ADDRESS>Saygah3gYWMp72i PY</S_ADDRESS>
-<S_NATIONKEY>24</S_NATIONKEY>
-<S_PHONE>34-852-489-8585</S_PHONE>
-<S_ACCTBAL>3891.91</S_ACCTBAL>
-<S_COMMENT>ironic deposits poach quickly furiously final accounts. carefull</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>11</S_SUPPKEY>
-<S_NAME>Supplier#000000011</S_NAME>
-<S_ADDRESS>JfwTs,LZrV, M,9C</S_ADDRESS>
-<S_NATIONKEY>18</S_NATIONKEY>
-<S_PHONE>28-613-996-1505</S_PHONE>
-<S_ACCTBAL>3393.08</S_ACCTBAL>
-<S_COMMENT>quickly bold asymptotes mold carefully unusual pearls. requests boost at the blith</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>12</S_SUPPKEY>
-<S_NAME>Supplier#000000012</S_NAME>
-<S_ADDRESS>aLIW q0HYd</S_ADDRESS>
-<S_NATIONKEY>8</S_NATIONKEY>
-<S_PHONE>18-179-925-7181</S_PHONE>
-<S_ACCTBAL>1432.69</S_ACCTBAL>
-<S_COMMENT>evenly pending theodolites lose. </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>13</S_SUPPKEY>
-<S_NAME>Supplier#000000013</S_NAME>
-<S_ADDRESS>HK71HQyWoqRWOX8GI FpgAifW,2PoH</S_ADDRESS>
-<S_NATIONKEY>3</S_NATIONKEY>
-<S_PHONE>13-727-620-7813</S_PHONE>
-<S_ACCTBAL>9107.22</S_ACCTBAL>
-<S_COMMENT>ironically busy packages thrash </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>14</S_SUPPKEY>
-<S_NAME>Supplier#000000014</S_NAME>
-<S_ADDRESS>EXsnO5pTNj4iZRm</S_ADDRESS>
-<S_NATIONKEY>15</S_NATIONKEY>
-<S_PHONE>25-656-247-5058</S_PHONE>
-<S_ACCTBAL>9189.82</S_ACCTBAL>
-<S_COMMENT>enticingly bold platelets wake against the</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>15</S_SUPPKEY>
-<S_NAME>Supplier#000000015</S_NAME>
-<S_ADDRESS>olXVbNBfVzRqgokr1T,Ie</S_ADDRESS>
-<S_NATIONKEY>8</S_NATIONKEY>
-<S_PHONE>18-453-357-6394</S_PHONE>
-<S_ACCTBAL>308.56</S_ACCTBAL>
-<S_COMMENT>regular attainments cajole. furiously final reques</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>16</S_SUPPKEY>
-<S_NAME>Supplier#000000016</S_NAME>
-<S_ADDRESS>YjP5C55zHDXL7LalK27zfQnwejdpin4AMpvh</S_ADDRESS>
-<S_NATIONKEY>22</S_NATIONKEY>
-<S_PHONE>32-822-502-4215</S_PHONE>
-<S_ACCTBAL>2972.26</S_ACCTBAL>
-<S_COMMENT>quick, final pains above the ironic, final instructions use furio</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>17</S_SUPPKEY>
-<S_NAME>Supplier#000000017</S_NAME>
-<S_ADDRESS>c2d,ESHRSkK3WYnxpgw6aOqN0q</S_ADDRESS>
-<S_NATIONKEY>19</S_NATIONKEY>
-<S_PHONE>29-601-884-9219</S_PHONE>
-<S_ACCTBAL>1687.81</S_ACCTBAL>
-<S_COMMENT>slyly pending deposits boost quickly.</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>18</S_SUPPKEY>
-<S_NAME>Supplier#000000018</S_NAME>
-<S_ADDRESS>PGGVE5PWAMwKDZw </S_ADDRESS>
-<S_NATIONKEY>16</S_NATIONKEY>
-<S_PHONE>26-729-551-1115</S_PHONE>
-<S_ACCTBAL>7040.82</S_ACCTBAL>
-<S_COMMENT>carefully pending deposits haggle regular the</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>19</S_SUPPKEY>
-<S_NAME>Supplier#000000019</S_NAME>
-<S_ADDRESS>edZT3es,nBFD8lBXTGeTl</S_ADDRESS>
-<S_NATIONKEY>24</S_NATIONKEY>
-<S_PHONE>34-278-310-2731</S_PHONE>
-<S_ACCTBAL>6150.38</S_ACCTBAL>
-<S_COMMENT>quickly regular pinto beans mold blithely slyly pending packages. unusual platelets are furiou</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>20</S_SUPPKEY>
-<S_NAME>Supplier#000000020</S_NAME>
-<S_ADDRESS>iybAE,RmTymrZVYaFZva2SH,j</S_ADDRESS>
-<S_NATIONKEY>3</S_NATIONKEY>
-<S_PHONE>13-715-945-6730</S_PHONE>
-<S_ACCTBAL>530.82</S_ACCTBAL>
-<S_COMMENT>finally regular asymptotes play furiously among the carefully special warhorses. slyly</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>21</S_SUPPKEY>
-<S_NAME>Supplier#000000021</S_NAME>
-<S_ADDRESS>81CavellcrJ0PQ3CPBID0Z0JwyJm0ka5igEs</S_ADDRESS>
-<S_NATIONKEY>2</S_NATIONKEY>
-<S_PHONE>12-253-590-5816</S_PHONE>
-<S_ACCTBAL>9365.80</S_ACCTBAL>
-<S_COMMENT>bravely ironic Tiresias run carefully. regular deposits integrate with the fluffily even f</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>22</S_SUPPKEY>
-<S_NAME>Supplier#000000022</S_NAME>
-<S_ADDRESS>okiiQFk 8lm6EVX6Q0,bEcO</S_ADDRESS>
-<S_NATIONKEY>4</S_NATIONKEY>
-<S_PHONE>14-144-830-2814</S_PHONE>
-<S_ACCTBAL>-966.20</S_ACCTBAL>
-<S_COMMENT>slyly special waters wake fluffily along the unusual package</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>23</S_SUPPKEY>
-<S_NAME>Supplier#000000023</S_NAME>
-<S_ADDRESS>ssetugTcXc096qlD7 2TL5crEEeS3zk</S_ADDRESS>
-<S_NATIONKEY>9</S_NATIONKEY>
-<S_PHONE>19-559-422-5776</S_PHONE>
-<S_ACCTBAL>5926.41</S_ACCTBAL>
-<S_COMMENT>carefully special requests haggle. furiously busy theodolites haggle b</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>24</S_SUPPKEY>
-<S_NAME>Supplier#000000024</S_NAME>
-<S_ADDRESS>C4nPvLrVmKPPabFCj</S_ADDRESS>
-<S_NATIONKEY>0</S_NATIONKEY>
-<S_PHONE>10-620-939-2254</S_PHONE>
-<S_ACCTBAL>9170.71</S_ACCTBAL>
-<S_COMMENT>quietly even theodolites alongside of the blithely special pin</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>25</S_SUPPKEY>
-<S_NAME>Supplier#000000025</S_NAME>
-<S_ADDRESS>RCQKONXMFnrodzz6w7fObFVV6CUm2q</S_ADDRESS>
-<S_NATIONKEY>22</S_NATIONKEY>
-<S_PHONE>32-431-945-3541</S_PHONE>
-<S_ACCTBAL>9198.31</S_ACCTBAL>
-<S_COMMENT>even excuses wake about the carefully special packa</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>26</S_SUPPKEY>
-<S_NAME>Supplier#000000026</S_NAME>
-<S_ADDRESS>iV,MHzAx6Z939uzFNkq09M0a1 MBfH7</S_ADDRESS>
-<S_NATIONKEY>21</S_NATIONKEY>
-<S_PHONE>31-758-894-4436</S_PHONE>
-<S_ACCTBAL>21.18</S_ACCTBAL>
-<S_COMMENT>slyly unusual pinto beans sleep carefully alongside of the furiously sly frets. regular, regula</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>27</S_SUPPKEY>
-<S_NAME>Supplier#000000027</S_NAME>
-<S_ADDRESS>lC4CjKwNHUr6L4xIpzOBK4NlHkFTg</S_ADDRESS>
-<S_NATIONKEY>18</S_NATIONKEY>
-<S_PHONE>28-708-999-2028</S_PHONE>
-<S_ACCTBAL>1887.62</S_ACCTBAL>
-<S_COMMENT>furiously thin packages use </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>28</S_SUPPKEY>
-<S_NAME>Supplier#000000028</S_NAME>
-<S_ADDRESS>GBhvoRh,7YIN V</S_ADDRESS>
-<S_NATIONKEY>0</S_NATIONKEY>
-<S_PHONE>10-538-384-8460</S_PHONE>
-<S_ACCTBAL>-891.99</S_ACCTBAL>
-<S_COMMENT>regular, regular excuses boost quickl</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>29</S_SUPPKEY>
-<S_NAME>Supplier#000000029</S_NAME>
-<S_ADDRESS>658tEqXLPvRd6xpFdqC2</S_ADDRESS>
-<S_NATIONKEY>1</S_NATIONKEY>
-<S_PHONE>11-555-705-5922</S_PHONE>
-<S_ACCTBAL>-811.62</S_ACCTBAL>
-<S_COMMENT>blithely pending theodolites are carefully ironic requests! fluffily express instructions ab</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>30</S_SUPPKEY>
-<S_NAME>Supplier#000000030</S_NAME>
-<S_ADDRESS>84NmC1rmQfO0fj3zkobLT</S_ADDRESS>
-<S_NATIONKEY>16</S_NATIONKEY>
-<S_PHONE>26-940-594-4852</S_PHONE>
-<S_ACCTBAL>8080.14</S_ACCTBAL>
-<S_COMMENT>express, bold deposits sleep according to th</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>31</S_SUPPKEY>
-<S_NAME>Supplier#000000031</S_NAME>
-<S_ADDRESS>fRJimA7zchyApqRLHcQeocVpP</S_ADDRESS>
-<S_NATIONKEY>16</S_NATIONKEY>
-<S_PHONE>26-515-530-4159</S_PHONE>
-<S_ACCTBAL>5916.91</S_ACCTBAL>
-<S_COMMENT>blithely bold deposits boost fluffily slyly final</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>32</S_SUPPKEY>
-<S_NAME>Supplier#000000032</S_NAME>
-<S_ADDRESS>yvoD3TtZSx1skQNCK8agk5bZlZLug</S_ADDRESS>
-<S_NATIONKEY>23</S_NATIONKEY>
-<S_PHONE>33-484-637-7873</S_PHONE>
-<S_ACCTBAL>3556.47</S_ACCTBAL>
-<S_COMMENT>furiously thin asymptotes are a</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>33</S_SUPPKEY>
-<S_NAME>Supplier#000000033</S_NAME>
-<S_ADDRESS>gfeKpYw3400L0SDywXA6Ya1Qmq1w6YB9f3R</S_ADDRESS>
-<S_NATIONKEY>7</S_NATIONKEY>
-<S_PHONE>17-138-897-9374</S_PHONE>
-<S_ACCTBAL>8564.12</S_ACCTBAL>
-<S_COMMENT>ironic instructions are. special pearls above </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>34</S_SUPPKEY>
-<S_NAME>Supplier#000000034</S_NAME>
-<S_ADDRESS>mYRe3KvA2O4lL4HhxDKkkrPUDPMKRCSp,Xpa</S_ADDRESS>
-<S_NATIONKEY>10</S_NATIONKEY>
-<S_PHONE>20-519-982-2343</S_PHONE>
-<S_ACCTBAL>237.31</S_ACCTBAL>
-<S_COMMENT>asymptotes are. special, ironic ideas on the close</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>35</S_SUPPKEY>
-<S_NAME>Supplier#000000035</S_NAME>
-<S_ADDRESS>QymmGXxjVVQ5OuABCXVVsu,4eF gU0Qc6</S_ADDRESS>
-<S_NATIONKEY>21</S_NATIONKEY>
-<S_PHONE>31-720-790-5245</S_PHONE>
-<S_ACCTBAL>4381.41</S_ACCTBAL>
-<S_COMMENT>slyly bold pinto beans wake. dependencies nag furiously according to the asymptotes. car</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>36</S_SUPPKEY>
-<S_NAME>Supplier#000000036</S_NAME>
-<S_ADDRESS>mzSpBBJvbjdx3UKTW3bLFewRD78D91lAC879</S_ADDRESS>
-<S_NATIONKEY>13</S_NATIONKEY>
-<S_PHONE>23-273-493-3679</S_PHONE>
-<S_ACCTBAL>2371.51</S_ACCTBAL>
-<S_COMMENT>slyly special braids among the regular, blithe p</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>37</S_SUPPKEY>
-<S_NAME>Supplier#000000037</S_NAME>
-<S_ADDRESS>cqjyB5h1nV</S_ADDRESS>
-<S_NATIONKEY>0</S_NATIONKEY>
-<S_PHONE>10-470-144-1330</S_PHONE>
-<S_ACCTBAL>3017.47</S_ACCTBAL>
-<S_COMMENT>ironic requests alongside of the blithely express accounts wake fluffily above the carefully express</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>38</S_SUPPKEY>
-<S_NAME>Supplier#000000038</S_NAME>
-<S_ADDRESS>xEcx45vD0FXHT7c9mvWFY</S_ADDRESS>
-<S_NATIONKEY>4</S_NATIONKEY>
-<S_PHONE>14-361-296-6426</S_PHONE>
-<S_ACCTBAL>2512.41</S_ACCTBAL>
-<S_COMMENT>blithely bold excuses haggle ironic, pending excuses. carefully bold deposits wake blithel</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>39</S_SUPPKEY>
-<S_NAME>Supplier#000000039</S_NAME>
-<S_ADDRESS>ZM, nSYpEPWr1yAFHaC91qjFcijjeU5eH</S_ADDRESS>
-<S_NATIONKEY>8</S_NATIONKEY>
-<S_PHONE>18-851-856-5633</S_PHONE>
-<S_ACCTBAL>6115.65</S_ACCTBAL>
-<S_COMMENT>ironic, express instructions can sleep bl</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>40</S_SUPPKEY>
-<S_NAME>Supplier#000000040</S_NAME>
-<S_ADDRESS>zyIeWzbbpkTV37vm1nmSGBxSgd2Kp</S_ADDRESS>
-<S_NATIONKEY>22</S_NATIONKEY>
-<S_PHONE>32-231-247-6991</S_PHONE>
-<S_ACCTBAL>-290.06</S_ACCTBAL>
-<S_COMMENT>carefully regular accounts sleep ca</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>41</S_SUPPKEY>
-<S_NAME>Supplier#000000041</S_NAME>
-<S_ADDRESS>G 1FKHR435 wMKFmyt</S_ADDRESS>
-<S_NATIONKEY>18</S_NATIONKEY>
-<S_PHONE>28-739-447-2525</S_PHONE>
-<S_ACCTBAL>6942.67</S_ACCTBAL>
-<S_COMMENT>silently regular packages hinder. blithely express decoys must </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>42</S_SUPPKEY>
-<S_NAME>Supplier#000000042</S_NAME>
-<S_ADDRESS>1Y5lwEgpe3j2vbUBYj3SwLhK62JlwEMtDC</S_ADDRESS>
-<S_NATIONKEY>22</S_NATIONKEY>
-<S_PHONE>32-698-298-6317</S_PHONE>
-<S_ACCTBAL>6565.11</S_ACCTBAL>
-<S_COMMENT>carefully thin courts against the final, regular accounts ar</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>43</S_SUPPKEY>
-<S_NAME>Supplier#000000043</S_NAME>
-<S_ADDRESS>Z5mLuAoTUEeKY5v22VnnA4D87Ao6jF2LvMYnlX8h</S_ADDRESS>
-<S_NATIONKEY>12</S_NATIONKEY>
-<S_PHONE>22-421-568-4862</S_PHONE>
-<S_ACCTBAL>7773.41</S_ACCTBAL>
-<S_COMMENT>slyly final accounts wake blithely slyly regular requests. sl</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>44</S_SUPPKEY>
-<S_NAME>Supplier#000000044</S_NAME>
-<S_ADDRESS>kERxlLDnlIZJdN66zAPHklyL</S_ADDRESS>
-<S_NATIONKEY>7</S_NATIONKEY>
-<S_PHONE>17-713-930-5667</S_PHONE>
-<S_ACCTBAL>9759.38</S_ACCTBAL>
-<S_COMMENT>quickly final instructions after the bold requests hagg</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>45</S_SUPPKEY>
-<S_NAME>Supplier#000000045</S_NAME>
-<S_ADDRESS>LcKnsa8XGtIO0WYSB7hkOrH rnzRg1</S_ADDRESS>
-<S_NATIONKEY>9</S_NATIONKEY>
-<S_PHONE>19-189-635-8862</S_PHONE>
-<S_ACCTBAL>2944.23</S_ACCTBAL>
-<S_COMMENT>furiously bold deposits use expres</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>46</S_SUPPKEY>
-<S_NAME>Supplier#000000046</S_NAME>
-<S_ADDRESS>e0URUXfDOYMdKe16Z5h5StMRbzGmTs,D2cjap</S_ADDRESS>
-<S_NATIONKEY>24</S_NATIONKEY>
-<S_PHONE>34-748-308-3215</S_PHONE>
-<S_ACCTBAL>3580.35</S_ACCTBAL>
-<S_COMMENT>slyly express dependencies behind the blithely silent platelets use </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>47</S_SUPPKEY>
-<S_NAME>Supplier#000000047</S_NAME>
-<S_ADDRESS>3XM1x,Pcxqw,HK4XNlgbnZMbLhBHLA</S_ADDRESS>
-<S_NATIONKEY>14</S_NATIONKEY>
-<S_PHONE>24-810-354-4471</S_PHONE>
-<S_ACCTBAL>2958.09</S_ACCTBAL>
-<S_COMMENT>regular deposits engage slyly with the</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>48</S_SUPPKEY>
-<S_NAME>Supplier#000000048</S_NAME>
-<S_ADDRESS>jg0U FNPMQDuyuKvTnLXXaLf3Wl6OtONA6mQlWJ</S_ADDRESS>
-<S_NATIONKEY>14</S_NATIONKEY>
-<S_PHONE>24-722-551-9498</S_PHONE>
-<S_ACCTBAL>5630.62</S_ACCTBAL>
-<S_COMMENT>carefully unusual packages print </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>49</S_SUPPKEY>
-<S_NAME>Supplier#000000049</S_NAME>
-<S_ADDRESS>Nvq 6macF4GtJvz</S_ADDRESS>
-<S_NATIONKEY>24</S_NATIONKEY>
-<S_PHONE>34-211-567-6800</S_PHONE>
-<S_ACCTBAL>9915.24</S_ACCTBAL>
-<S_COMMENT>blithely silent pinto beans hang slyly. blithely eve</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>50</S_SUPPKEY>
-<S_NAME>Supplier#000000050</S_NAME>
-<S_ADDRESS>rGobqSMMYz0ErrPhCGS</S_ADDRESS>
-<S_NATIONKEY>9</S_NATIONKEY>
-<S_PHONE>19-561-560-7437</S_PHONE>
-<S_ACCTBAL>4515.87</S_ACCTBAL>
-<S_COMMENT>quickly regular theodolites wake within the slyly even accounts. furiously express accounts</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>51</S_SUPPKEY>
-<S_NAME>Supplier#000000051</S_NAME>
-<S_ADDRESS>rDkBXb01POIKjOwrij62uM8O4</S_ADDRESS>
-<S_NATIONKEY>9</S_NATIONKEY>
-<S_PHONE>19-475-537-1368</S_PHONE>
-<S_ACCTBAL>7241.40</S_ACCTBAL>
-<S_COMMENT>instructions wake ironically even excuses? quickly ironic excuses wake slyly! carefully regular pla</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>52</S_SUPPKEY>
-<S_NAME>Supplier#000000052</S_NAME>
-<S_ADDRESS>WCk XCHYzBA1dvJDSol4ZJQQcQN,</S_ADDRESS>
-<S_NATIONKEY>19</S_NATIONKEY>
-<S_PHONE>29-974-934-4713</S_PHONE>
-<S_ACCTBAL>287.16</S_ACCTBAL>
-<S_COMMENT>ironic accounts are slyly above the foxes. regular courts use furiously! slyly pending deposi</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>53</S_SUPPKEY>
-<S_NAME>Supplier#000000053</S_NAME>
-<S_ADDRESS>i9v3 EsYCfLKFU6PIt8iihBOHBB37yR7b3GD7Rt</S_ADDRESS>
-<S_NATIONKEY>7</S_NATIONKEY>
-<S_PHONE>17-886-101-6083</S_PHONE>
-<S_ACCTBAL>6177.35</S_ACCTBAL>
-<S_COMMENT>ideas since the furiously ironic deposits sleep furiously pinto beans. always unu</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>54</S_SUPPKEY>
-<S_NAME>Supplier#000000054</S_NAME>
-<S_ADDRESS>J1s,Wxb5pg</S_ADDRESS>
-<S_NATIONKEY>12</S_NATIONKEY>
-<S_PHONE>22-966-435-7200</S_PHONE>
-<S_ACCTBAL>2733.69</S_ACCTBAL>
-<S_COMMENT>blithely regular ideas was quickly. requests are. blithely regular packages along the silent </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>55</S_SUPPKEY>
-<S_NAME>Supplier#000000055</S_NAME>
-<S_ADDRESS>OqdYSiOQeG4eGi636Tj</S_ADDRESS>
-<S_NATIONKEY>24</S_NATIONKEY>
-<S_PHONE>34-876-912-6007</S_PHONE>
-<S_ACCTBAL>7162.15</S_ACCTBAL>
-<S_COMMENT>special, express deposits against the bold, fluffy pinto beans are even, re</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>56</S_SUPPKEY>
-<S_NAME>Supplier#000000056</S_NAME>
-<S_ADDRESS>fUVtlUVal GiHBOuYoUQ XQ9NfNLQR3Gl</S_ADDRESS>
-<S_NATIONKEY>16</S_NATIONKEY>
-<S_PHONE>26-471-195-5486</S_PHONE>
-<S_ACCTBAL>-632.16</S_ACCTBAL>
-<S_COMMENT>silent gifts wake stealthily carefully pending d</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>57</S_SUPPKEY>
-<S_NAME>Supplier#000000057</S_NAME>
-<S_ADDRESS>bEWqUVRR f0mb2o18Y</S_ADDRESS>
-<S_NATIONKEY>17</S_NATIONKEY>
-<S_PHONE>27-681-514-6892</S_PHONE>
-<S_ACCTBAL>-831.07</S_ACCTBAL>
-<S_COMMENT>pending accounts boost bl</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>58</S_SUPPKEY>
-<S_NAME>Supplier#000000058</S_NAME>
-<S_ADDRESS>01dEADIZoCULZXg</S_ADDRESS>
-<S_NATIONKEY>16</S_NATIONKEY>
-<S_PHONE>26-659-969-5586</S_PHONE>
-<S_ACCTBAL>92.44</S_ACCTBAL>
-<S_COMMENT>unusual requests are blithely. slyly final packages are carefully. busy, final multipliers x-ray</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>59</S_SUPPKEY>
-<S_NAME>Supplier#000000059</S_NAME>
-<S_ADDRESS>N8lKbYjMnVlEHmTPRmBgtLiX8rrJx</S_ADDRESS>
-<S_NATIONKEY>17</S_NATIONKEY>
-<S_PHONE>27-249-395-9123</S_PHONE>
-<S_ACCTBAL>586.16</S_ACCTBAL>
-<S_COMMENT>carefully ironic deposits detect carefully along the final packages. foxes </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>60</S_SUPPKEY>
-<S_NAME>Supplier#000000060</S_NAME>
-<S_ADDRESS>cb08ntDTARo47WmnBcYXu</S_ADDRESS>
-<S_NATIONKEY>8</S_NATIONKEY>
-<S_PHONE>18-550-360-2464</S_PHONE>
-<S_ACCTBAL>4515.80</S_ACCTBAL>
-<S_COMMENT>slyly regular accounts are final packages. quickly regular ideas hang carefully </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>61</S_SUPPKEY>
-<S_NAME>Supplier#000000061</S_NAME>
-<S_ADDRESS>Oz0M1qBR9I</S_ADDRESS>
-<S_NATIONKEY>8</S_NATIONKEY>
-<S_PHONE>18-396-489-9719</S_PHONE>
-<S_ACCTBAL>6096.58</S_ACCTBAL>
-<S_COMMENT>quickly pending pinto beans above the slyly bold instruction</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>62</S_SUPPKEY>
-<S_NAME>Supplier#000000062</S_NAME>
-<S_ADDRESS>bSmlFYUKBeRsqJxwC9 zS6xpFdEf5jNTb</S_ADDRESS>
-<S_NATIONKEY>19</S_NATIONKEY>
-<S_PHONE>29-603-653-2494</S_PHONE>
-<S_ACCTBAL>9202.57</S_ACCTBAL>
-<S_COMMENT>final deposits affix ironic dependencies? pending packages grow furiously after the carefully</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>63</S_SUPPKEY>
-<S_NAME>Supplier#000000063</S_NAME>
-<S_ADDRESS>NlV0OQyIoPvPkw5AYuWGomX,hgqm1</S_ADDRESS>
-<S_NATIONKEY>5</S_NATIONKEY>
-<S_PHONE>15-781-401-3047</S_PHONE>
-<S_ACCTBAL>5742.03</S_ACCTBAL>
-<S_COMMENT>furiously express requests use. bold </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>64</S_SUPPKEY>
-<S_NAME>Supplier#000000064</S_NAME>
-<S_ADDRESS>w80JjnIP lGoLdUjRutbv81gGlqqpW4PQBeOtSYU</S_ADDRESS>
-<S_NATIONKEY>24</S_NATIONKEY>
-<S_PHONE>34-278-790-7004</S_PHONE>
-<S_ACCTBAL>1309.70</S_ACCTBAL>
-<S_COMMENT>fluffily even instructions cajole accounts</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>65</S_SUPPKEY>
-<S_NAME>Supplier#000000065</S_NAME>
-<S_ADDRESS>BsAnHUmSFArppKrM</S_ADDRESS>
-<S_NATIONKEY>22</S_NATIONKEY>
-<S_PHONE>32-444-835-2434</S_PHONE>
-<S_ACCTBAL>-963.79</S_ACCTBAL>
-<S_COMMENT>regular, regular theodolites wake</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>66</S_SUPPKEY>
-<S_NAME>Supplier#000000066</S_NAME>
-<S_ADDRESS>qYdruFJQJYYiKvnNVmYfCVydVB8bcW,AW,U6SOV3</S_ADDRESS>
-<S_NATIONKEY>23</S_NATIONKEY>
-<S_PHONE>33-300-836-9529</S_PHONE>
-<S_ACCTBAL>2455.98</S_ACCTBAL>
-<S_COMMENT>quickly silent excuses about the even hockey players integrate</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>67</S_SUPPKEY>
-<S_NAME>Supplier#000000067</S_NAME>
-<S_ADDRESS>7YrEKJncHFk5D W7ZaqfAXV</S_ADDRESS>
-<S_NATIONKEY>4</S_NATIONKEY>
-<S_PHONE>14-563-538-1657</S_PHONE>
-<S_ACCTBAL>3576.55</S_ACCTBAL>
-<S_COMMENT>silent, even accounts among the bold, pending packages </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>68</S_SUPPKEY>
-<S_NAME>Supplier#000000068</S_NAME>
-<S_ADDRESS>Ue6N50wH2CwE4PPgTGLmat,ibGYYlDoOb3xQwtgb</S_ADDRESS>
-<S_NATIONKEY>21</S_NATIONKEY>
-<S_PHONE>31-267-327-4328</S_PHONE>
-<S_ACCTBAL>5119.38</S_ACCTBAL>
-<S_COMMENT>furiously regular deposits wake fluffily requests. always unusual requests need to are. bold acco</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>69</S_SUPPKEY>
-<S_NAME>Supplier#000000069</S_NAME>
-<S_ADDRESS>T2Dl9,f97e333eRuMi2z </S_ADDRESS>
-<S_NATIONKEY>4</S_NATIONKEY>
-<S_PHONE>14-491-707-8310</S_PHONE>
-<S_ACCTBAL>8466.50</S_ACCTBAL>
-<S_COMMENT>ironic, ironic requests cajole blithely express accoun</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>70</S_SUPPKEY>
-<S_NAME>Supplier#000000070</S_NAME>
-<S_ADDRESS>INWNH2w,OOWgNDq0BRCcBwOMQc6PdFDc4</S_ADDRESS>
-<S_NATIONKEY>6</S_NATIONKEY>
-<S_PHONE>16-821-608-1166</S_PHONE>
-<S_ACCTBAL>9508.37</S_ACCTBAL>
-<S_COMMENT>accounts use. busily even theodolites are blithely. slyly</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>71</S_SUPPKEY>
-<S_NAME>Supplier#000000071</S_NAME>
-<S_ADDRESS>YFo8an7P6wi Q</S_ADDRESS>
-<S_NATIONKEY>1</S_NATIONKEY>
-<S_PHONE>11-743-919-7272</S_PHONE>
-<S_ACCTBAL>8179.68</S_ACCTBAL>
-<S_COMMENT>ironic requests after the regular, bold</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>72</S_SUPPKEY>
-<S_NAME>Supplier#000000072</S_NAME>
-<S_ADDRESS>mKpAJojtawk2alqV4 ZEbJ3PH3wfYqy AM8rGq1</S_ADDRESS>
-<S_NATIONKEY>18</S_NATIONKEY>
-<S_PHONE>28-113-898-6643</S_PHONE>
-<S_ACCTBAL>7014.50</S_ACCTBAL>
-<S_COMMENT>quickly even platelets haggle alongside of the furiously express pa</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>73</S_SUPPKEY>
-<S_NAME>Supplier#000000073</S_NAME>
-<S_ADDRESS>HBZA1NHvrswQCxTTjg 5XrfSOGgMRKNCe2ovE</S_ADDRESS>
-<S_NATIONKEY>16</S_NATIONKEY>
-<S_PHONE>26-758-310-7496</S_PHONE>
-<S_ACCTBAL>3793.13</S_ACCTBAL>
-<S_COMMENT>carefully even foxes cajole </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>74</S_SUPPKEY>
-<S_NAME>Supplier#000000074</S_NAME>
-<S_ADDRESS>uM3yV5NOc6b5wNdpxF69CW 8QvDxqvKubRJtA</S_ADDRESS>
-<S_NATIONKEY>20</S_NATIONKEY>
-<S_PHONE>30-166-486-1559</S_PHONE>
-<S_ACCTBAL>4170.51</S_ACCTBAL>
-<S_COMMENT>furiously regular depths affix carefully deposits. gifts are according to the furiously regular requ</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>75</S_SUPPKEY>
-<S_NAME>Supplier#000000075</S_NAME>
-<S_ADDRESS>7f3gN4rP1livII</S_ADDRESS>
-<S_NATIONKEY>18</S_NATIONKEY>
-<S_PHONE>28-716-704-8686</S_PHONE>
-<S_ACCTBAL>-224.84</S_ACCTBAL>
-<S_COMMENT>packages cajole. fluffily ironic dolphins wake furiously after the even multiplier</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>76</S_SUPPKEY>
-<S_NAME>Supplier#000000076</S_NAME>
-<S_ADDRESS>JBhSBa3cLYvNgHUYtUHmtECCD</S_ADDRESS>
-<S_NATIONKEY>14</S_NATIONKEY>
-<S_PHONE>24-228-763-7840</S_PHONE>
-<S_ACCTBAL>2971.10</S_ACCTBAL>
-<S_COMMENT>blithely silent packages nag carefully furiously regu</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>77</S_SUPPKEY>
-<S_NAME>Supplier#000000077</S_NAME>
-<S_ADDRESS>wVtcr0uH3CyrSiWMLsqnB09Syo,UuZxPMeBghlY</S_ADDRESS>
-<S_NATIONKEY>7</S_NATIONKEY>
-<S_PHONE>17-281-345-4863</S_PHONE>
-<S_ACCTBAL>4186.95</S_ACCTBAL>
-<S_COMMENT>blithely pending accounts ru</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>78</S_SUPPKEY>
-<S_NAME>Supplier#000000078</S_NAME>
-<S_ADDRESS>9y3OZ2CV hGrsrQxzB7V3zTtygHVHlG3SD6yrz</S_ADDRESS>
-<S_NATIONKEY>5</S_NATIONKEY>
-<S_PHONE>15-670-998-6860</S_PHONE>
-<S_ACCTBAL>1044.10</S_ACCTBAL>
-<S_COMMENT>requests about the packages wake </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>79</S_SUPPKEY>
-<S_NAME>Supplier#000000079</S_NAME>
-<S_ADDRESS>p0u3tztSXUD2J8vFfLNFNKsrRRv7qyUtTBTA</S_ADDRESS>
-<S_NATIONKEY>14</S_NATIONKEY>
-<S_PHONE>24-402-227-9600</S_PHONE>
-<S_ACCTBAL>1191.94</S_ACCTBAL>
-<S_COMMENT>deposits hinder. packages wake quickly even, bold accounts. furiou</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>80</S_SUPPKEY>
-<S_NAME>Supplier#000000080</S_NAME>
-<S_ADDRESS>cJ2MHSEJ13rIL2Wj3D5i6hRo30,ZiNUXhqn</S_ADDRESS>
-<S_NATIONKEY>21</S_NATIONKEY>
-<S_PHONE>31-646-289-1906</S_PHONE>
-<S_ACCTBAL>-40.45</S_ACCTBAL>
-<S_COMMENT>slyly regular depths eat furiously. carefully even ideas are quickly aga</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>81</S_SUPPKEY>
-<S_NAME>Supplier#000000081</S_NAME>
-<S_ADDRESS>SLlacbhgpKmVa,gF3saYv12e0</S_ADDRESS>
-<S_NATIONKEY>12</S_NATIONKEY>
-<S_PHONE>22-535-310-6971</S_PHONE>
-<S_ACCTBAL>166.32</S_ACCTBAL>
-<S_COMMENT>final, final platelets nag</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>82</S_SUPPKEY>
-<S_NAME>Supplier#000000082</S_NAME>
-<S_ADDRESS>WyTKA7ZpF15t1aCNlT3</S_ADDRESS>
-<S_NATIONKEY>18</S_NATIONKEY>
-<S_PHONE>28-177-572-9691</S_PHONE>
-<S_ACCTBAL>-724.31</S_ACCTBAL>
-<S_COMMENT>fluffily special foxes nag boldly u</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>83</S_SUPPKEY>
-<S_NAME>Supplier#000000083</S_NAME>
-<S_ADDRESS>WRJUkzCn050seVz57oAfrbCuw</S_ADDRESS>
-<S_NATIONKEY>14</S_NATIONKEY>
-<S_PHONE>24-529-559-2461</S_PHONE>
-<S_ACCTBAL>1467.77</S_ACCTBAL>
-<S_COMMENT>dependencies according to the fluf</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>84</S_SUPPKEY>
-<S_NAME>Supplier#000000084</S_NAME>
-<S_ADDRESS>DcYjWMiZGQqEKOJi4wAmIV08ikx</S_ADDRESS>
-<S_NATIONKEY>24</S_NATIONKEY>
-<S_PHONE>34-869-118-7803</S_PHONE>
-<S_ACCTBAL>4780.93</S_ACCTBAL>
-<S_COMMENT>accounts haggle. slyly final requests wake sometimes carefully unusual dolphin</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>85</S_SUPPKEY>
-<S_NAME>Supplier#000000085</S_NAME>
-<S_ADDRESS>Ckls9RtlzKSF</S_ADDRESS>
-<S_NATIONKEY>7</S_NATIONKEY>
-<S_PHONE>17-167-806-8199</S_PHONE>
-<S_ACCTBAL>7174.74</S_ACCTBAL>
-<S_COMMENT>furiously silent warthogs unwind. furiously un</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>86</S_SUPPKEY>
-<S_NAME>Supplier#000000086</S_NAME>
-<S_ADDRESS>J1fgg5QaqnN</S_ADDRESS>
-<S_NATIONKEY>19</S_NATIONKEY>
-<S_PHONE>29-903-665-7065</S_PHONE>
-<S_ACCTBAL>1883.37</S_ACCTBAL>
-<S_COMMENT>slyly pending requests wake car</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>87</S_SUPPKEY>
-<S_NAME>Supplier#000000087</S_NAME>
-<S_ADDRESS>WCw7URDj8zoZ7tqC3cpm7</S_ADDRESS>
-<S_NATIONKEY>24</S_NATIONKEY>
-<S_PHONE>34-860-229-1674</S_PHONE>
-<S_ACCTBAL>4746.66</S_ACCTBAL>
-<S_COMMENT>pending, even requests haggle slyly slyly spe</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>88</S_SUPPKEY>
-<S_NAME>Supplier#000000088</S_NAME>
-<S_ADDRESS>yOshY8wwzMgS</S_ADDRESS>
-<S_NATIONKEY>11</S_NATIONKEY>
-<S_PHONE>21-191-938-9469</S_PHONE>
-<S_ACCTBAL>3086.13</S_ACCTBAL>
-<S_COMMENT>foxes among the furiously re</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>89</S_SUPPKEY>
-<S_NAME>Supplier#000000089</S_NAME>
-<S_ADDRESS>fhtzZcSorhud1</S_ADDRESS>
-<S_NATIONKEY>9</S_NATIONKEY>
-<S_PHONE>19-259-876-1014</S_PHONE>
-<S_ACCTBAL>1638.02</S_ACCTBAL>
-<S_COMMENT>bold, even instructions print carefully even courts. ironic,</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>90</S_SUPPKEY>
-<S_NAME>Supplier#000000090</S_NAME>
-<S_ADDRESS>bPE6Uhz1f2m3gwSGMrnRt,g,3gq37r5kxgphqss1</S_ADDRESS>
-<S_NATIONKEY>6</S_NATIONKEY>
-<S_PHONE>16-380-123-9217</S_PHONE>
-<S_ACCTBAL>6201.77</S_ACCTBAL>
-<S_COMMENT>carefully regular platelets boost slyly bold foxes. even pint</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>91</S_SUPPKEY>
-<S_NAME>Supplier#000000091</S_NAME>
-<S_ADDRESS>YV45D7TkfdQanOOZ7q9QxkyGUapU1oOWU6q3</S_ADDRESS>
-<S_NATIONKEY>3</S_NATIONKEY>
-<S_PHONE>13-604-986-9056</S_PHONE>
-<S_ACCTBAL>6255.87</S_ACCTBAL>
-<S_COMMENT>carefully ironic packages impress across the slyly express accounts: ironic theodo</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>92</S_SUPPKEY>
-<S_NAME>Supplier#000000092</S_NAME>
-<S_ADDRESS>n48Wy4QI3lml8T217rk</S_ADDRESS>
-<S_NATIONKEY>2</S_NATIONKEY>
-<S_PHONE>12-701-432-8346</S_PHONE>
-<S_ACCTBAL>2470.84</S_ACCTBAL>
-<S_COMMENT>instructions sublate fluffily fluffily bold platelets. deposits impress quickly slyly even </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>93</S_SUPPKEY>
-<S_NAME>Supplier#000000093</S_NAME>
-<S_ADDRESS>wd1djjKXT,4zBm</S_ADDRESS>
-<S_NATIONKEY>16</S_NATIONKEY>
-<S_PHONE>26-528-528-1157</S_PHONE>
-<S_ACCTBAL>368.76</S_ACCTBAL>
-<S_COMMENT>carefully express pinto beans use slyly. slyly fina</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>94</S_SUPPKEY>
-<S_NAME>Supplier#000000094</S_NAME>
-<S_ADDRESS>lK,pLPjAMVGJOXN80zPZuNQjpChliE</S_ADDRESS>
-<S_NATIONKEY>4</S_NATIONKEY>
-<S_PHONE>14-728-888-8882</S_PHONE>
-<S_ACCTBAL>2766.80</S_ACCTBAL>
-<S_COMMENT>ironic packages breach. carefully pending accou</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>95</S_SUPPKEY>
-<S_NAME>Supplier#000000095</S_NAME>
-<S_ADDRESS>p2 2hBfH5TD</S_ADDRESS>
-<S_NATIONKEY>19</S_NATIONKEY>
-<S_PHONE>29-142-539-1403</S_PHONE>
-<S_ACCTBAL>2588.83</S_ACCTBAL>
-<S_COMMENT>bold instructions are along the carefully final re</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>96</S_SUPPKEY>
-<S_NAME>Supplier#000000096</S_NAME>
-<S_ADDRESS>Lbxp3WIipye o2wZme1i9iJx,xTt1Mp</S_ADDRESS>
-<S_NATIONKEY>12</S_NATIONKEY>
-<S_PHONE>22-888-654-7193</S_PHONE>
-<S_ACCTBAL>3437.24</S_ACCTBAL>
-<S_COMMENT>evenly final excuses are fluffily slyly silent theodolites. quickly final </S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>97</S_SUPPKEY>
-<S_NAME>Supplier#000000097</S_NAME>
-<S_ADDRESS>MrCQha2G6ndX1fp6CA</S_ADDRESS>
-<S_NATIONKEY>4</S_NATIONKEY>
-<S_PHONE>14-618-678-1789</S_PHONE>
-<S_ACCTBAL>6642.22</S_ACCTBAL>
-<S_COMMENT>unusual platelets cajole carefully. quickly even packages use furiously. speci</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>98</S_SUPPKEY>
-<S_NAME>Supplier#000000098</S_NAME>
-<S_ADDRESS>ogHn8dpXB5Q</S_ADDRESS>
-<S_NATIONKEY>21</S_NATIONKEY>
-<S_PHONE>31-914-775-1978</S_PHONE>
-<S_ACCTBAL>5873.07</S_ACCTBAL>
-<S_COMMENT>slyly regular requests mold slyly regular depo</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>99</S_SUPPKEY>
-<S_NAME>Supplier#000000099</S_NAME>
-<S_ADDRESS>4SxkTHG28nZrtT0,MnVF9H</S_ADDRESS>
-<S_NATIONKEY>18</S_NATIONKEY>
-<S_PHONE>28-272-909-1617</S_PHONE>
-<S_ACCTBAL>3671.34</S_ACCTBAL>
-<S_COMMENT>fluffily final packages haggle carefully ab</S_COMMENT>
-</T>
-<T>
-<S_SUPPKEY>100</S_SUPPKEY>
-<S_NAME>Supplier#000000100</S_NAME>
-<S_ADDRESS>rIlN li8zvW22l2slbcx ECP4fL</S_ADDRESS>
-<S_NATIONKEY>21</S_NATIONKEY>
-<S_PHONE>31-351-324-5062</S_PHONE>
-<S_ACCTBAL>3191.70</S_ACCTBAL>
-<S_COMMENT>carefully ironic forges nag carefully blithely express de</S_COMMENT>
-</T>
-</table>
+<response>
+<row>
+<row _id="row-ei7b_eqmg.5wfp" _uuid="00000000-0000-0000-AB38-5E46D742C16F" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-ei7b_eqmg.5wfp">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Total</group>
+<subgroup>Total</subgroup>
+<sample_size>6794</sample_size>
+<percent>0.9</percent>
+<standard_error>0.2</standard_error>
+</row>
+<row _id="row-3yi3.5j9h.me6v" _uuid="00000000-0000-0000-4DB5-257B7149191B" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-3yi3.5j9h.me6v">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Age group</group>
+<subgroup>18-44 years</subgroup>
+<sample_size>2606</sample_size>
+<percent>1.5</percent>
+<standard_error>0.3</standard_error>
+</row>
+<row _id="row-z8yq~d8ke.dbn3" _uuid="00000000-0000-0000-11FD-96C5BF1EB472" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-z8yq~d8ke.dbn3">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Age group</group>
+<subgroup>45-64 years</subgroup>
+<sample_size>2386</sample_size>
+<percent>0.5</percent>
+<standard_error>0.1</standard_error>
+</row>
+<row _id="row-eg3m_2vwy~f9i5" _uuid="00000000-0000-0000-7608-3349C22FBC65" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-eg3m_2vwy~f9i5">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Age group</group>
+<subgroup>65 years and over</subgroup>
+<sample_size>1802</sample_size>
+<percent>0</percent>
+<standard_error>0</standard_error>
+</row>
+<row _id="row-9nrg-ybzv_fxjh" _uuid="00000000-0000-0000-2DB8-CB77472283DA" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-9nrg-ybzv_fxjh">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Race/Hispanic origin</group>
+<subgroup>White non-Hispanic</subgroup>
+<sample_size>4514</sample_size>
+<percent>0.5</percent>
+<standard_error>0.2</standard_error>
+</row>
+<row _id="row-54bm.azb8_qz24" _uuid="00000000-0000-0000-B12D-EDAFA3EF1C02" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-54bm.azb8_qz24">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Race/Hispanic origin</group>
+<subgroup>Black non-Hispanic</subgroup>
+<sample_size>810</sample_size>
+<percent>2.5</percent>
+<standard_error>0.6</standard_error>
+</row>
+<row _id="row-y3ym~ityt.kyeh" _uuid="00000000-0000-0000-4379-0B08D6F6F0C9" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-y3ym~ityt.kyeh">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Race/Hispanic origin</group>
+<subgroup>Other non-Hispanic</subgroup>
+<sample_size>528</sample_size>
+<percent>0.5</percent>
+<standard_error>0.3</standard_error>
+</row>
+<row _id="row-qrez_xth3.ie6x" _uuid="00000000-0000-0000-FE26-3629C5104AA8" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-qrez_xth3.ie6x">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Race/Hispanic origin</group>
+<subgroup>Hispanic</subgroup>
+<sample_size>942</sample_size>
+<percent>1.3</percent>
+<standard_error>0.6</standard_error>
+</row>
+<row _id="row-6vvu~kf7a_396k" _uuid="00000000-0000-0000-7F03-14E89ED60CCC" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-6vvu~kf7a_396k">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Sex</group>
+<subgroup>Male</subgroup>
+<sample_size>2968</sample_size>
+<percent>0.7</percent>
+<standard_error>0.2</standard_error>
+</row>
+<row _id="row-y6bc-3jgu-ipss" _uuid="00000000-0000-0000-19BB-6A21D1575500" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-y6bc-3jgu-ipss">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Sex</group>
+<subgroup>Female</subgroup>
+<sample_size>3826</sample_size>
+<percent>1</percent>
+<standard_error>0.2</standard_error>
+</row>
+<row _id="row-9yda-6sj9-bayn" _uuid="00000000-0000-0000-4988-044844C0C049" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-9yda-6sj9-bayn">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Education</group>
+<subgroup>High school graduate or less</subgroup>
+<sample_size>1295</sample_size>
+<percent>0.8</percent>
+<standard_error>0.2</standard_error>
+</row>
+<row _id="row-few2~mz2f_8nqa" _uuid="00000000-0000-0000-AD9D-E8B14AEA6FCC" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-few2~mz2f_8nqa">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Education</group>
+<subgroup>Some college</subgroup>
+<sample_size>2552</sample_size>
+<percent>1.6</percent>
+<standard_error>0.4</standard_error>
+</row>
+<row _id="row-kxmy.j2vz-z4tz" _uuid="00000000-0000-0000-1555-54C1B2002119" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-kxmy.j2vz-z4tz">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Education</group>
+<subgroup>Bachelor's degree or above</subgroup>
+<sample_size>2947</sample_size>
+<percent>0.2</percent>
+<standard_error>0.1</standard_error>
+</row>
+<row _id="row-ufbr~ancn_2fqp" _uuid="00000000-0000-0000-7EA1-C3AE870EF554" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-ufbr~ancn_2fqp">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Urbanization</group>
+<subgroup>Metropolitan</subgroup>
+<sample_size>6056</sample_size>
+<percent>0.8</percent>
+<standard_error>0.1</standard_error>
+</row>
+<row _id="row-2vk5~e2m2~kp9b" _uuid="00000000-0000-0000-BFDC-E0D89F78A870" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-2vk5~e2m2~kp9b">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Urbanization</group>
+<subgroup>Non-Metropolitan</subgroup>
+<sample_size>738</sample_size>
+<percent>1.6</percent>
+<standard_error>0.8</standard_error>
+</row>
+<row _id="row-x5xu_gbkc-34xg" _uuid="00000000-0000-0000-3358-72D612964423" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-x5xu_gbkc-34xg">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Chronic conditions</group>
+<subgroup>One or more chronic conditions</subgroup>
+<sample_size>4085</sample_size>
+<percent>1</percent>
+<standard_error>0.2</standard_error>
+</row>
+<row _id="row-xdk4_8usg.jdn3" _uuid="00000000-0000-0000-09F7-5D27FE784D2E" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-xdk4_8usg.jdn3">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Chronic conditions</group>
+<subgroup>Diagnosed diabetes</subgroup>
+<sample_size>767</sample_size>
+<percent>0.7</percent>
+<standard_error>0.3</standard_error>
+</row>
+<row _id="row-3u7t.fzwp~jf6r" _uuid="00000000-0000-0000-B0BE-E79CA23DCB8E" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-3u7t.fzwp~jf6r">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Chronic conditions</group>
+<subgroup>Diagnosed hypertension</subgroup>
+<sample_size>2425</sample_size>
+<percent>0.9</percent>
+<standard_error>0.3</standard_error>
+</row>
+<row _id="row-hwis~5hkk~k87z" _uuid="00000000-0000-0000-9F59-161D217AC8E1" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-hwis~5hkk~k87z">
+<round>1</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Chronic conditions</group>
+<subgroup>Current asthma</subgroup>
+<sample_size>697</sample_size>
+<percent>1</percent>
+<standard_error>0.4</standard_error>
+</row>
+<row _id="row-2dgs.9v8v-ws2c" _uuid="00000000-0000-0000-9636-C15430781232" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-2dgs.9v8v-ws2c">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Total</group>
+<subgroup>Total</subgroup>
+<sample_size>5974</sample_size>
+<percent>1.1</percent>
+<standard_error>0.2</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-vktg_reg7.7zrr" _uuid="00000000-0000-0000-F448-59A60FCD2B1F" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-vktg_reg7.7zrr">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Age group</group>
+<subgroup>18-44 years</subgroup>
+<sample_size>2214</sample_size>
+<percent>1.9</percent>
+<standard_error>0.4</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-btpk_dny5.m599" _uuid="00000000-0000-0000-10BA-62866CBEFB67" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-btpk_dny5.m599">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Age group</group>
+<subgroup>45-64 years</subgroup>
+<sample_size>2083</sample_size>
+<percent>0.6</percent>
+<standard_error>0.2</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-9yy8_szt4-dxfk" _uuid="00000000-0000-0000-AB46-2262D3E8F9D3" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-9yy8_szt4-dxfk">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Age group</group>
+<subgroup>65 years and over</subgroup>
+<sample_size>1677</sample_size>
+<percent>0.1</percent>
+<standard_error>0.1</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-4xb4~3eci.erym" _uuid="00000000-0000-0000-6E9D-B4F21D5CD0A8" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-4xb4~3eci.erym">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Race/Hispanic origin</group>
+<subgroup>White non-Hispanic</subgroup>
+<sample_size>4074</sample_size>
+<percent>0.3</percent>
+<standard_error>0.1</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-cga4.v8se-7hfu" _uuid="00000000-0000-0000-68F7-816502A1F90E" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-cga4.v8se-7hfu">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Race/Hispanic origin</group>
+<subgroup>Black non-Hispanic</subgroup>
+<sample_size>691</sample_size>
+<percent>2.6</percent>
+<standard_error>1.1</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-k3uy.3v8v_q835" _uuid="00000000-0000-0000-43BF-36A4D1A60390" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-k3uy.3v8v_q835">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Race/Hispanic origin</group>
+<subgroup>Other non-Hispanic</subgroup>
+<sample_size>461</sample_size>
+<percent>2.1</percent>
+<standard_error>1</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-bmad.nzsn-ay2b" _uuid="00000000-0000-0000-91F9-ED602F263A51" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-bmad.nzsn-ay2b">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Race/Hispanic origin</group>
+<subgroup>Hispanic</subgroup>
+<sample_size>748</sample_size>
+<percent>2.8</percent>
+<standard_error>0.8</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-2qfd_k4jb~edfx" _uuid="00000000-0000-0000-7FA3-C4BF1F5144D6" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-2qfd_k4jb~edfx">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Sex</group>
+<subgroup>Male</subgroup>
+<sample_size>2589</sample_size>
+<percent>1</percent>
+<standard_error>0.3</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-uvsy.bxb4-tniy" _uuid="00000000-0000-0000-7C9F-3E56385920AE" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-uvsy.bxb4-tniy">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Sex</group>
+<subgroup>Female</subgroup>
+<sample_size>3385</sample_size>
+<percent>1.3</percent>
+<standard_error>0.2</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-cxqv_dfhb~zu5w" _uuid="00000000-0000-0000-0661-C617186959B8" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-cxqv_dfhb~zu5w">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Education</group>
+<subgroup>High school graduate or less</subgroup>
+<sample_size>1102</sample_size>
+<percent>1.2</percent>
+<standard_error>0.5</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-mgtd~zuak.t3bf" _uuid="00000000-0000-0000-D958-7D6A20247807" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-mgtd~zuak.t3bf">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Education</group>
+<subgroup>Some college</subgroup>
+<sample_size>2226</sample_size>
+<percent>1.6</percent>
+<standard_error>0.4</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-6bsw_wpm2~i92j" _uuid="00000000-0000-0000-7185-B8CED0379D1F" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-6bsw_wpm2~i92j">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Education</group>
+<subgroup>Bachelor's degree or above</subgroup>
+<sample_size>2646</sample_size>
+<percent>0.6</percent>
+<standard_error>0.2</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-w7s3-fpz3_uvn3" _uuid="00000000-0000-0000-9A81-124D2FF92E82" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-w7s3-fpz3_uvn3">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Urbanization</group>
+<subgroup>Metropolitan</subgroup>
+<sample_size>5317</sample_size>
+<percent>1.2</percent>
+<standard_error>0.2</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-arsd~3va2_5i6c" _uuid="00000000-0000-0000-8591-8DC54BEC8737" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-arsd~3va2_5i6c">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Urbanization</group>
+<subgroup>Non-Metropolitan</subgroup>
+<sample_size>657</sample_size>
+<percent>0.7</percent>
+<standard_error>0.3</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-knyv~m3c2-9p2k" _uuid="00000000-0000-0000-9340-FF44CEF4C76A" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-knyv~m3c2-9p2k">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Chronic conditions</group>
+<subgroup>One or more chronic conditions</subgroup>
+<sample_size>3648</sample_size>
+<percent>1.3</percent>
+<standard_error>0.3</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-rh2w-mycn-9abv" _uuid="00000000-0000-0000-E58F-BB8E4E1D514C" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-rh2w-mycn-9abv">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Chronic conditions</group>
+<subgroup>Diagnosed diabetes</subgroup>
+<sample_size>691</sample_size>
+<percent>1.1</percent>
+<standard_error>0.4</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-8i8f-kg6u_sdj9" _uuid="00000000-0000-0000-E850-63A2011484D2" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-8i8f-kg6u_sdj9">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Chronic conditions</group>
+<subgroup>Diagnosed hypertension</subgroup>
+<sample_size>2189</sample_size>
+<percent>1.1</percent>
+<standard_error>0.3</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-w3y7_6nh4.ap9c" _uuid="00000000-0000-0000-C0DD-94F5CAB34EC8" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-w3y7_6nh4.ap9c">
+<round>2</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Chronic conditions</group>
+<subgroup>Current asthma</subgroup>
+<sample_size>619</sample_size>
+<percent>2.7</percent>
+<standard_error>1</standard_error>
+<significant_1>0</significant_1>
+</row>
+<row _id="row-gijx_fg94_xg56" _uuid="00000000-0000-0000-7438-21EA324A7EFA" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-gijx_fg94_xg56">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Total</group>
+<subgroup>Total</subgroup>
+<sample_size>5450</sample_size>
+<percent>1.2</percent>
+<standard_error>0.3</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-arpj_r6w4.5hu5" _uuid="00000000-0000-0000-6CD8-B2F6BCE02F60" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-arpj_r6w4.5hu5">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Age group</group>
+<subgroup>18-44 years</subgroup>
+<sample_size>1975</sample_size>
+<percent>1.9</percent>
+<standard_error>0.5</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-y7y4_epqc.52qk" _uuid="00000000-0000-0000-B8FE-761FFCA285E9" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-y7y4_epqc.52qk">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Age group</group>
+<subgroup>45-64 years</subgroup>
+<sample_size>1735</sample_size>
+<percent>0.8</percent>
+<standard_error>0.3</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-p93q~3xqb.syt9" _uuid="00000000-0000-0000-AD06-EE06663FAF44" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-p93q~3xqb.syt9">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Age group</group>
+<subgroup>65 years and over</subgroup>
+<sample_size>1740</sample_size>
+<percent>0.4</percent>
+<standard_error>0.2</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-j8tx_sx6f.22mz" _uuid="00000000-0000-0000-A5BE-D9BC6ECBD388" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-j8tx_sx6f.22mz">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Race/Hispanic origin</group>
+<subgroup>White non-Hispanic</subgroup>
+<sample_size>3476</sample_size>
+<percent>0.4</percent>
+<standard_error>0.1</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-gifc.k5z9_yvn9" _uuid="00000000-0000-0000-DFAE-6474C12F2845" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-gifc.k5z9_yvn9">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Race/Hispanic origin</group>
+<subgroup>Black non-Hispanic</subgroup>
+<sample_size>762</sample_size>
+<suppression>*</suppression>
+</row>
+<row _id="row-njq9_ewbs_r7my" _uuid="00000000-0000-0000-AEED-3DCF68231849" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-njq9_ewbs_r7my">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Race/Hispanic origin</group>
+<subgroup>Other non-Hispanic</subgroup>
+<sample_size>393</sample_size>
+<percent>2</percent>
+<standard_error>1</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-qad9.zsjp.wpmp" _uuid="00000000-0000-0000-719F-88C5D15A0126" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-qad9.zsjp.wpmp">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Race/Hispanic origin</group>
+<subgroup>Hispanic</subgroup>
+<sample_size>819</sample_size>
+<percent>2.5</percent>
+<standard_error>1</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-pxgj-yh6d.z8fw" _uuid="00000000-0000-0000-95B3-58BE833D21C2" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-pxgj-yh6d.z8fw">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Sex</group>
+<subgroup>Male</subgroup>
+<sample_size>2464</sample_size>
+<percent>1.3</percent>
+<standard_error>0.3</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-i37h_ufsx-s2iq" _uuid="00000000-0000-0000-BF03-AD8FA8336FF8" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-i37h_ufsx-s2iq">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Sex</group>
+<subgroup>Female</subgroup>
+<sample_size>2986</sample_size>
+<percent>1.1</percent>
+<standard_error>0.3</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-quac-2mhe.fibc" _uuid="00000000-0000-0000-387E-DEAD06292596" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-quac-2mhe.fibc">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Education</group>
+<subgroup>High school graduate or less</subgroup>
+<sample_size>1277</sample_size>
+<percent>1.7</percent>
+<standard_error>0.5</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-wukc~rsb4~5hhi" _uuid="00000000-0000-0000-8130-94FFC6FD9EF8" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-wukc~rsb4~5hhi">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Education</group>
+<subgroup>Some college</subgroup>
+<sample_size>2579</sample_size>
+<percent>1.3</percent>
+<standard_error>0.4</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-3mpj.tu7k-k7w8" _uuid="00000000-0000-0000-8339-24D42BD37AB4" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-3mpj.tu7k-k7w8">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Education</group>
+<subgroup>Bachelor's degree or above</subgroup>
+<sample_size>1594</sample_size>
+<percent>0.4</percent>
+<standard_error>0.2</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-ej2v_76ys.fsry" _uuid="00000000-0000-0000-026A-9346325549E4" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-ej2v_76ys.fsry">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Urbanization</group>
+<subgroup>Metropolitan</subgroup>
+<sample_size>4617</sample_size>
+<percent>1.3</percent>
+<standard_error>0.3</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-h5g4-ncqc_exxf" _uuid="00000000-0000-0000-05BC-9A1429DE712D" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-h5g4-ncqc_exxf">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Urbanization</group>
+<subgroup>Non-Metropolitan</subgroup>
+<sample_size>833</sample_size>
+<percent>0.9</percent>
+<standard_error>0.5</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-7hm9~ekv2.bxub" _uuid="00000000-0000-0000-B4DA-85820EFACA6E" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-7hm9~ekv2.bxub">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Chronic conditions</group>
+<subgroup>One or more chronic conditions</subgroup>
+<sample_size>3414</sample_size>
+<percent>1.2</percent>
+<standard_error>0.4</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-thv2.hg6f-4qtx" _uuid="00000000-0000-0000-C962-7F0613AC89A1" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-thv2.hg6f-4qtx">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Chronic conditions</group>
+<subgroup>Diagnosed diabetes</subgroup>
+<sample_size>739</sample_size>
+<percent>2.5</percent>
+<standard_error>1.1</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-sz4d.w9q8.tbm2" _uuid="00000000-0000-0000-2465-12D69806994A" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-sz4d.w9q8.tbm2">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Chronic conditions</group>
+<subgroup>Diagnosed hypertension</subgroup>
+<sample_size>2102</sample_size>
+<percent>1.8</percent>
+<standard_error>0.6</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+<row _id="row-32p4~2v3k.mvca" _uuid="00000000-0000-0000-BDEC-FC61DB11F926" _position="0" _address="https://data.cdc.gov/resource/qgkx-mswu/row-32p4~2v3k.mvca">
+<round>3</round>
+<indicator>Unable to work due to self or family member having COVID-19</indicator>
+<group>Chronic conditions</group>
+<subgroup>Current asthma</subgroup>
+<sample_size>563</sample_size>
+<percent>2.5</percent>
+<standard_error>1.1</standard_error>
+<significant_1>0</significant_1>
+<significant_2>0</significant_2>
+</row>
+</row>
+</response>

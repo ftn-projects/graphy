@@ -27,7 +27,7 @@ class XmlDataSourceService(DataSourceService):
         self.parse_attributes(root, node, graph)
         for child in root:
             if child.text is not None and child.text.strip() != "":
-                node.add_property(self.string_cleanup(child.tag), self.string_cleanup(child.text))
+                node.add_property(self.key_cleanup(child.tag), self.value_cleanup(child.text))
                 self.parse_attributes(child, node, graph, child.tag)
             else:
                 result = self.parse_node(child, graph)
@@ -82,7 +82,12 @@ class XmlDataSourceService(DataSourceService):
         filtered = [n for n in kids if n.name == node_tag]
         return filtered[int(order) - 1]
 
-    def string_cleanup(self, text: str) -> any:
+    def key_cleanup(self, text: str) -> any:
+        text.replace("\n", "")
+        tokens = text.split()
+        return " ".join(tokens)
+
+    def value_cleanup(self, text: str) -> any:
         text.replace("\n", "")
         tokens = text.split()
         return self._util.parse_any(" ".join(tokens))
