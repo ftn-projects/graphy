@@ -21,5 +21,5 @@ class Command(ABC):
         return result
 
     @abstractmethod
-    def fulfills(self, value_name: str, attribute: any) -> bool:
+    def fulfills(self, attribute_key: str, attribute_value: any) -> bool:
         pass

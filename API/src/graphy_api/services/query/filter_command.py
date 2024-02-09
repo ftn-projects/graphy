@@ -27,12 +27,12 @@ class FilterCommand(Command):
     def parameter(self) -> any:
         return self.__parse(self.__query[2])
 
-    def fulfills(self, value_name: str,attribute: any) -> bool:
+    def fulfills(self, value_name: str, attribute_value: any) -> bool:
         return value_name == self.value and any([
-            self.operator == "=" and attribute == self.parameter,
-            self.operator == "<" and attribute < self.parameter,
-            self.operator == "<=" and attribute <= self.parameter,
-            self.operator == ">" and attribute > self.parameter,
-            self.operator == ">=" and attribute >= self.parameter,
-            self.operator == "!=" and attribute != self.parameter
+            self.operator == "=" and attribute_value == self.parameter,
+            self.operator == "<" and attribute_value < self.parameter,
+            self.operator == "<=" and attribute_value <= self.parameter,
+            self.operator == ">" and attribute_value > self.parameter,
+            self.operator == ">=" and attribute_value >= self.parameter,
+            self.operator == "!=" and attribute_value != self.parameter
         ])
