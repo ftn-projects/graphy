@@ -1,8 +1,10 @@
+import json
 from typing import List
 import time
 
 from django.core.handlers.wsgi import WSGIRequest
 from django.http import HttpResponse
+from django.shortcuts import render
 
 from graphy_api.services import *
 from graphy_api.services.reader import *
@@ -65,6 +67,28 @@ class Workspace:
 
     def render_graph(self, request: WSGIRequest) -> HttpResponse:
         return self.__visualizer_plugin.create_view(request, self.__graph)
+
+    def render_bird_view(self, request):
+        return render(request, 'bird_view.html')
+
+    def render_tree_view(self, request):
+        if self.__graph is None:
+            graph_data = {'nodes': [], 'edges': []}
+            graph_json = json.dumps(graph_data)
+            return render(request, 'tree_view.html', {'graph': graph_json})
+
+        last_selected_node = None
+        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties} for node in
+                            self.__graph.nodes]
+        serialized_edges = [{'source': edge.source.id, 'target': edge.destination.id, 'value': edge.value} for edge in
+                            self.__graph.edges]
+        graph_data = {
+            'nodes': serialized_nodes,
+            'edges': serialized_edges
+        }
+
+        graph_json = json.dumps(graph_data)
+        return render(request, 'tree_view.html', {'graph': graph_json})
 
     def set_sources(self, filepath: str, data_source: str, visualizer: str):
         if data_source in data_source_services:
