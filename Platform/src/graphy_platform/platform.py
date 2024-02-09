@@ -2,6 +2,7 @@ from typing import List
 
 from django.core.handlers.wsgi import WSGIRequest
 from django.http import HttpResponse
+from django.shortcuts import render, redirect
 
 from graphy_api.services import *
 from graphy_api.services.reader import *
@@ -46,6 +47,9 @@ class Platform:
 
     def render_graph(self, request: WSGIRequest) -> HttpResponse:
         return self.__visualizer_plugin.create_view(request, self.__graph)
+
+    def render_bird_view(self, request):
+        return render(request, 'bird_view.html')
 
     def set_sources(self, filepath: str, data_source: str, visualizer: str):
         if data_source in data_source_services:

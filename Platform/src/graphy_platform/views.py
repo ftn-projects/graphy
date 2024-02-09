@@ -23,7 +23,11 @@ def get_view(request):
     response = platform.render_graph(request)
     plugin_content = response.content.decode()
 
-    return render(request, 'platform_home.html', {'plugin_content': plugin_content})
+    response_bird = platform.render_bird_view(request)
+    plugin_content_bird = response_bird.content.decode()
+
+    return render(request, 'platform_home.html',
+                  {'plugin_content': plugin_content, 'bird_content': plugin_content_bird})
 
 
 def get_query(request):
@@ -49,4 +53,3 @@ def get_query(request):
 def get_initial(request):
     platform.reset_graph()
     return redirect('http://127.0.0.1:8000')
-

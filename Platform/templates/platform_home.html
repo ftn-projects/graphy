@@ -183,7 +183,7 @@
         <div class="vertical-plugin-container">
             <div class="tree-plugin-container">Hypothetical Tree View</div>
             <div class="bird-plugin-container">
-
+                {{ bird_content|safe }}
             </div>
         </div>
         <div class="main-plugin-container">
@@ -192,7 +192,6 @@
     </div>
 </div>
 <script>
-    visualizer_observer.attach(EventType.HTML_CHANGED, on_data_changed);
 
     const searchParams = new URLSearchParams(window.location.search);
     let filepath = searchParams.get('filepath');
@@ -245,79 +244,6 @@
     function onReset(){
         document.location.href = 'http://127.0.0.1:8000/clearQuery'
     }
-
-    function on_data_changed(event, data) {
-        var svgOld = data.mainSVG;
-        d3.select(".bird-plugin-container").select("svg").remove();
-        var mini = d3.select(".bird-plugin-container").append("svg")
-            .attr("width", "100%")
-            .attr("height", "100%")
-            .style("border", "1px solid black");
-
-        var miniContent = mini.append("g")
-            .attr("class", "mini-content")
-
-        var svgWidth = parseInt(mini.style("width"));
-        var svgHeight = parseInt(mini.style("height"));
-
-        var minX = d3.min(svgOld.selectAll("*"), function (d) {
-            return d.getBBox().x - 50;
-        });
-        var maxX = d3.max(svgOld.selectAll("*"), function (d) {
-            return d.getBBox().x + d.getBBox().width + 50;
-        });
-        var minY = d3.min(svgOld.selectAll("*"), function (d) {
-            return d.getBBox().y - 50;
-        });
-        var maxY = d3.max(svgOld.selectAll("*"), function (d) {
-            return d.getBBox().y + d.getBBox().height + 50;
-        });
-
-        var width = maxX - minX;
-        var height = maxY - minY;
-
-        var scaleFactor = Math.min(svgWidth / width, svgHeight / height);
-
-        var translateX = -minX * scaleFactor + (svgWidth - width * scaleFactor) / 2;
-        var translateY = -minY * scaleFactor + (svgHeight - height * scaleFactor) / 2;
-
-        svgOld.selectAll("*").each(function () {
-            var clone = this.cloneNode(true);
-            d3.select(clone).attr("transform", "translate(" + translateX + "," + translateY + ") scale(" + scaleFactor + ")");
-            miniContent.node().appendChild(clone);
-        });
-
-
-        drawViewportRect(data.zoom, translateX, translateY, scaleFactor);
-    }
-
-
-
-    function drawViewportRect(transform, translateX, translateY, scaleFactora) {
-        var svgWidth = parseInt(d3.select(".container-simple").style("width"));
-        var svgHeight = parseInt(d3.select(".container-simple").style("height"));
-
-        var scaleFactor = transform.k;
-
-        var visibleWidth = svgWidth / scaleFactor;
-        var visibleHeight = svgHeight / scaleFactor;
-        var visibleX = -transform.x / scaleFactor;
-        var visibleY = -transform.y / scaleFactor;
-
-        var g = d3.select(".bird-plugin-container svg g");
-
-        viewportRect = g.append("rect")
-            .attr("class", "viewport-rect")
-            .attr("x", visibleX)
-            .attr("y", visibleY)
-            .attr("width", visibleWidth)
-            .attr("height", visibleHeight)
-            .style("fill", "none")
-            .style("stroke", "red")
-            .style("stroke-width", 5)
-            .attr("transform", "translate(" + translateX + "," + translateY + ") scale(" + scaleFactora + ")");
-    }
-
 
 </script>
 
