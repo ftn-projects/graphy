@@ -128,9 +128,9 @@
         <div class="visualizer-section">
             <fieldset>
                 <legend>Visualizer type</legend>
-                <input type="radio" id="simple-radio" name="visualizer-group">
+                <input type="radio" id="simple-radio" name="visualizer-group" onclick="onChangeVisualizer()">
                 <label for="simple-radio">Simple</label>
-                <input type="radio" id="block-radio" name="visualizer-group">
+                <input type="radio" id="block-radio" name="visualizer-group" onclick="onChangeVisualizer()">
                 <label for="block-radio">Block</label>
             </fieldset>
         </div>
@@ -203,50 +203,48 @@
 
     console.log(workspace_id, filepath, dataSource, visualizer, applied_queries)
 
-    pathInput = d3.select('#path-input');
+    pathInput = document.getElementById('path-input');
     dataSourceSelect = d3.select('#data-sources-select');
     simpleVisualizer = document.getElementById('simple-radio');
     blockVisualizer = document.getElementById('block-radio');
     queryLabel = document.getElementById('queries');
 
-    pathInput.text(filepath);
+    pathInput.text = filepath;
     dataSourceSelect.property('value', dataSource);
 
-    if (visualizer === 'SIMPLE') {
-        console.log(simpleVisualizer)
+    if (visualizer === 'SIMPLE')
         simpleVisualizer.checked = true;
-    }
-    if (visualizer === 'BLOCK') {
+    if (visualizer === 'BLOCK')
         blockVisualizer.checked = true;
-    }
 
     queryLabel.appendChild(document.createTextNode(applied_queries.join(', ')));
-    {#for (let a of applied_queries)#}
-    {#    queryLabel.appendChild(document.createTextNode(a + ", "))#}
+
+    function onChangeVisualizer() {
+        let visualizerType = simpleVisualizer.checked ? 'SIMPLE' : 'BLOCK';
+        document.location.href = baseUrl() + '/changeVisualizer?type=' + visualizerType;
+    }
 
     function onLoad() {
-
+        var filepath = d3.select("#path-input").property("value");
+        var sourceType = dataSourceSelect.property("value");
+        document.location.href = baseUrl() + '/load?filepath=' + filepath + '&source_type=' + sourceType;
     }
 
     function onSearch() {
-        {#const filepath = 'aaa.xml';#}
-        {#const data_source = 'XML';#}
-        {#visualizer = visualizer === 'SIMPLE' ? 'BLOCK' : 'SIMPLE';#}
-        {##}
-        {#document.location.href = 'http://127.0.0.1:8000?filepath=' + filepath + '&data_source=' + data_source + '&visualizer=' + visualizer;#}
-
         var search = d3.select("#search-input").property("value");
         var filter = d3.select("#filter-input").property("value");
         var select = d3.select("#select-input").property("value");
         var param = d3.select("#value-input").property("value");
 
-        document.location.href = 'http://127.0.0.1:8000/query?search=' + search + '&attribute=' + filter + '&operator=' + select + '&filter=' + param;
-
-        console.log(search, filter, select, param )
+        document.location.href = baseUrl() + '/search?search=' + search + '&attribute=' + filter + '&operator=' + select + '&filter=' + param;
     }
 
     function onReset(){
-        document.location.href = 'http://127.0.0.1:8000/clearQuery'
+        document.location.href = baseUrl() + '/clearSearch';
+    }
+
+    function baseUrl() {
+        return 'http://127.0.0.1:8000/' + workspace_id;
     }
 
 </script>

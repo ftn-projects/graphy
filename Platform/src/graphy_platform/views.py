@@ -2,7 +2,7 @@ import json
 
 from django.core.handlers.wsgi import WSGIRequest
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .workspace import Workspace
 from .platform import Platform
@@ -24,6 +24,8 @@ def get_workspace_view(
         tree_content: HttpResponse | None = None) -> HttpResponse:
     try:
         workspace = platform.get_workspace(workspace_id)
+        if workspace is None:
+            workspace = Workspace()
 
         if plugin_content is None:
             plugin_content = workspace.render_graph_view(request)
@@ -61,7 +63,7 @@ def get_search(request: WSGIRequest, workspace_id: int) -> HttpResponse:
         if attribute != '' and operator != '' and parameter != '':
             workspace.filter_graph(attribute, operator, parameter)
 
-        return get_workspace_view(request, workspace_id)
+        return redirect('http://127.0.0.1:8000/' + str(workspace_id))
     except BaseException as e:
         return get_with_error(request, workspace_id, str(e))
 
@@ -70,7 +72,7 @@ def get_initial(request, workspace_id: int):
     try:
         workspace = platform.get_workspace(workspace_id)
         workspace.reset_graph()
-        return get_workspace_view(request, workspace_id)
+        return redirect('http://127.0.0.1:8000/' + str(workspace_id))
     except BaseException as e:
         return get_with_error(request, workspace_id, str(e))
 
@@ -78,8 +80,19 @@ def get_initial(request, workspace_id: int):
 def load(request: WSGIRequest, workspace_id: int) -> HttpResponse:
     try:
         workspace = platform.get_workspace(workspace_id)
+        workspace.filepath = request.GET.get('filepath', '')
+        workspace.set_source_plugin(request.GET.get('source_type', ''))
         workspace.load_graph()
-        return get_workspace_view(request, workspace_id)
+        return redirect('http://127.0.0.1:8000/' + str(workspace_id))
+    except BaseException as e:
+        return get_with_error(request, workspace_id, str(e))
+
+
+def change_visualizer(request: WSGIRequest, workspace_id: int) -> HttpResponse:
+    try:
+        workspace = platform.get_workspace(workspace_id)
+        workspace.set_visualizer_plugin(request.GET.get('type', ''))
+        return redirect('http://127.0.0.1:8000/' + str(workspace_id))
     except BaseException as e:
         return get_with_error(request, workspace_id, str(e))
 

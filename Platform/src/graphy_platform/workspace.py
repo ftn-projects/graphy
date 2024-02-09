@@ -49,6 +49,11 @@ class Workspace:
     def filepath(self) -> str:
         return self.__filepath
 
+    @filepath.setter
+    def filepath(self, filepath: str) -> None:
+        self.__filepath = filepath
+        self.__source_plugin.set_reader(FileSourceReader(filepath))
+
     @property
     def source_plugin(self) -> DataSourceService:
         return self.__source_plugin
@@ -86,19 +91,17 @@ class Workspace:
         graph_json = json.dumps(graph_data)
         return render(request, 'tree_view.html', {'graph': graph_json})
 
-    def set_sources(self, filepath: str, data_source: str, visualizer: str):
+    def set_source_plugin(self, data_source: str) -> None:
         if data_source in data_source_services:
             self.__source_plugin = data_source_services[data_source]
         else:
             raise ValueError('unknown data source type')
+
+    def set_visualizer_plugin(self, visualizer: str) -> None:
         if visualizer in visualizer_services:
             self.__visualizer_plugin = visualizer_services[visualizer]
         else:
             raise ValueError('unknown visualizer type')
-
-        reader = FileSourceReader(filepath)
-        self.__source_plugin.set_reader(reader)
-        self.__source_plugin.set_util(UtilService())
 
     def is_not_set(self) -> bool:
         return self.__source_plugin is None or self.__visualizer_plugin is None

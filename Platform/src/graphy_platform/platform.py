@@ -11,4 +11,4 @@ class Platform(object):
         self.__workspaces[workspace.id] = workspace
 
     def get_workspace(self, workspace_id: int) -> Workspace:
-        return self.__workspaces.get(workspace_id)
+        return self.__workspaces.get(workspace_id, Workspace())
