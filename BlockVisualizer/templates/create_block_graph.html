@@ -108,7 +108,7 @@
         // Append a rectangle for the property
         svg.append("rect")
             .attr("class", "node_property")
-            .attr("id", "node_property_" + d.name)
+            .attr("id", "node_property_" + d.id)
             .attr("width", 100)
             .attr("height", 20)
             .attr("x", d.x - 50)
@@ -128,7 +128,7 @@
         // Append text label for the property
         svg.append("text")
             .attr("class", "property_label")
-            .attr("id", "node_property_label_" + d.name)
+            .attr("id", "node_property_label_" + d.id)
             .attr("x", d.x)
             .attr("y", floatY + i * 20 + 15) // Dynamically calculate y position for label
             .attr("dy", -5)
@@ -147,7 +147,7 @@
         .attr("y", function(d) { return d.y+5; })
         .style("text-anchor", "middle")
         .text(function (d) {
-            return "id="+d.name;
+            return d.name;
         });
 
 
@@ -262,8 +262,8 @@
 
         node.each(function(d) {
         var floatY = d.y + 10 - Object.keys(d.properties).length * 20;
-        var rect=d3.selectAll("#node_property_"+d.name);
-        var values=d3.selectAll("#node_property_label_"+d.name);
+        var rect=d3.selectAll("#node_property_"+d.id);
+        var values=d3.selectAll("#node_property_label_"+d.id);
         rect.each(function() {
         d3.select(this)
             .attr("x", d.x - 50)
