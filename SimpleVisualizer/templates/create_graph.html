@@ -157,6 +157,7 @@
 
     svg.call(zoom);
 
+    setInterval(sendDataToMinimap,1);
 
     function sendDataToMinimap() {
         var minimapData = {
