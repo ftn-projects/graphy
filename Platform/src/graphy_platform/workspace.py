@@ -35,7 +35,7 @@ class Workspace:
     def __init__(self):
         self.__id: int = int(time.time())
         self.__filepath: str | None = ''
-        self.__source_plugin: DataSourceService | None = data_source_services['JSON']
+        self.__source_plugin: DataSourceService | None = data_source_services['XML']
         self.__visualizer_plugin: VisualizerService | None = visualizer_services['SIMPLE']
         self.__graph: Graph | None = None
         self.__initial_graph: Graph | None = None
