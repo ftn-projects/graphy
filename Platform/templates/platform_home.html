@@ -105,7 +105,7 @@
             border: 1px solid black;
         }
 
-        .tree-plugin-container, .bird-plugin-container {
+        .bird-plugin-container {
             flex: 1;
             display: flex;
             justify-content: center;
@@ -116,6 +116,13 @@
         .bird-plugin-svg {
             width: 100%; /* Adjust width as needed */
             height: 100%; /* Adjust height as needed */
+        }
+
+        .tree-plugin-container{
+            flex: 1;
+            width: 350px;
+            padding: 10px 10px;
+            overflow: scroll;
         }
 
     </style>
@@ -182,14 +189,14 @@
     <div class="all-plugins-container">
         <div class="vertical-plugin-container">
             <div class="tree-plugin-container">
-
+                {{ tree_content|safe }}
             </div>
             <div class="bird-plugin-container">
                 {{ bird_content|safe }}
             </div>
         </div>
         <div class="main-plugin-container">
-            {{ tree_content|safe }}
+                {{ plugin_content|safe }}
         </div>
     </div>
 </div>

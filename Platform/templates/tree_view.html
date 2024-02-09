@@ -1,184 +1,129 @@
 {% load static %}
 <style>
-    .node {
+    .package {
+        margin-left: 20px;
         cursor: pointer;
     }
-
-    .node circle {
-        fill: #fff;
-        stroke: steelblue;
-        stroke-width: 2px;
+    .attributes {
+        display: none;
+        margin-left: 20px;
     }
-
-    .node text {
-        font: 12px sans-serif;
-    }
-
-    .link {
-        fill: none;
-        stroke: #ccc;
-        stroke-width: 2px;
+    .child {
+        cursor: pointer;
+        margin-left: 20px;
     }
 </style>
-<div id="tree_div"></div>
+<div id="explorer"></div>
 <script src="{% static 'js_observer.js' %}"></script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
-  var graphData = {{ graph|safe }};
+    // Assuming the graphDataTree variable is correctly populated with JSON data
+    var graphDataTree = {{ graph | safe }};
 
-  // Create a root node with all nodes as its children
-  var rootNode = {
-    name: "root",
-    children: graphData.nodes.map(function(node) {
-      return {
-        name: node.name,
-          id: node.id,
-        children: node.children.map(function(childId) {
-          return graphData.nodes.find(function(n) {
-            return n.id === childId;
-          });
-        })
-      };
-    })
-  };
+    console.log(graphDataTree); // Log the graphDataTree to inspect its structure
 
-  var width = 600;
-  var height = 400;
+    function createNodeElement(node) {
+        const container = document.createElement("div");
+        container.classList.add("package");
 
-  var treeLayout = d3.tree()
-    .size([height, width - 200]);
+        const idElement = document.createElement("div");
+        idElement.textContent = "ID: " + node.id;
+        container.appendChild(idElement);
 
-  var treeData = d3.hierarchy(rootNode);
+        const attributesElement = document.createElement("div");
+        attributesElement.classList.add("attributes");
+        for (const [key, value] of Object.entries(node)) {
+            if (key !== "id") { // Exclude ID
+                if (Array.isArray(value) && value.length > 0) { // Check if it's a non-empty array
+                    value.forEach(childId => {
+                        const childElement = document.createElement("div");
+                        childElement.classList.add("child");
+                        childElement.textContent = `Child:${childId}`;
+                        childElement.dataset.childId = childId; // Set data attribute for child id
+                        childElement.addEventListener("click", (event) => {
+                            event.stopPropagation(); // Stop the click event from propagating to the parent container
+                            const clickedNode = graphDataTree.nodes.find(node => node.id === childId);
+                            if (clickedNode) {
+                                console.log("Opening node:", clickedNode);
+                                const newNodeElement = createNodeElement(clickedNode);
+                                container.appendChild(newNodeElement); // Append the new node element to the parent container
+                                addEventListenersToNode(newNodeElement); // Add event listeners to the newly created node
+                                // Remove the clicked child element from the parent's attributes
+                                childElement.remove();
+                            } else {
+                                console.log("Node not found:", childId);
+                            }
+                        });
+                        attributesElement.appendChild(childElement);
+                    });
+                } else if (typeof value !== 'object') {
+                    const attributeElement = document.createElement("div");
+                    attributeElement.textContent = `${key}: ${value}`;
+                    attributesElement.appendChild(attributeElement);
+                }
+            }
+        }
+        container.appendChild(attributesElement);
 
-  treeLayout(treeData);
-
-  var svg = d3.select("#tree_div").append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .append("g")
-    .attr("transform", "translate(100, 0)");
-
-  var link = svg.selectAll(".link")
-    .data(treeData.links())
-    .enter().append("path")
-    .attr("class", "link")
-    .attr("d", d3.linkHorizontal()
-      .x(function(d) { return d.y; })
-      .y(function(d) { return d.x; }));
-
-  console.log(treeData.descendants())
-
-  var node = svg.selectAll(".node")
-    .data(treeData.descendants())
-    .enter().append("g")
-    .attr("class", "node")
-    .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
-
-  node.append("circle")
-    .attr("r", 5)
-    .style("fill", "#fff")
-    .style("stroke", "steelblue")
-    .style("stroke-width", "2px");
-
-  node.append("text")
-    .attr("dy", "0.31em")
-    .attr("x", function(d) { return d.children ? -6 : 6; })
-    .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
-    .text(function(d) {
-        return d.data.id; });
-
-  function toggleChildren(d) {
-    if (d.children) {
-      d._children = d.children;
-      d.children = null;
-    } else {
-      d.children = d._children;
-      d._children = null;
-    }
-    update(d);
-  }
-
-  function update(source) {
-    var nodes = treeData.descendants(),
-        links = treeData.links();
-
-    // Update the nodes…
-    var node = svg.selectAll(".node")
-        .data(nodes, function(d) { return d.id || (d.id = ++i); });
-
-    var nodeEnter = node.enter().append("g")
-        .attr("class", "node")
-        .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
-        .on("click", toggleChildren);
-
-    nodeEnter.append("circle")
-        .attr("r", 1e-6)
-        .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
-
-    nodeEnter.append("text")
-        .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
-        .attr("dy", ".35em")
-        .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
-        .text(function(d) {
-            return d.data.id; })
-        .style("fill-opacity", 1e-6);
-
-    // Transition nodes to their new position.
-    var nodeUpdate = node.merge(nodeEnter).transition()
-        .duration(duration)
-        .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
-
-    nodeUpdate.select("circle")
-        .attr("r", 4.5)
-        .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
-
-    nodeUpdate.select("text")
-        .style("fill-opacity", 1);
-
-    // Transition exiting nodes to the parent's new position.
-    var nodeExit = node.exit().transition()
-        .duration(duration)
-        .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
-        .remove();
-
-    nodeExit.select("circle")
-        .attr("r", 1e-6);
-
-    nodeExit.select("text")
-        .style("fill-opacity", 1e-6);
-
-    // Update the links…
-    var link = svg.selectAll(".link")
-        .data(links, function(d) { return d.target.id; });
-
-    // Enter any new links at the parent's previous position.
-    var linkEnter = link.enter().insert("path", "g")
-        .attr("class", "link")
-        .attr("d", function(d) {
-          var o = {x: source.x0, y: source.y0};
-          return diagonal({source: o, target: o});
+        container.addEventListener("click", (event) => {
+            event.stopPropagation();
+            toggleVisibility(container);
         });
 
-    // Transition links to their new position.
-    link.merge(linkEnter).transition()
-        .duration(duration)
-        .attr("d", diagonal);
+        return container;
+    }
 
-    // Transition exiting nodes to the parent's new position.
-    link.exit().transition()
-        .duration(duration)
-        .attr("d", function(d) {
-          var o = {x: source.x, y: source.y};
-          return diagonal({source: o, target: o});
-        })
-        .remove();
+    function toggleVisibility(element) {
+        const attributesElement = element.querySelector('.attributes');
+        if (attributesElement.style.display === "none") {
+            attributesElement.style.display = "block";
+            element.querySelectorAll('.child').forEach(childElement => {
+                childElement.style.display = "block";
+            });
+            element.querySelectorAll('.package').forEach(childPackage => {
+                childPackage.style.display = "block";
+            });
+        } else {
+            attributesElement.style.display = "none";
+            element.querySelectorAll('.child').forEach(childElement => {
+                childElement.style.display = "none";
+            });
+            element.querySelectorAll('.package').forEach(childPackage => {
+                childPackage.style.display = "none";
+            });
+        }
+    }
 
-    // Stash the old positions for transition.
-    treeData.each(function(d) {
-      d.x0 = d.x;
-      d.y0 = d.y;
-    });
-  }
+    function addEventListenersToNode(nodeElement) {
+        const childElements = nodeElement.querySelectorAll('.child');
+        childElements.forEach(childElement => {
+            childElement.addEventListener("click", (event) => {
+                event.stopPropagation(); // Stop the click event from propagating to the parent container
+                const childId = childElement.dataset.childId;
+                const clickedNode = graphDataTree.nodes.find(node => node.id === childId);
+                if (clickedNode) {
+                    console.log("Opening node:", clickedNode);
+                    const newNodeElement = createNodeElement(clickedNode);
+                    nodeElement.appendChild(newNodeElement); // Append the new node element to the parent node
+                    addEventListenersToNode(newNodeElement); // Add event listeners to the newly created node
+                    // Remove the clicked child element from the parent's attributes
+                    childElement.remove();
+                } else {
+                    console.log("Node not found:", childId);
+                }
+            });
+        });
+    }
 
-  toggleChildren(treeData);
+    function createPackageExplorer(data, parentElement) {
+        data.forEach(item => {
+            const nodeElement = createNodeElement(item);
+            parentElement.appendChild(nodeElement);
+            addEventListenersToNode(nodeElement); // Add event listeners to the created node
+        });
+    }
+
+    // Initialize the package explorer
+    const explorerElement = document.getElementById("explorer");
+    createPackageExplorer(graphDataTree.nodes, explorerElement);
 </script>

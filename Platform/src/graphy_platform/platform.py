@@ -59,7 +59,7 @@ class Platform:
             return render(request, 'tree_view.html', {'graph': graph_json})
 
         last_selected_node = None
-        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties , 'children': [childNode.id for childNode in node.children]} for node in
+        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties , 'childs': [childNode.id for childNode in node.children]} for node in
                             self.__graph.nodes]
         graph_data = {
             'nodes': serialized_nodes
