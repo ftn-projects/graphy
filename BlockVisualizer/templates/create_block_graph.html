@@ -1,12 +1,12 @@
 {% load static %}
 <style>
     .node {
-        fill: blue;
+        fill: limegreen;
         stroke: #fff;
     }
 
     .node_property {
-        fill: blue;
+        fill: limegreen;
         stroke: #fff;
     }
 
@@ -22,15 +22,15 @@
     }
 
     .label {
-        fill: white;
+        fill: black;
         font-family: Arial, sans-serif;
-        font-size: 1em;
+        font-size: 0.6em;
         text-anchor: middle;
         pointer-events: none;
     }
 
     .property_label {
-        fill: white;
+        fill: black;
         font-family: Arial, sans-serif;
         font-size: 0.5em;
         text-anchor: middle;
@@ -137,6 +137,8 @@
     });
 });
 
+   var rectangles=svg.selectAll(".node_property");
+   var labels=svg.selectAll(".property_label");
 
     var nodeLabels = svg
         .selectAll(".label")
@@ -176,8 +178,8 @@
         node.attr("transform", d3.zoomTransform(this));
         link.attr("transform", d3.zoomTransform(this));
         nodeLabels.attr("transform", d3.zoomTransform(this));
-        d3.selectAll(".node_property").attr("transform",d3.zoomTransform(this));
-        d3.selectAll(".property_label").attr("transform",d3.zoomTransform(this));
+        rectangles.attr("transform", d3.zoomTransform(this));
+        labels.attr("transform", d3.zoomTransform(this));
     });
 
 
@@ -237,6 +239,7 @@
         }
     }
 
+    setInterval(sendDataToMinimap,1);
 
     function ticked() {
 
