@@ -20,6 +20,9 @@ from .views import *
 
 urlpatterns = [
     path('', get_view),
+    path('<int:id>/', get_workspace_view),
     path('query/', get_query),
-    path('clearQuery/', get_initial)
+    path('clearQuery/', get_initial),
+    path('load/', load),
+
 ]

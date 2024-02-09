@@ -2,28 +2,35 @@ import json
 
 from django.shortcuts import render, redirect
 
+from .workspace import Workspace
 from .platform import Platform
 
 platform = Platform()
 
+# def get_view(request):
+#     if filepath.strip() != '':
+#         platform.load_graph()
+#     response = platform.render_graph(request)
+#     plugin_content = response.content.decode()
 
 def get_view(request):
-    # if 'filepath' not in request.GET or 'data_source' not in request.GET or 'visualizer' not in request.GET:
-    #     return redirect('http://127.0.0.1:8000?filepath=&data_source=JSON&visualizer=SIMPLE')
+    workspace = Workspace()
+    platform.addWorkspace(workspace)
 
-    filepath: str = request.GET.get('filepath', 'aaa.xml')
-    filepath = 'aaa.xml'
-    data_source = request.GET.get('data_source', 'XML')
-    data_source = 'XML'
-    visualizer = request.GET.get('visualizer', 'SIMPLE')
-    platform.set_sources(filepath, data_source, visualizer)
+    return get_workspace_view(request, workspace.id)
 
-    if filepath.strip() != '':
-        platform.load_graph()
-    response = platform.render_graph(request)
-    plugin_content = response.content.decode()
+def get_workspace_view(request, id: int):
+    workspace = platform.getWorkspace(id)
+    queries = [c.serialize() for c in workspace.applied_queries]
 
-    return render(request, 'platform_home.html', {'plugin_content': plugin_content})
+    return render(request, 'platform_home.html', {
+        'plugin_content': workspace.render_graph(request),
+        'workspace_id' : id,
+        'filepath' : workspace.filepath,
+        'data_source' : workspace.source_plugin.identifier(),
+        'visualizer' : workspace.visualizer_plugin.identifier(),
+        'applied_queries': json.dumps(queries)
+        })
 
 
 def get_query(request):
