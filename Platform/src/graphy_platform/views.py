@@ -46,8 +46,12 @@ def get_query(request):
 
     queries = [c.serialize() for c in platform.applied_queries]
 
+    response_bird = platform.render_bird_view(request)
+    plugin_content_bird = response_bird.content.decode()
+
     return render(request, 'platform_home.html',
-                  {'plugin_content': plugin_content, 'applied_queries': json.dumps(queries)})
+                  {'plugin_content': plugin_content, 'applied_queries': json.dumps(queries),
+                   'bird_content': plugin_content_bird})
 
 
 def get_initial(request):
