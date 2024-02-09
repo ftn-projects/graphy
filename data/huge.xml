@@ -1,0 +1,1093 @@
+<response>
+	<row>
+		<row _id="row-7ecr-rw5c.zdsg" _uuid="00000000-0000-0000-5A87-4B7286C42576" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-7ecr-rw5c.zdsg">
+			<state>Alabama</state>
+			<sex>Total</sex>
+			<le>73.2</le>
+			<se>0.067</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-c82q_65bd~4m7u" _uuid="00000000-0000-0000-3E6F-9C71E3FDC33B" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-c82q_65bd~4m7u">
+			<state>Alaska</state>
+			<sex>Total</sex>
+			<le>76.6</le>
+			<se>0.176</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-mfzg~qatp~hx8v" _uuid="00000000-0000-0000-B396-57AB79CD7796" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-mfzg~qatp~hx8v">
+			<state>Arizona</state>
+			<sex>Total</sex>
+			<le>76.3</le>
+			<se>0.055</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-gmw3-x6py.jeir" _uuid="00000000-0000-0000-BEE2-999BC6A1E17F" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-gmw3-x6py.jeir">
+			<state>Arkansas</state>
+			<sex>Total</sex>
+			<le>73.8</le>
+			<se>0.086</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-rhyg-zt4e.ciz4" _uuid="00000000-0000-0000-CE73-7D7C6CE69854" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-rhyg-zt4e.ciz4">
+			<state>California</state>
+			<sex>Total</sex>
+			<le>79</le>
+			<se>0.022</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-8x88_d47p-7rnx" _uuid="00000000-0000-0000-AE49-B0A839F050C1" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-8x88_d47p-7rnx">
+			<state>Colorado</state>
+			<sex>Total</sex>
+			<le>78.3</le>
+			<se>0.058</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-di56_ia7h~w4si" _uuid="00000000-0000-0000-EFB8-D1B20D47F6B1" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-di56_ia7h~w4si">
+			<state>Connecticut</state>
+			<sex>Total</sex>
+			<le>78.4</le>
+			<se>0.073</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-5z69_gs7f.fygg" _uuid="00000000-0000-0000-9420-DC2E5B33773A" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-5z69_gs7f.fygg">
+			<state>Delaware</state>
+			<sex>Total</sex>
+			<le>76.7</le>
+			<se>0.147</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-64aq~md49-bavu" _uuid="00000000-0000-0000-D254-3632902998CC" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-64aq~md49-bavu">
+			<state>District of Columbia</state>
+			<sex>Total</sex>
+			<le>75.3</le>
+			<se>0.179</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-sin5_v6ba~y29k" _uuid="00000000-0000-0000-CB06-B683A808B229" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-sin5_v6ba~y29k">
+			<state>Florida</state>
+			<sex>Total</sex>
+			<le>77.5</le>
+			<se>0.032</se>
+			<quartile>76.9 - 78.0</quartile>
+		</row>
+		<row _id="row-fjcf~g9t4-6jt7" _uuid="00000000-0000-0000-DA92-6C95BD1FDBAE" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-fjcf~g9t4-6jt7">
+			<state>Georgia</state>
+			<sex>Total</sex>
+			<le>75.6</le>
+			<se>0.044</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-b65w~fcri-2n9u" _uuid="00000000-0000-0000-2341-F80793BC9E98" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-b65w~fcri-2n9u">
+			<state>Hawaii</state>
+			<sex>Total</sex>
+			<le>80.7</le>
+			<se>0.119</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-hm6u~kxzs_4z47" _uuid="00000000-0000-0000-F5A9-5E35E918DEA1" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-hm6u~kxzs_4z47">
+			<state>Idaho</state>
+			<sex>Total</sex>
+			<le>78.4</le>
+			<se>0.102</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-fraq~23gt-22g2" _uuid="00000000-0000-0000-FBBD-8D5C74A2A32A" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-fraq~23gt-22g2">
+			<state>Illinois</state>
+			<sex>Total</sex>
+			<le>76.8</le>
+			<se>0.04</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-sn97~s94a-xihc" _uuid="00000000-0000-0000-3AFB-BB69DAC41E07" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-sn97~s94a-xihc">
+			<state>Indiana</state>
+			<sex>Total</sex>
+			<le>75</le>
+			<se>0.056</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-mwyh.xyqm_h4mq" _uuid="00000000-0000-0000-C4E0-4F987C80BA8F" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-mwyh.xyqm_h4mq">
+			<state>Iowa</state>
+			<sex>Total</sex>
+			<le>77.5</le>
+			<se>0.077</se>
+			<quartile>76.9 - 78.0</quartile>
+		</row>
+		<row _id="row-9ncr_6sx2~wpjw" _uuid="00000000-0000-0000-124E-C593A0CAAA64" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-9ncr_6sx2~wpjw">
+			<state>Kansas</state>
+			<sex>Total</sex>
+			<le>76.4</le>
+			<se>0.084</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-hwih.j9uc~2br3" _uuid="00000000-0000-0000-FE88-1DF0AF636BF9" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-hwih.j9uc~2br3">
+			<state>Kentucky</state>
+			<sex>Total</sex>
+			<le>73.5</le>
+			<se>0.071</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-kh8z~a9uq~78x7" _uuid="00000000-0000-0000-A46B-371903DD5C8E" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-kh8z~a9uq~78x7">
+			<state>Louisiana</state>
+			<sex>Total</sex>
+			<le>73.1</le>
+			<se>0.07</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-73tk~d6zu-5szn" _uuid="00000000-0000-0000-289B-F98185722C55" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-73tk~d6zu-5szn">
+			<state>Maine</state>
+			<sex>Total</sex>
+			<le>77.8</le>
+			<se>0.127</se>
+			<quartile>76.9 - 78.0</quartile>
+		</row>
+		<row _id="row-xku3_wapq.wuau" _uuid="00000000-0000-0000-D6D4-71C71AC513C5" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-xku3_wapq.wuau">
+			<state>Maryland</state>
+			<sex>Total</sex>
+			<le>76.8</le>
+			<se>0.059</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-wm32-7uby~m67r" _uuid="00000000-0000-0000-DFFA-13B0612E3377" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-wm32-7uby~m67r">
+			<state>Massachusetts</state>
+			<sex>Total</sex>
+			<le>79</le>
+			<se>0.05</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-3zbk-mnat~akwm" _uuid="00000000-0000-0000-B58F-C62033C9B8E2" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-3zbk-mnat~akwm">
+			<state>Michigan</state>
+			<sex>Total</sex>
+			<le>76</le>
+			<se>0.046</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-6yxa-xpqe_pfvb" _uuid="00000000-0000-0000-D954-A83B14C4D586" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-6yxa-xpqe_pfvb">
+			<state>Minnesota</state>
+			<sex>Total</sex>
+			<le>79.1</le>
+			<se>0.056</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-qhae-gdj9_8kp4" _uuid="00000000-0000-0000-8BFD-EDC224EA9EA3" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-qhae-gdj9_8kp4">
+			<state>Mississippi</state>
+			<sex>Total</sex>
+			<le>71.9</le>
+			<se>0.089</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-7bbi.tnne_4zwk" _uuid="00000000-0000-0000-EB4A-DA1144B6099B" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-7bbi.tnne_4zwk">
+			<state>Missouri</state>
+			<sex>Total</sex>
+			<le>75.1</le>
+			<se>0.059</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-t5ru.ef5q.uudc" _uuid="00000000-0000-0000-21FD-68DC26CA794B" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-t5ru.ef5q.uudc">
+			<state>Montana</state>
+			<sex>Total</sex>
+			<le>76.8</le>
+			<se>0.142</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-vmys~fevp~y7q4" _uuid="00000000-0000-0000-F351-3E49A487153E" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-vmys~fevp~y7q4">
+			<state>Nebraska</state>
+			<sex>Total</sex>
+			<le>77.7</le>
+			<se>0.099</se>
+			<quartile>76.9 - 78.0</quartile>
+		</row>
+		<row _id="row-xej2~j79v-g29s" _uuid="00000000-0000-0000-C2D3-6B43912D9ED4" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-xej2~j79v-g29s">
+			<state>Nevada</state>
+			<sex>Total</sex>
+			<le>76.3</le>
+			<se>0.08</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-e3ip~defb~jknu" _uuid="00000000-0000-0000-3F1B-640E7A6FD57C" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-e3ip~defb~jknu">
+			<state>New Hampshire</state>
+			<sex>Total</sex>
+			<le>79</le>
+			<se>0.117</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-hw7p-78nr-kckg" _uuid="00000000-0000-0000-30DE-DDCB6D7108D9" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-hw7p-78nr-kckg">
+			<state>New Jersey</state>
+			<sex>Total</sex>
+			<le>77.5</le>
+			<se>0.045</se>
+			<quartile>76.9 - 78.0</quartile>
+		</row>
+		<row _id="row-uhxp-4xkt-6h8p" _uuid="00000000-0000-0000-7333-92696F819BCE" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-uhxp-4xkt-6h8p">
+			<state>New Mexico</state>
+			<sex>Total</sex>
+			<le>74.5</le>
+			<se>0.109</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-eahc~v6yt~9ieb" _uuid="00000000-0000-0000-87E0-EF067DE8E590" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-eahc~v6yt~9ieb">
+			<state>New York</state>
+			<sex>Total</sex>
+			<le>77.7</le>
+			<se>0.031</se>
+			<quartile>76.9 - 78.0</quartile>
+		</row>
+		<row _id="row-2zy9-q528.zre8" _uuid="00000000-0000-0000-0329-703C05163D98" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-2zy9-q528.zre8">
+			<state>North Carolina</state>
+			<sex>Total</sex>
+			<le>76.1</le>
+			<se>0.045</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-kwx6.vvd5~cw6z" _uuid="00000000-0000-0000-7E1D-BAA6EC74B9F8" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-kwx6.vvd5~cw6z">
+			<state>North Dakota</state>
+			<sex>Total</sex>
+			<le>76.9</le>
+			<se>0.164</se>
+			<quartile>76.9 - 78.0</quartile>
+		</row>
+		<row _id="row-9xr5~fny7~5gsz" _uuid="00000000-0000-0000-F22B-84421B5ECECD" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-9xr5~fny7~5gsz">
+			<state>Ohio</state>
+			<sex>Total</sex>
+			<le>75.3</le>
+			<se>0.043</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-rpr2~ne68_2spv" _uuid="00000000-0000-0000-7FEB-E8346C7A3F82" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-rpr2~ne68_2spv">
+			<state>Oklahoma</state>
+			<sex>Total</sex>
+			<le>74.1</le>
+			<se>0.072</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-4p8q.qa2x_c6yz" _uuid="00000000-0000-0000-5546-7738216B6177" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-4p8q.qa2x_c6yz">
+			<state>Oregon</state>
+			<sex>Total</sex>
+			<le>78.8</le>
+			<se>0.067</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-wrpk_v8cb_rsv7" _uuid="00000000-0000-0000-52D0-40FDB19AED88" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-wrpk_v8cb_rsv7">
+			<state>Pennsylvania</state>
+			<sex>Total</sex>
+			<le>76.8</le>
+			<se>0.04</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-uqja~ru3c.5gdc" _uuid="00000000-0000-0000-959F-9B7F7F2210E2" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-uqja~ru3c.5gdc">
+			<state>Rhode Island</state>
+			<sex>Total</sex>
+			<le>78.2</le>
+			<se>0.13</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-mitj-nba8.79js" _uuid="00000000-0000-0000-11F7-EA90BE067397" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-mitj-nba8.79js">
+			<state>South Carolina</state>
+			<sex>Total</sex>
+			<le>74.8</le>
+			<se>0.066</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-kk7a.3w9b-izim" _uuid="00000000-0000-0000-273E-E23D47C73D38" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-kk7a.3w9b-izim">
+			<state>South Dakota</state>
+			<sex>Total</sex>
+			<le>76.7</le>
+			<se>0.156</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-wyrp_dz5n~yuqn" _uuid="00000000-0000-0000-2F0F-A5F3D3E56CE5" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-wyrp_dz5n~yuqn">
+			<state>Tennessee</state>
+			<sex>Total</sex>
+			<le>73.8</le>
+			<se>0.057</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-hmpn-kfv4~gxnk" _uuid="00000000-0000-0000-B9F3-B3F58D879AFB" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-hmpn-kfv4~gxnk">
+			<state>Texas</state>
+			<sex>Total</sex>
+			<le>76.5</le>
+			<se>0.026</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-z3s3-7cdw-km5g" _uuid="00000000-0000-0000-C58C-54FFE79C2E08" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-z3s3-7cdw-km5g">
+			<state>United States</state>
+			<sex>Total</sex>
+			<le>77</le>
+			<quartile>*</quartile>
+		</row>
+		<row _id="row-nkbf~6ywi-cufs" _uuid="00000000-0000-0000-2535-712F95A14B27" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-nkbf~6ywi-cufs">
+			<state>Utah</state>
+			<sex>Total</sex>
+			<le>78.6</le>
+			<se>0.078</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-wvwg.w7j8.tnz3" _uuid="00000000-0000-0000-5C54-F1801F170621" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-wvwg.w7j8.tnz3">
+			<state>Vermont</state>
+			<sex>Total</sex>
+			<le>78.8</le>
+			<se>0.178</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-tr77~rnch~d4iq" _uuid="00000000-0000-0000-FCD0-928975A6B47D" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-tr77~rnch~d4iq">
+			<state>Virginia</state>
+			<sex>Total</sex>
+			<le>77.6</le>
+			<se>0.048</se>
+			<quartile>76.9 - 78.0</quartile>
+		</row>
+		<row _id="row-ue43_n4c6.9mnk" _uuid="00000000-0000-0000-B126-FB517CA197CA" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-ue43_n4c6.9mnk">
+			<state>Washington</state>
+			<sex>Total</sex>
+			<le>79.2</le>
+			<se>0.049</se>
+			<quartile>78.1 - 80.7</quartile>
+		</row>
+		<row _id="row-avr4~c8t9_9e8f" _uuid="00000000-0000-0000-27FC-89C8BB327B77" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-avr4~c8t9_9e8f">
+			<state>West Virginia</state>
+			<sex>Total</sex>
+			<le>72.8</le>
+			<se>0.118</se>
+			<quartile>71.9 - 75.3</quartile>
+		</row>
+		<row _id="row-zn2j~khsg-urq2" _uuid="00000000-0000-0000-D1CD-0F16886CD4ED" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-zn2j~khsg-urq2">
+			<state>Wisconsin</state>
+			<sex>Total</sex>
+			<le>77.7</le>
+			<se>0.058</se>
+			<quartile>76.9 - 78.0</quartile>
+		</row>
+		<row _id="row-tcv7~hrxf-33nc" _uuid="00000000-0000-0000-A537-A870EA37C16D" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-tcv7~hrxf-33nc">
+			<state>Wyoming</state>
+			<sex>Total</sex>
+			<le>76.3</le>
+			<se>0.191</se>
+			<quartile>75.4 - 76.8</quartile>
+		</row>
+		<row _id="row-6c9v_8zvm-wxx4" _uuid="00000000-0000-0000-ABC5-007580EE0902" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-6c9v_8zvm-wxx4">
+			<state>Alabama</state>
+			<sex>Male</sex>
+			<le>70.1</le>
+			<se>0.099</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-kgtr.zgip-e9gu" _uuid="00000000-0000-0000-F66D-6B07374DE11C" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-kgtr.zgip-e9gu">
+			<state>Alaska</state>
+			<sex>Male</sex>
+			<le>74.3</le>
+			<se>0.249</se>
+			<quartile>74.1 - 75.4</quartile>
+		</row>
+		<row _id="row-7arf.hmpt-argp" _uuid="00000000-0000-0000-844E-72165E9E8296" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-7arf.hmpt-argp">
+			<state>Arizona</state>
+			<sex>Male</sex>
+			<le>73.4</le>
+			<se>0.081</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-z865~tmwe-9cz5" _uuid="00000000-0000-0000-9332-818FA775CA2E" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-z865~tmwe-9cz5">
+			<state>Arkansas</state>
+			<sex>Male</sex>
+			<le>71.1</le>
+			<se>0.125</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-dmjw.hq3v_7am2" _uuid="00000000-0000-0000-18FD-7AD108745B1E" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-dmjw.hq3v_7am2">
+			<state>California</state>
+			<sex>Male</sex>
+			<le>76.2</le>
+			<se>0.032</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-wv8v.tcg7~hwwc" _uuid="00000000-0000-0000-0277-148797D120E1" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-wv8v.tcg7~hwwc">
+			<state>Colorado</state>
+			<sex>Male</sex>
+			<le>75.8</le>
+			<se>0.085</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-wi2b_e628-c57x" _uuid="00000000-0000-0000-5A93-9ED99706A659" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-wi2b_e628-c57x">
+			<state>Connecticut</state>
+			<sex>Male</sex>
+			<le>75.6</le>
+			<se>0.109</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-se5z.464h_8h6k" _uuid="00000000-0000-0000-DE6E-4F5CE8CEBDD4" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-se5z.464h_8h6k">
+			<state>Delaware</state>
+			<sex>Male</sex>
+			<le>73.9</le>
+			<se>0.219</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-xz6f~m6ki-qjta" _uuid="00000000-0000-0000-1822-28E245C84241" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-xz6f~m6ki-qjta">
+			<state>District of Columbia</state>
+			<sex>Male</sex>
+			<le>71.7</le>
+			<se>0.266</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-ngum~a536_hvks" _uuid="00000000-0000-0000-07F8-0541DB9EBC7D" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-ngum~a536_hvks">
+			<state>Florida</state>
+			<sex>Male</sex>
+			<le>74.6</le>
+			<se>0.047</se>
+			<quartile>74.1 - 75.4</quartile>
+		</row>
+		<row _id="row-3gjn-imzw~7vcg" _uuid="00000000-0000-0000-1016-75A23F5382FF" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-3gjn-imzw~7vcg">
+			<state>Georgia</state>
+			<sex>Male</sex>
+			<le>72.8</le>
+			<se>0.064</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-m9a6.5bs6~tm4y" _uuid="00000000-0000-0000-5088-561454FCBDC3" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-m9a6.5bs6~tm4y">
+			<state>Hawaii</state>
+			<sex>Male</sex>
+			<le>77.6</le>
+			<se>0.17</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-5rer.dfek.2i9n" _uuid="00000000-0000-0000-5881-F963BBC9E615" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-5rer.dfek.2i9n">
+			<state>Idaho</state>
+			<sex>Male</sex>
+			<le>76.1</le>
+			<se>0.15</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-gxf5-g6b4~h69g" _uuid="00000000-0000-0000-2374-5615B1896080" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-gxf5-g6b4~h69g">
+			<state>Illinois</state>
+			<sex>Male</sex>
+			<le>73.8</le>
+			<se>0.059</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-nm3s~j5ui-hmem" _uuid="00000000-0000-0000-71B0-25C69B0E2D27" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-nm3s~j5ui-hmem">
+			<state>Indiana</state>
+			<sex>Male</sex>
+			<le>72.3</le>
+			<se>0.082</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-smqn.9pts_8ey5" _uuid="00000000-0000-0000-34CC-3A1BBB2FD8F0" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-smqn.9pts_8ey5">
+			<state>Iowa</state>
+			<sex>Male</sex>
+			<le>74.9</le>
+			<se>0.112</se>
+			<quartile>74.1 - 75.4</quartile>
+		</row>
+		<row _id="row-sy5v_jmzr-pzqr" _uuid="00000000-0000-0000-C613-252F1E738FD5" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-sy5v_jmzr-pzqr">
+			<state>Kansas</state>
+			<sex>Male</sex>
+			<le>73.8</le>
+			<se>0.122</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-6uia.2x9r_6m48" _uuid="00000000-0000-0000-B9C0-D099E64DC18A" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-6uia.2x9r_6m48">
+			<state>Kentucky</state>
+			<sex>Male</sex>
+			<le>70.6</le>
+			<se>0.102</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-8ksf_c5vr-hibc" _uuid="00000000-0000-0000-270E-B5B2C27830D0" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-8ksf_c5vr-hibc">
+			<state>Louisiana</state>
+			<sex>Male</sex>
+			<le>69.9</le>
+			<se>0.102</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-me6h_qn9s.9i4q" _uuid="00000000-0000-0000-F783-FE310BD6F8B5" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-me6h_qn9s.9i4q">
+			<state>Maine</state>
+			<sex>Male</sex>
+			<le>74.9</le>
+			<se>0.189</se>
+			<quartile>74.1 - 75.4</quartile>
+		</row>
+		<row _id="row-8qzd.bvit_7wv3" _uuid="00000000-0000-0000-0740-4AC6AEF4E53E" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-8qzd.bvit_7wv3">
+			<state>Maryland</state>
+			<sex>Male</sex>
+			<le>73.8</le>
+			<se>0.087</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-yup9_hv3e-f6y3" _uuid="00000000-0000-0000-1FB5-788A690C0135" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-yup9_hv3e-f6y3">
+			<state>Massachusetts</state>
+			<sex>Male</sex>
+			<le>76.4</le>
+			<se>0.074</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-qmw6.xwvi.dm6a" _uuid="00000000-0000-0000-0212-07B9E3A4F644" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-qmw6.xwvi.dm6a">
+			<state>Michigan</state>
+			<sex>Male</sex>
+			<le>73.4</le>
+			<se>0.067</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-ad6w-yzms.akae" _uuid="00000000-0000-0000-C940-E63206579942" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-ad6w-yzms.akae">
+			<state>Minnesota</state>
+			<sex>Male</sex>
+			<le>76.8</le>
+			<se>0.083</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-i5w5-gagr_c78u" _uuid="00000000-0000-0000-0947-40EBE8773AFF" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-i5w5-gagr_c78u">
+			<state>Mississippi</state>
+			<sex>Male</sex>
+			<le>68.6</le>
+			<se>0.13</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-m3xq_ycr4~b686" _uuid="00000000-0000-0000-E43B-95B835BCEC35" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-m3xq_ycr4~b686">
+			<state>Missouri</state>
+			<sex>Male</sex>
+			<le>72.1</le>
+			<se>0.087</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-ynu3.azm5-n8p2" _uuid="00000000-0000-0000-9640-6430020928C1" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-ynu3.azm5-n8p2">
+			<state>Montana</state>
+			<sex>Male</sex>
+			<le>74.2</le>
+			<se>0.203</se>
+			<quartile>74.1 - 75.4</quartile>
+		</row>
+		<row _id="row-gswk_qub2~i3nj" _uuid="00000000-0000-0000-0D4E-4456E6A682C8" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-gswk_qub2~i3nj">
+			<state>Nebraska</state>
+			<sex>Male</sex>
+			<le>75.2</le>
+			<se>0.145</se>
+			<quartile>74.1 - 75.4</quartile>
+		</row>
+		<row _id="row-erf4_ek3c~vyck" _uuid="00000000-0000-0000-BCF8-D6461CE791E9" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-erf4_ek3c~vyck">
+			<state>Nevada</state>
+			<sex>Male</sex>
+			<le>73.5</le>
+			<se>0.117</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-vey4-xyfn.vkmr" _uuid="00000000-0000-0000-4251-A104B2C48A3F" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-vey4-xyfn.vkmr">
+			<state>New Hampshire</state>
+			<sex>Male</sex>
+			<le>76.5</le>
+			<se>0.173</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-fi4r-wqxy_cm4p" _uuid="00000000-0000-0000-436F-70FCDCDBF9CE" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-fi4r-wqxy_cm4p">
+			<state>New Jersey</state>
+			<sex>Male</sex>
+			<le>74.6</le>
+			<se>0.066</se>
+			<quartile>74.1 - 75.4</quartile>
+		</row>
+		<row _id="row-bavf.katf_8ikw" _uuid="00000000-0000-0000-392F-6304F9E9300A" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-bavf.katf_8ikw">
+			<state>New Mexico</state>
+			<sex>Male</sex>
+			<le>71.3</le>
+			<se>0.158</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-6xas~fzcx-bytu" _uuid="00000000-0000-0000-8011-87CA7427E3AF" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-6xas~fzcx-bytu">
+			<state>New York</state>
+			<sex>Male</sex>
+			<le>74.8</le>
+			<se>0.045</se>
+			<quartile>74.1 - 75.4</quartile>
+		</row>
+		<row _id="row-p8nz-cqaa_aejn" _uuid="00000000-0000-0000-4627-A7F1B3382D2B" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-p8nz-cqaa_aejn">
+			<state>North Carolina</state>
+			<sex>Male</sex>
+			<le>73.3</le>
+			<se>0.067</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-z8st_zgjd-j682" _uuid="00000000-0000-0000-2CD2-917BA20E0940" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-z8st_zgjd-j682">
+			<state>North Dakota</state>
+			<sex>Male</sex>
+			<le>74.2</le>
+			<se>0.236</se>
+			<quartile>74.1 - 75.4</quartile>
+		</row>
+		<row _id="row-as5m.uab5_28ua" _uuid="00000000-0000-0000-BEED-83EF7A6D2D26" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-as5m.uab5_28ua">
+			<state>Ohio</state>
+			<sex>Male</sex>
+			<le>72.5</le>
+			<se>0.062</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-eyku_yihu.uhpv" _uuid="00000000-0000-0000-B139-077857E0395D" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-eyku_yihu.uhpv">
+			<state>Oklahoma</state>
+			<sex>Male</sex>
+			<le>71.5</le>
+			<se>0.104</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-rbms_2ywr~8iif" _uuid="00000000-0000-0000-27B8-80782CFEB346" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-rbms_2ywr~8iif">
+			<state>Oregon</state>
+			<sex>Male</sex>
+			<le>76.3</le>
+			<se>0.099</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-duyn_ana4-ey6t" _uuid="00000000-0000-0000-0373-0FBF6EF7FF0C" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-duyn_ana4-ey6t">
+			<state>Pennsylvania</state>
+			<sex>Male</sex>
+			<le>74</le>
+			<se>0.059</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-a4u6-6ras.gb9h" _uuid="00000000-0000-0000-A8C6-EF7489162AA0" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-a4u6-6ras.gb9h">
+			<state>Rhode Island</state>
+			<sex>Male</sex>
+			<le>75.5</le>
+			<se>0.192</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-ujk9.yiuf.jwth" _uuid="00000000-0000-0000-7A54-63843132523F" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-ujk9.yiuf.jwth">
+			<state>South Carolina</state>
+			<sex>Male</sex>
+			<le>71.7</le>
+			<se>0.098</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-gxvz.uih4.q5hu" _uuid="00000000-0000-0000-936D-D7954E66DCE5" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-gxvz.uih4.q5hu">
+			<state>South Dakota</state>
+			<sex>Male</sex>
+			<le>74.2</le>
+			<se>0.221</se>
+			<quartile>74.1 - 75.4</quartile>
+		</row>
+		<row _id="row-2w6a-f3yz~bccz" _uuid="00000000-0000-0000-55C5-572342A8C8AC" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-2w6a-f3yz~bccz">
+			<state>Tennessee</state>
+			<sex>Male</sex>
+			<le>70.7</le>
+			<se>0.083</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-mgvr_rgqr~w9hf" _uuid="00000000-0000-0000-DE21-CEFA6CFF72E0" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-mgvr_rgqr~w9hf">
+			<state>Texas</state>
+			<sex>Male</sex>
+			<le>73.7</le>
+			<se>0.038</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-fnhd.2pxj_cdw6" _uuid="00000000-0000-0000-D233-0E1A8ECD1280" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-fnhd.2pxj_cdw6">
+			<state>United States</state>
+			<sex>Male</sex>
+			<le>74.2</le>
+			<quartile>*</quartile>
+		</row>
+		<row _id="row-b2it.5x8i-beue" _uuid="00000000-0000-0000-4D29-6D6032085788" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-b2it.5x8i-beue">
+			<state>Utah</state>
+			<sex>Male</sex>
+			<le>76.7</le>
+			<se>0.113</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-i2tu_qfgd_dhh7" _uuid="00000000-0000-0000-7F17-92688B4E261E" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-i2tu_qfgd_dhh7">
+			<state>Vermont</state>
+			<sex>Male</sex>
+			<le>76.1</le>
+			<se>0.27</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-gab4.5xiu~77q2" _uuid="00000000-0000-0000-F8F8-4DEBB8559771" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-gab4.5xiu~77q2">
+			<state>Virginia</state>
+			<sex>Male</sex>
+			<le>75.1</le>
+			<se>0.07</se>
+			<quartile>74.1 - 75.4</quartile>
+		</row>
+		<row _id="row-gpww-ivnc~pt8m" _uuid="00000000-0000-0000-283F-B0DB1BF19149" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-gpww-ivnc~pt8m">
+			<state>Washington</state>
+			<sex>Male</sex>
+			<le>76.9</le>
+			<se>0.072</se>
+			<quartile>75.5 - 77.6</quartile>
+		</row>
+		<row _id="row-uf6u~dh7f.pr7a" _uuid="00000000-0000-0000-8F12-680E16F3C147" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-uf6u~dh7f.pr7a">
+			<state>West Virginia</state>
+			<sex>Male</sex>
+			<le>69.8</le>
+			<se>0.17</se>
+			<quartile>68.6 - 72.4</quartile>
+		</row>
+		<row _id="row-3atp~tknq.wqcs" _uuid="00000000-0000-0000-2448-A93FDFC03542" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-3atp~tknq.wqcs">
+			<state>Wisconsin</state>
+			<sex>Male</sex>
+			<le>75.2</le>
+			<se>0.085</se>
+			<quartile>74.1 - 75.4</quartile>
+		</row>
+		<row _id="row-dhik-fm9q.e4av" _uuid="00000000-0000-0000-A1FF-24F40EDDACF9" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-dhik-fm9q.e4av">
+			<state>Wyoming</state>
+			<sex>Male</sex>
+			<le>74</le>
+			<se>0.275</se>
+			<quartile>72.5 - 74.0</quartile>
+		</row>
+		<row _id="row-2w9k.bb4c_i2fk" _uuid="00000000-0000-0000-809C-15840AAC5762" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-2w9k.bb4c_i2fk">
+			<state>Alabama</state>
+			<sex>Female</sex>
+			<le>76.4</le>
+			<se>0.088</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-sv2m_sw33.4yyy" _uuid="00000000-0000-0000-7E93-B19F83798F21" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-sv2m_sw33.4yyy">
+			<state>Alaska</state>
+			<sex>Female</sex>
+			<le>79.2</le>
+			<se>0.242</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-tn2r.ipw7.9z4j" _uuid="00000000-0000-0000-A4C0-3ED5A0BB6524" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-tn2r.ipw7.9z4j">
+			<state>Arizona</state>
+			<sex>Female</sex>
+			<le>79.5</le>
+			<se>0.072</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-v35j_pb7w_kb28" _uuid="00000000-0000-0000-24D8-A8337C599DB3" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-v35j_pb7w_kb28">
+			<state>Arkansas</state>
+			<sex>Female</sex>
+			<le>76.6</le>
+			<se>0.116</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-vvx9.r8ts~d5k8" _uuid="00000000-0000-0000-9750-F273B745CFCF" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-vvx9.r8ts~d5k8">
+			<state>California</state>
+			<sex>Female</sex>
+			<le>82</le>
+			<se>0.029</se>
+			<quartile>80.0 - 83.8</quartile>
+		</row>
+		<row _id="row-hx4t~i93q_fytd" _uuid="00000000-0000-0000-73BD-1F017707568C" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-hx4t~i93q_fytd">
+			<state>Colorado</state>
+			<sex>Female</sex>
+			<le>80.9</le>
+			<se>0.077</se>
+			<quartile>80.0 - 83.8</quartile>
+		</row>
+		<row _id="row-nity~x3yj_h7gx" _uuid="00000000-0000-0000-5DD1-71C5DDFC569D" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-nity~x3yj_h7gx">
+			<state>Connecticut</state>
+			<sex>Female</sex>
+			<le>81.3</le>
+			<se>0.093</se>
+			<quartile>80.0 - 83.8</quartile>
+		</row>
+		<row _id="row-hyf4~jpus_h7d2" _uuid="00000000-0000-0000-5257-C0E62807F071" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-hyf4~jpus_h7d2">
+			<state>Delaware</state>
+			<sex>Female</sex>
+			<le>79.5</le>
+			<se>0.191</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-saww-cg8c-i9vx" _uuid="00000000-0000-0000-51F0-39051D35D268" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-saww-cg8c-i9vx">
+			<state>District of Columbia</state>
+			<sex>Female</sex>
+			<le>78.7</le>
+			<se>0.233</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-5kuc-7nxy-bnt6" _uuid="00000000-0000-0000-697B-C5B028D2EAB6" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-5kuc-7nxy-bnt6">
+			<state>Florida</state>
+			<sex>Female</sex>
+			<le>80.5</le>
+			<se>0.042</se>
+			<quartile>79.7 - 80.7</quartile>
+		</row>
+		<row _id="row-z8hw~i4d6~2p86" _uuid="00000000-0000-0000-3497-88AB35329AAF" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-z8hw~i4d6~2p86">
+			<state>Georgia</state>
+			<sex>Female</sex>
+			<le>78.3</le>
+			<se>0.058</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-a7br~6te9.k6u6" _uuid="00000000-0000-0000-1757-916C51D1CD4A" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-a7br~6te9.k6u6">
+			<state>Hawaii</state>
+			<sex>Female</sex>
+			<le>83.8</le>
+			<se>0.159</se>
+			<quartile>80.0 - 83.8</quartile>
+		</row>
+		<row _id="row-fkwr_awug-2wgs" _uuid="00000000-0000-0000-367F-3BE3EC0C135B" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-fkwr_awug-2wgs">
+			<state>Idaho</state>
+			<sex>Female</sex>
+			<le>80.8</le>
+			<se>0.136</se>
+			<quartile>80.0 - 83.8</quartile>
+		</row>
+		<row _id="row-8jbv_ifmf-hab8" _uuid="00000000-0000-0000-41D3-D0D4E5440333" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-8jbv_ifmf-hab8">
+			<state>Illinois</state>
+			<sex>Female</sex>
+			<le>79.8</le>
+			<se>0.052</se>
+			<quartile>79.7 - 80.7</quartile>
+		</row>
+		<row _id="row-rk73-inip.g2un" _uuid="00000000-0000-0000-0164-8DA2B9C14C92" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-rk73-inip.g2un">
+			<state>Indiana</state>
+			<sex>Female</sex>
+			<le>77.9</le>
+			<se>0.075</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-reru_rk6p~yeg3" _uuid="00000000-0000-0000-FFB0-626AB425792A" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-reru_rk6p~yeg3">
+			<state>Iowa</state>
+			<sex>Female</sex>
+			<le>80.1</le>
+			<se>0.102</se>
+			<quartile>79.7 - 80.7</quartile>
+		</row>
+		<row _id="row-znwf_6ru9.bq3i" _uuid="00000000-0000-0000-100B-97C7F3444999" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-znwf_6ru9.bq3i">
+			<state>Kansas</state>
+			<sex>Female</sex>
+			<le>79.2</le>
+			<se>0.112</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-nwk8~7edq.pyft" _uuid="00000000-0000-0000-23B2-7CEE668E64AD" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-nwk8~7edq.pyft">
+			<state>Kentucky</state>
+			<sex>Female</sex>
+			<le>76.5</le>
+			<se>0.094</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-63u6_wx85_6zgj" _uuid="00000000-0000-0000-EAB5-10B755F2953B" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-63u6_wx85_6zgj">
+			<state>Louisiana</state>
+			<sex>Female</sex>
+			<le>76.4</le>
+			<se>0.093</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-35wt-ietr-8er3" _uuid="00000000-0000-0000-DB39-A0A6B5F87018" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-35wt-ietr-8er3">
+			<state>Maine</state>
+			<sex>Female</sex>
+			<le>80.7</le>
+			<se>0.162</se>
+			<quartile>79.7 - 80.7</quartile>
+		</row>
+		<row _id="row-t3ih-imy3.q7se" _uuid="00000000-0000-0000-F9EA-5BC2315DAB04" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-t3ih-imy3.q7se">
+			<state>Maryland</state>
+			<sex>Female</sex>
+			<le>79.7</le>
+			<se>0.076</se>
+			<quartile>79.7 - 80.7</quartile>
+		</row>
+		<row _id="row-utxc~vqdi_pr43" _uuid="00000000-0000-0000-9E20-DE3423B7D521" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-utxc~vqdi_pr43">
+			<state>Massachusetts</state>
+			<sex>Female</sex>
+			<le>81.5</le>
+			<se>0.065</se>
+			<quartile>80.0 - 83.8</quartile>
+		</row>
+		<row _id="row-ckv5.gcbw-dwsn" _uuid="00000000-0000-0000-8079-81902BFF32FC" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-ckv5.gcbw-dwsn">
+			<state>Michigan</state>
+			<sex>Female</sex>
+			<le>78.8</le>
+			<se>0.062</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-tkj4-u3yn.fut3" _uuid="00000000-0000-0000-93E1-754E72D0913E" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-tkj4-u3yn.fut3">
+			<state>Minnesota</state>
+			<sex>Female</sex>
+			<le>81.4</le>
+			<se>0.074</se>
+			<quartile>80.0 - 83.8</quartile>
+		</row>
+		<row _id="row-3nen.v43a~7spt" _uuid="00000000-0000-0000-0AAA-A57158310B4C" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-3nen.v43a~7spt">
+			<state>Mississippi</state>
+			<sex>Female</sex>
+			<le>75.2</le>
+			<se>0.118</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-i4nt_gbux.h9wq" _uuid="00000000-0000-0000-A5D7-62E2ABC89FC5" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-i4nt_gbux.h9wq">
+			<state>Missouri</state>
+			<sex>Female</sex>
+			<le>78.1</le>
+			<se>0.078</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-vxrp-ehkt.hpvg" _uuid="00000000-0000-0000-F274-D694F0AD9BC2" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-vxrp-ehkt.hpvg">
+			<state>Montana</state>
+			<sex>Female</sex>
+			<le>79.6</le>
+			<se>0.193</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-n7b7~8ydd~jda5" _uuid="00000000-0000-0000-F5ED-91C82D58341E" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-n7b7~8ydd~jda5">
+			<state>Nebraska</state>
+			<sex>Female</sex>
+			<le>80.3</le>
+			<se>0.131</se>
+			<quartile>79.7 - 80.7</quartile>
+		</row>
+		<row _id="row-ukzh_c6nb.ybfn" _uuid="00000000-0000-0000-3DF9-158C47E45F73" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-ukzh_c6nb.ybfn">
+			<state>Nevada</state>
+			<sex>Female</sex>
+			<le>79.2</le>
+			<se>0.106</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-26fa-xmgg~tn7g" _uuid="00000000-0000-0000-C1EA-2D8049569EB3" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-26fa-xmgg~tn7g">
+			<state>New Hampshire</state>
+			<sex>Female</sex>
+			<le>81.5</le>
+			<se>0.153</se>
+			<quartile>80.0 - 83.8</quartile>
+		</row>
+		<row _id="row-z3sg-iaxq-wzwf" _uuid="00000000-0000-0000-0725-EBCBFF9DC036" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-z3sg-iaxq-wzwf">
+			<state>New Jersey</state>
+			<sex>Female</sex>
+			<le>80.5</le>
+			<se>0.059</se>
+			<quartile>79.7 - 80.7</quartile>
+		</row>
+		<row _id="row-6xe3~qxbv~evcq" _uuid="00000000-0000-0000-B631-CC7B69CD7263" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-6xe3~qxbv~evcq">
+			<state>New Mexico</state>
+			<sex>Female</sex>
+			<le>77.8</le>
+			<se>0.145</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-tpzp-5iqg_gyy3" _uuid="00000000-0000-0000-4DFA-7BAE994A6B0E" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-tpzp-5iqg_gyy3">
+			<state>New York</state>
+			<sex>Female</sex>
+			<le>80.7</le>
+			<se>0.04</se>
+			<quartile>79.7 - 80.7</quartile>
+		</row>
+		<row _id="row-sfkh-uep8~tn33" _uuid="00000000-0000-0000-370D-AC04B1CA8592" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-sfkh-uep8~tn33">
+			<state>North Carolina</state>
+			<sex>Female</sex>
+			<le>79</le>
+			<se>0.059</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-2xd9-3xuj~znc7" _uuid="00000000-0000-0000-FE3A-005AC70C16A5" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-2xd9-3xuj~znc7">
+			<state>North Dakota</state>
+			<sex>Female</sex>
+			<le>80</le>
+			<se>0.22</se>
+			<quartile>79.7 - 80.7</quartile>
+		</row>
+		<row _id="row-tkyt_tfuc_vuw5" _uuid="00000000-0000-0000-D154-9721CB41E25E" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-tkyt_tfuc_vuw5">
+			<state>Ohio</state>
+			<sex>Female</sex>
+			<le>78.1</le>
+			<se>0.057</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-pk9e-56u4.6wyk" _uuid="00000000-0000-0000-8D40-18722DC1DB76" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-pk9e-56u4.6wyk">
+			<state>Oklahoma</state>
+			<sex>Female</sex>
+			<le>76.9</le>
+			<se>0.097</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-axuc~ydh7~kjne" _uuid="00000000-0000-0000-1C47-F01E6F2460EA" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-axuc~ydh7~kjne">
+			<state>Oregon</state>
+			<sex>Female</sex>
+			<le>81.3</le>
+			<se>0.088</se>
+			<quartile>80.0 - 83.8</quartile>
+		</row>
+		<row _id="row-gxei_hazi.96eg" _uuid="00000000-0000-0000-7F5C-13906ED9821F" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-gxei_hazi.96eg">
+			<state>Pennsylvania</state>
+			<sex>Female</sex>
+			<le>79.6</le>
+			<se>0.052</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-89tu.hbu6.casp" _uuid="00000000-0000-0000-CB8B-74DCDFA8BD73" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-89tu.hbu6.casp">
+			<state>Rhode Island</state>
+			<sex>Female</sex>
+			<le>80.9</le>
+			<se>0.17</se>
+			<quartile>80.0 - 83.8</quartile>
+		</row>
+		<row _id="row-qsm7.rw8x.r62e" _uuid="00000000-0000-0000-4265-8A0441846EB3" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-qsm7.rw8x.r62e">
+			<state>South Carolina</state>
+			<sex>Female</sex>
+			<le>78</le>
+			<se>0.087</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-afqr-trmg~xib3" _uuid="00000000-0000-0000-197C-327DF47E68A2" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-afqr-trmg~xib3">
+			<state>South Dakota</state>
+			<sex>Female</sex>
+			<le>79.4</le>
+			<se>0.217</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-5btb-2s3g~4xc6" _uuid="00000000-0000-0000-A2B6-18C15A7A94E4" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-5btb-2s3g~4xc6">
+			<state>Tennessee</state>
+			<sex>Female</sex>
+			<le>77</le>
+			<se>0.074</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-x3ak-smzn~4bgk" _uuid="00000000-0000-0000-3B79-F36262A54A07" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-x3ak-smzn~4bgk">
+			<state>Texas</state>
+			<sex>Female</sex>
+			<le>79.3</le>
+			<se>0.035</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+		<row _id="row-ajfu~ek7u_cyss" _uuid="00000000-0000-0000-A7BD-A47FC9E1CECC" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-ajfu~ek7u_cyss">
+			<state>United States</state>
+			<sex>Female</sex>
+			<le>79.9</le>
+			<quartile>*</quartile>
+		</row>
+		<row _id="row-ewgy.rge6-dbjj" _uuid="00000000-0000-0000-2401-4908A291EBC3" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-ewgy.rge6-dbjj">
+			<state>Utah</state>
+			<sex>Female</sex>
+			<le>80.6</le>
+			<se>0.105</se>
+			<quartile>79.7 - 80.7</quartile>
+		</row>
+		<row _id="row-gx9h~z5dh~ufeu" _uuid="00000000-0000-0000-3952-A8F6D52CAB07" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-gx9h~z5dh~ufeu">
+			<state>Vermont</state>
+			<sex>Female</sex>
+			<le>81.4</le>
+			<se>0.227</se>
+			<quartile>80.0 - 83.8</quartile>
+		</row>
+		<row _id="row-dwvd.x9kj-gkh3" _uuid="00000000-0000-0000-5B0F-C3FACD6ED501" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-dwvd.x9kj-gkh3">
+			<state>Virginia</state>
+			<sex>Female</sex>
+			<le>80.1</le>
+			<se>0.064</se>
+			<quartile>79.7 - 80.7</quartile>
+		</row>
+		<row _id="row-fm7f-qqea~e2w6" _uuid="00000000-0000-0000-AA75-742642F3C283" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-fm7f-qqea~e2w6">
+			<state>Washington</state>
+			<sex>Female</sex>
+			<le>81.6</le>
+			<se>0.065</se>
+			<quartile>80.0 - 83.8</quartile>
+		</row>
+		<row _id="row-sriy~nfrj~qtdt" _uuid="00000000-0000-0000-DC88-B2D60108C20A" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-sriy~nfrj~qtdt">
+			<state>West Virginia</state>
+			<sex>Female</sex>
+			<le>76.1</le>
+			<se>0.158</se>
+			<quartile>75.2 - 78.2</quartile>
+		</row>
+		<row _id="row-a86s~tz5i-dn7w" _uuid="00000000-0000-0000-6210-8194941C5DE9" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-a86s~tz5i-dn7w">
+			<state>Wisconsin</state>
+			<sex>Female</sex>
+			<le>80.3</le>
+			<se>0.078</se>
+			<quartile>79.7 - 80.7</quartile>
+		</row>
+		<row _id="row-qruh_uw4e~dcqc" _uuid="00000000-0000-0000-0954-DC18FCDAA836" _position="0" _address="https://data.cdc.gov/resource/ss2j-8ajj/row-qruh_uw4e~dcqc">
+			<state>Wyoming</state>
+			<sex>Female</sex>
+			<le>78.9</le>
+			<se>0.259</se>
+			<quartile>78.3 - 79.6</quartile>
+		</row>
+	</row>
+</response>

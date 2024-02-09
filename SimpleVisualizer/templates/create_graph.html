@@ -186,7 +186,7 @@
 
     function getRadius(d) {
         var minradius = 15;
-        return minradius + (d * 4);
+        return Math.min(minradius + (d * 4), 100);
     }
 
 

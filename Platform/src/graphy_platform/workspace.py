@@ -70,6 +70,7 @@ class Workspace:
         self.__source_plugin.set_reader(FileSourceReader(self.__filepath))
         self.__graph = self.__source_plugin.load()
         self.__initial_graph = self.__source_plugin.load()
+        self.__applied_queries = []
         print(self.graph_stats)
 
     def render_graph_view(self, request: WSGIRequest) -> HttpResponse:
