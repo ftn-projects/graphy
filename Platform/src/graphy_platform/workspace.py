@@ -52,7 +52,6 @@ class Workspace:
     @filepath.setter
     def filepath(self, filepath: str) -> None:
         self.__filepath = filepath
-        self.__source_plugin.set_reader(FileSourceReader(filepath))
 
     @property
     def source_plugin(self) -> DataSourceService:
@@ -67,8 +66,9 @@ class Workspace:
         return self.__applied_queries
 
     def load_graph(self) -> None:
+        self.__source_plugin.set_reader(FileSourceReader(self.__filepath))
         self.__graph = self.__source_plugin.load()
-        self.__initial_graph = self.__source_plugin.load()
+        self.__initial_graph = self.__graph
 
     def render_graph_view(self, request: WSGIRequest) -> HttpResponse:
         return self.__visualizer_plugin.create_view(request, self.__graph)
