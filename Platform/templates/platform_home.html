@@ -151,8 +151,32 @@
                 <button class="action-button" onclick="onLoad()">Load</button>
             </div>
             <div class="search-filter-section section">
+
+                <div class="path-input-container">
+                    <label for="search-input">Search:</label>
+                    <input name="search-input" id="search-input" />
+                </div>
+
+                <div class="path-input-container">
+                    <label for="filter-input">Filter:</label>
+                    <input name="filter-input" id="filter-input" />
+                    <label for="select-input"></label>
+                    <select name="select-input" id="select-input">
+                        <option value="="> = </option>
+                        <option value="!="> != </option>
+                        <option value="<"> < </option>
+                        <option value="<="> <= </option>
+                        <option value=">"> > </option>
+                        <option value=">="> >= </option>
+                    </select>
+                    <label for="value-input"></label>
+                    <input name="value-input" id="value-input" />
+                </div>
+
                 <button class="action-button" onclick="onSearch()">SEARCH</button>
+                <button class="action-button" onclick="onReset()">RESET</button>
             </div>
+            <label class="section" id="queries">Applied queries: </label>
         </div>
     </div>
     <div class="all-plugins-container">
@@ -174,13 +198,16 @@
     let filepath = searchParams.get('filepath');
     let dataSource = searchParams.get('data_source');
     let visualizer = searchParams.get('visualizer');
+    let applied_queries = {{ applied_queries | safe }}
 
     console.log(filepath, dataSource, visualizer);
+    console.log(applied_queries)
 
     pathInput = d3.select('#path-input');
     dataSourceSelect = d3.select('#data-sources-select');
     simpleVisualizer = d3.select('#simple-radio');
     blockVisualizer = d3.select('#block-radio');
+    queryLabel = document.getElementById("queries")
 
     console.log(pathInput, dataSourceSelect, simpleVisualizer, blockVisualizer)
 
@@ -190,16 +217,33 @@
         simpleVisualizer.checked = true
     else blockVisualizer.checked = true
 
+    for (let a of applied_queries) {
+        queryLabel.appendChild(document.createTextNode(a + ", "))
+    }
+
     function onLoad() {
 
     }
 
     function onSearch() {
-        const filepath = 'aaa.xml';
-        const data_source = 'XML';
-        visualizer = visualizer === 'SIMPLE' ? 'BLOCK' : 'SIMPLE';
+        {#const filepath = 'aaa.xml';#}
+        {#const data_source = 'XML';#}
+        {#visualizer = visualizer === 'SIMPLE' ? 'BLOCK' : 'SIMPLE';#}
+        {##}
+        {#document.location.href = 'http://127.0.0.1:8000?filepath=' + filepath + '&data_source=' + data_source + '&visualizer=' + visualizer;#}
 
-        document.location.href = 'http://127.0.0.1:8000?filepath=' + filepath + '&data_source=' + data_source + '&visualizer=' + visualizer;
+        var search = d3.select("#search-input").property("value");
+        var filter = d3.select("#filter-input").property("value");
+        var select = d3.select("#select-input").property("value");
+        var param = d3.select("#value-input").property("value");
+
+        document.location.href = 'http://127.0.0.1:8000/query?search=' + search + '&attribute=' + filter + '&operator=' + select + '&filter=' + param;
+
+        console.log(search, filter, select, param )
+    }
+
+    function onReset(){
+        document.location.href = 'http://127.0.0.1:8000/clearQuery'
     }
 
     function on_data_changed(event, data) {

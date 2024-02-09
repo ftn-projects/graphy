@@ -19,5 +19,7 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('', get_view)
+    path('', get_view),
+    path('query/', get_query),
+    path('clearQuery/', get_initial)
 ]

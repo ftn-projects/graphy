@@ -23,7 +23,7 @@ class JsonDataSourceService(DataSourceService):
     def __construct_tree(self, json: any):
         self.__load_object('', json, None)
 
-    def __load_object(self, key: str, json: any, parent: Node | None, parent_obj: bool = True) -> None:
+    def __load_object(self, key: str, json: any, parent, parent_obj: bool = True) -> None:
         if isinstance(json, dict):
             node = self.__create_with_parent(key, parent)
             self.__load_dictionary(node, json.items())
@@ -51,7 +51,7 @@ class JsonDataSourceService(DataSourceService):
             else:
                 self.__load_object(k, v, node, False)
 
-    def __create_with_parent(self, key: str, parent: Node | None, name: str = '') -> Node:
+    def __create_with_parent(self, key: str, parent, name: str = '') -> Node:
         node = Node(name)
         self.__graph.add_node(node)
 
