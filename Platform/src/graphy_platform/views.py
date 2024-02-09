@@ -85,6 +85,6 @@ def load(request: WSGIRequest, workspace_id: int) -> HttpResponse:
 
 
 def get_with_error(request: WSGIRequest, workspace_id: int, message: str) -> HttpResponse:
-    plugin_content = render(request, 'create_graph.html', {'message': message})
+    plugin_content = render(request, 'error_view.html', {'message': message})
     tree_view = render(request, 'tree_view.html')
     return get_workspace_view(request, workspace_id, plugin_content, tree_view)
