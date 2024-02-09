@@ -1,7 +1,81 @@
 {% load static %}
-<div>ALSKJELKASJDLK:ASJD:LKASJDL:</div>
+<style>
+    #tree_div {
+        width: 600px;
+        height: 600px;
+    }
 
+    .node circle {
+        fill: #fff;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+
+    .node text {
+        font: 10px sans-serif;
+    }
+
+    .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 1.5px;
+    }
+</style>
+<div id="tree_div"></div>
+<script src="{% static 'js_observer.js' %}"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
-    var graphData=JSON.parse('{{ graph|safe }}');
-    console.log(graphData);
+    var graphData = {{ graph|safe }};
+
+    // Create a hierarchy from the root
+    var root = d3.hierarchy(graphData);
+
+    // Create tree layout
+    var treeLayout = d3.tree().size([600, 400]);
+
+    // Assigns the x and y position for the nodes
+    var treeData = treeLayout(root);
+
+    // Append the svg object to the body of the page
+    var svg = d3.select("#tree_div").append("svg")
+        .attr("width", 600)
+        .attr("height", 600)
+        .append("g")
+        .attr("transform", "translate(50, 50)");
+
+    // Draw edges
+    svg.selectAll(".link")
+        .data(treeData.links())
+        .enter().append("path")
+        .attr("class", "link")
+        .attr("d", d3.linkHorizontal()
+            .x(function(d) { return d.y; })
+            .y(function(d) { return d.x; }));
+
+    // Draw nodes
+    var node = svg.selectAll(".node")
+        .data(treeData.descendants())
+        .enter().append("g")
+        .attr("class", function(d) {
+            return "node" + (d.children ? " node--internal" : " node--leaf");
+        })
+        .attr("transform", function(d) {
+            return "translate(" + d.y + "," + d.x + ")";
+        });
+
+    node.append("circle")
+        .attr("r", 10);
+
+    // Add labels for the nodes
+    node.append("text")
+        .attr("dy", ".35em")
+        .attr("x", function(d) {
+            return d.children ? -13 : 13;
+        })
+        .style("text-anchor", function(d) {
+            return d.children ? "end" : "start";
+        })
+        .text(function(d) {
+            return d.data.name;
+        });
 </script>

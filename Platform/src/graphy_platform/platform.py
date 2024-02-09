@@ -59,14 +59,14 @@ class Platform:
             return render(request, 'tree_view.html', {'graph': graph_json})
 
         last_selected_node = None
-        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties} for node in
+        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties , 'children': [childNode.id for childNode in node.children]} for node in
                             self.__graph.nodes]
-        serialized_edges = [{'source': edge.source.id, 'target': edge.destination.id, 'value': edge.value} for edge in
-                            self.__graph.edges]
         graph_data = {
-            'nodes': serialized_nodes,
-            'edges': serialized_edges
+            'nodes': serialized_nodes
         }
+
+
+
 
         graph_json = json.dumps(graph_data)
         return render(request, 'tree_view.html', {'graph': graph_json})
