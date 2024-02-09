@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from typing import List
 import time
 
@@ -80,10 +81,18 @@ class Workspace:
             graph_json = json.dumps(graph_data)
             return render(request, 'tree_view.html', {'graph': graph_json})
 
-        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties} for node in
-                            self.__graph.nodes]
-        serialized_edges = [{'source': edge.source.id, 'target': edge.destination.id, 'value': edge.value} for edge in
-                            self.__graph.edges]
+        formatted_nodes = []
+        for node in self.__graph.nodes:
+            n = node.clone()
+            for k, v in node.properties.items():
+                if isinstance(v, datetime):
+                    n.properties[k] = str(v)
+            formatted_nodes.append(n)
+
+        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties}
+                            for node in formatted_nodes]
+        serialized_edges = [{'source': edge.source.id, 'target': edge.destination.id, 'value': edge.value}
+                            for edge in self.__graph.edges]
         graph_data = {
             'nodes': serialized_nodes,
             'edges': serialized_edges
