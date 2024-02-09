@@ -181,7 +181,9 @@
     </div>
     <div class="all-plugins-container">
         <div class="vertical-plugin-container">
-            <div class="tree-plugin-container">Hypothetical Tree View</div>
+            <div class="tree-plugin-container">
+                {{ tree_content|safe }}
+            </div>
             <div class="bird-plugin-container">
                 {{ bird_content|safe }}
             </div>

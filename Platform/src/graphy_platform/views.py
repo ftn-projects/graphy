@@ -26,8 +26,12 @@ def get_view(request):
     response_bird = platform.render_bird_view(request)
     plugin_content_bird = response_bird.content.decode()
 
+    response_tree = platform.render_tree_view(request)
+    plugin_content_tree = response_tree.content.decode()
+
+
     return render(request, 'platform_home.html',
-                  {'plugin_content': plugin_content, 'bird_content': plugin_content_bird})
+                  {'plugin_content': plugin_content, 'bird_content': plugin_content_bird, 'tree_content':plugin_content_tree})
 
 
 def get_query(request):
@@ -49,9 +53,12 @@ def get_query(request):
     response_bird = platform.render_bird_view(request)
     plugin_content_bird = response_bird.content.decode()
 
+    response_tree = platform.render_tree_view(request)
+    plugin_content_tree = response_tree.content.decode()
+
     return render(request, 'platform_home.html',
                   {'plugin_content': plugin_content, 'applied_queries': json.dumps(queries),
-                   'bird_content': plugin_content_bird})
+                   'bird_content': plugin_content_bird, 'tree_content': plugin_content_tree})
 
 
 def get_initial(request):
