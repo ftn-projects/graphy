@@ -74,6 +74,7 @@
         container.addEventListener("click", (event) => {
             event.stopPropagation();
             toggleVisibility(container);
+            visualizer_observer.notify(EventType.NODE_SELECTED,node.id)
         });
 
         return container;
