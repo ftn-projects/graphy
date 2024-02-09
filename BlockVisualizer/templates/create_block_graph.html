@@ -1,0 +1,290 @@
+{% load static %}
+<style>
+    .node {
+        fill: blue;
+        stroke: #fff;
+    }
+
+    .node_property {
+        fill: blue;
+        stroke: #fff;
+    }
+
+    .link.connected {
+        stroke: red !important;
+        stroke-width: 3;
+    }
+
+    .link {
+        stroke: #999;
+        stroke-opacity: 0.6;
+        stroke-width: 1;
+    }
+
+    .label {
+        fill: white;
+        font-family: Arial, sans-serif;
+        font-size: 1em;
+        text-anchor: middle;
+        pointer-events: none;
+    }
+
+    .property_label {
+        fill: white;
+        font-family: Arial, sans-serif;
+        font-size: 0.5em;
+        text-anchor: middle;
+        pointer-events: none;
+    }
+
+    .simple-svg-container, .container-simple {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<div class="simple-svg-container">
+    <svg id="container-simple" class="container-simple"></svg>
+</div>
+
+<script src="{% static 'js_observer.js' %}"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+
+    visualizer_observer.notify(EventType.NODE_SELECTED)
+    // Parse the graph data passed from the view function
+    var graphData = JSON.parse('{{ graph_json | safe }}');
+
+    var svg = d3.select(".container-simple");
+    // Create force simulation
+    var simulation = d3.forceSimulation()
+        .nodes(graphData.nodes)
+        .force("link", d3.forceLink(graphData.edges).id(function (d) {
+            return d.id;
+        }))
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(400, 300))
+        .force("collide", d3.forceCollide().radius(function (d) {
+            return 70;
+        }).iterations(5)); // Adjust the radius as needed; // Center the simulation in the SVG container
+
+    // Draw edges
+    var link = svg
+        .selectAll(".link")
+        .data(graphData.edges)
+        .enter().append("line")
+        .attr("class", "link");
+
+    // Draw nodes
+    var node = svg
+    .selectAll(".node")
+    .data(graphData.nodes)
+    .enter().append("rect")
+    .attr("class", "node")
+    .attr("width", 100)
+    .attr("height", 20)
+    .attr("x", function(d) { return d.x-50; })
+    .attr("y", function(d) { return d.y-10; })
+    .on("click", function (event, d) {
+        let selectedNodeId = d.index;
+
+        link.attr("class", function (l) {
+            if (l.source.index === selectedNodeId || l.target.index === selectedNodeId) {
+                return "link connected"; // Add connected class
+            } else {
+                return "link";
+            }
+        });
+
+        visualizer_observer.notify(EventType.NODE_SELECTED, selectedNodeId);
+    });
+
+   node.each(function(d) {
+    var floatY = d.y + 10; // Initial y position for the first property
+    var properties = Object.keys(d.properties);
+
+    properties.forEach(function(property, i) {
+        var value = d.properties[property];
+
+        // Append a rectangle for the property
+        svg.append("rect")
+            .attr("class", "node_property")
+            .attr("id", "node_property_" + d.name)
+            .attr("width", 100)
+            .attr("height", 20)
+            .attr("x", d.x - 50)
+            .attr("y", floatY + i * 20)
+            .on("click", function(event) {
+                let selectedNodeId = d.index;
+                link.attr("class", function(l) {
+                    if (l.source.index === selectedNodeId || l.target.index === selectedNodeId) {
+                        return "link connected";
+                    } else {
+                        return "link";
+                    }
+                });
+                visualizer_observer.notify(EventType.NODE_SELECTED, selectedNodeId);
+            });
+
+        // Append text label for the property
+        svg.append("text")
+            .attr("class", "property_label")
+            .attr("id", "node_property_label_" + d.name)
+            .attr("x", d.x)
+            .attr("y", floatY + i * 20 + 15) // Dynamically calculate y position for label
+            .attr("dy", -5)
+            .style("text-anchor", "middle")
+            .text(property + ": " + value);
+    });
+});
+
+
+    var nodeLabels = svg
+        .selectAll(".label")
+        .data(graphData.nodes)
+        .enter().append("text")
+        .attr("class", "label")
+        .attr("x", function(d) { return d.x; })
+        .attr("y", function(d) { return d.y+5; })
+        .style("text-anchor", "middle")
+        .text(function (d) {
+            return "id="+d.name;
+        });
+
+
+    // Update node and edge positions during simulation
+    simulation.nodes(graphData.nodes).on("tick", ticked);
+    simulation.force("link").links(graphData.edges);
+
+    var zoom = d3.zoom().scaleExtent([0.5, 5]);
+
+    svg.call(zoom);
+
+
+    function sendDataToMinimap() {
+        var minimapData = {
+            mainSVG: svg,
+            zoom: d3.zoomTransform(svg.node())
+        };
+
+        visualizer_observer.notify(EventType.HTML_CHANGED, minimapData);
+    }
+
+
+
+    zoom.on("zoom", function (event) {
+        var currentZoom = event.transform.k;
+        node.attr("transform", d3.zoomTransform(this));
+        link.attr("transform", d3.zoomTransform(this));
+        nodeLabels.attr("transform", d3.zoomTransform(this));
+        d3.selectAll(".node_property").attr("transform",d3.zoomTransform(this));
+        d3.selectAll(".property_label").attr("transform",d3.zoomTransform(this));
+    });
+
+
+    // Define drag behavior
+    var drag = d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended);
+
+    // Apply drag behavior to nodes
+    node.call(drag);
+
+
+    function getRadius(d) {
+        var minradius = 15;
+        return minradius + (d * 4);
+    }
+
+
+    // Drag start function
+    function dragstarted(event, d) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+    }
+
+    // Drag function
+    function dragged(event, d) {
+        d.fx = event.x;
+        d.fy = event.y;
+    }
+
+    // Drag end function
+    function dragended(event, d) {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+    }
+
+    function handleNodeSelection(selectedNodeId) {
+        console.log("Clicked node id received in D3: ", selectedNodeId);
+    }
+
+
+    visualizer_observer.attach(EventType.NODE_SELECTED, set_selected_node)
+
+    function set_selected_node(event, selected_node) {
+        if (selected_node) {
+            console.log("Selected node has been set in simple visualizer: ", selected_node);
+            link.attr("class", function (l) {
+                if (l.source.index === selected_node || l.target.index === selected_node) {
+                    return "link connected";
+                } else {
+                    return "link";
+                }
+            });
+        }
+    }
+
+
+    function ticked() {
+
+
+        link.attr("x1", function (d) {
+            return d.source.x;
+        })
+            .attr("y1", function (d) {
+                return d.source.y;
+            })
+            .attr("x2", function (d) {
+                return d.target.x;
+            })
+            .attr("y2", function (d) {
+                return d.target.y;
+            });
+
+
+
+    nodeLabels.attr("x", function(d) { return d.x; })
+    .attr("y", function(d) { return d.y + 5; })
+    .style("text-anchor", "middle"); // Set text-anchor to center the text horizontally
+
+        node.each(function(d) {
+        var floatY = d.y + 10 - Object.keys(d.properties).length * 20;
+        var rect=d3.selectAll("#node_property_"+d.name);
+        var values=d3.selectAll("#node_property_label_"+d.name);
+        rect.each(function() {
+        d3.select(this)
+            .attr("x", d.x - 50)
+            .attr("y", floatY);
+        floatY+=20;
+        });
+        floatY = d.y + 10 - (Object.keys(d.properties).length - 1) * 20;
+        values.each(function(){
+            d3.select(this)
+                .attr("x",d.x)
+                .attr("y",floatY)
+                .attr("dy", -5)
+                .style("text-anchor", "middle");
+            floatY+=20;
+        })
+
+        });
+
+        node.attr("x", function(d) { return d.x - 50; })
+        .attr("y", function(d) { return d.y - 10; })
+
+        sendDataToMinimap();
+    }
+</script>

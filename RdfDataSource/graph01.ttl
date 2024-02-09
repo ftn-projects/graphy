@@ -1,0 +1,42 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:Person rdf:type rdf:Class .
+
+ex:John rdf:type ex:Person ;
+    ex:name "John Doe" ;
+    ex:age 30 ;
+    ex:city "New York" .
+
+ex:Mary rdf:type ex:Person ;
+    ex:name "Mary Smith" ;
+    ex:age 25 ;
+    ex:city "London" .
+
+ex:knows rdf:type rdf:Property .
+
+ex:John ex:knows ex:Mary .
+
+ex:University rdf:type rdf:Class .
+
+ex:MIT rdf:type ex:University ;
+    ex:name "Massachusetts Institute of Technology" ;
+    ex:location "Cambridge, MA" .
+
+ex:Harvard rdf:type ex:University ;
+    ex:name "Harvard University" ;
+    ex:location "Cambridge, MA" .
+
+ex:Professor rdf:type rdf:Class .
+
+ex:Smith rdf:type ex:Professor ;
+    ex:name "Prof. Smith" ;
+    ex:teaches ex:ComputerScience .
+
+ex:ComputerScience rdf:type rdf:Class ;
+    rdf:subClassOf ex:AcademicSubject .
+
+ex:AcademicSubject rdf:type rdf:Class .
+
+ex:Programming rdf:type ex:AcademicSubject ;
+    ex:name "Programming" .

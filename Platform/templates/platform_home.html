@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Home</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .all-plugins-container {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid blue;
+        }
+
+        .main-plugin-container {
+            flex: 1;
+        }
+
+        .vertical-plugin-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .action-button {
+            padding: 4px;
+        }
+
+        .section {
+            display: flex;
+            padding: 15px;
+            padding-inline: 50px;
+            gap: 40px;
+        }
+
+        .upper-section-container {
+            height: min-content;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .right-upper-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .visualizer-section {
+            width: 350px;
+            row-span: 2;
+        }
+
+        .file-browsing-section {
+            height: min-content;
+        }
+
+        .section>* {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-self: center;
+            gap: 5px;
+        }
+
+        .path-input-container {
+            flex: 1;
+        }
+
+        #path-input {
+            flex: 1;
+        }
+
+        .search-filter-section {
+            flex: 1;
+        }
+
+        .tree-plugin-container {
+            border: 1px solid forestgreen;
+        }
+
+        .bird-plugin-container {
+            border: 1px solid lightskyblue;
+        }
+
+        .main-plugin-container {
+            border: 1px solid black;
+        }
+
+        .tree-plugin-container, .bird-plugin-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+        }
+
+        .bird-plugin-svg {
+            width: 100%; /* Adjust width as needed */
+            height: 100%; /* Adjust height as needed */
+        }
+
+    </style>
+</head>
+<body>
+<script src="{% static 'js_observer.js' %}"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<div class="container">
+    <div class="upper-section-container">
+        <div class="visualizer-section">
+            <fieldset>
+                <legend>Visualizer type</legend>
+                <input type="radio" id="simple-radio" name="visualizer-group" value="on" checked>
+                <label for="simple-radio">Simple</label>
+                <input type="radio" id="block-radio" name="visualizer-group" value="off">
+                <label for="block-radio">Block</label>
+            </fieldset>
+        </div>
+        <div class="right-upper-container">
+            <div class="file-browsing-section section">
+                <div class="path-input-container">
+                    <label for="path-input">Path to file:</label>
+                    <input name="path-input" id="path-input" />
+                </div>
+                <div>
+                    <label for="data-sources-select">Data type:</label>
+                    <select name="data-sources-select" id="data-sources-select">
+                        <option value="JSON">JSON</option>
+                        <option value="XML">XML</option>
+                        <option value="RDF">RDF</option>
+                    </select>
+                </div>
+                <button class="action-button" onclick="onLoad()">Load</button>
+            </div>
+            <div class="search-filter-section section">
+                <button class="action-button" onclick="onSearch()">SEARCH</button>
+            </div>
+        </div>
+    </div>
+    <div class="all-plugins-container">
+        <div class="vertical-plugin-container">
+            <div class="tree-plugin-container">Hypothetical Tree View</div>
+            <div class="bird-plugin-container">
+
+            </div>
+        </div>
+        <div class="main-plugin-container">
+            {{ plugin_content|safe }}
+        </div>
+    </div>
+</div>
+<script>
+    visualizer_observer.attach(EventType.HTML_CHANGED, on_data_changed);
+
+    const searchParams = new URLSearchParams(window.location.search);
+    let filepath = searchParams.get('filepath');
+    let dataSource = searchParams.get('data_source');
+    let visualizer = searchParams.get('visualizer');
+
+    console.log(filepath, dataSource, visualizer);
+
+    pathInput = d3.select('#path-input');
+    dataSourceSelect = d3.select('#data-sources-select');
+    simpleVisualizer = d3.select('#simple-radio');
+    blockVisualizer = d3.select('#block-radio');
+
+    console.log(pathInput, dataSourceSelect, simpleVisualizer, blockVisualizer)
+
+    pathInput.text(filepath);
+    dataSourceSelect.property('value', dataSource);
+    if (visualizer === 'SIMPLE')
+        simpleVisualizer.checked = true
+    else blockVisualizer.checked = true
+
+    function onLoad() {
+
+    }
+
+    function onSearch() {
+        const filepath = 'aaa.xml';
+        const data_source = 'XML';
+        visualizer = visualizer === 'SIMPLE' ? 'BLOCK' : 'SIMPLE';
+
+        document.location.href = 'http://127.0.0.1:8000?filepath=' + filepath + '&data_source=' + data_source + '&visualizer=' + visualizer;
+    }
+
+    function on_data_changed(event, data) {
+        var svgOld = data.mainSVG;
+        d3.select(".bird-plugin-container").select("svg").remove();
+        var mini = d3.select(".bird-plugin-container").append("svg")
+            .attr("width", "100%")
+            .attr("height", "100%")
+            .style("border", "1px solid black");
+
+        var miniContent = mini.append("g")
+            .attr("class", "mini-content")
+
+        var svgWidth = parseInt(mini.style("width"));
+        var svgHeight = parseInt(mini.style("height"));
+
+        var minX = d3.min(svgOld.selectAll("*"), function (d) {
+            return d.getBBox().x + d.getBBox().width / 2;
+        });
+        var maxX = d3.max(svgOld.selectAll("*"), function (d) {
+            return d.getBBox().x + d.getBBox().width / 2;
+        });
+        var minY = d3.min(svgOld.selectAll("*"), function (d) {
+            return d.getBBox().y + d.getBBox().height / 2;
+        });
+        var maxY = d3.max(svgOld.selectAll("*"), function (d) {
+            return d.getBBox().y + d.getBBox().height / 2;
+        });
+
+        var width = maxX - minX;
+        var height = maxY - minY;
+
+        var scaleFactor = Math.min(svgWidth / width, svgHeight / height);
+
+        var translateX = -minX * scaleFactor + (svgWidth - width * scaleFactor) / 2;
+        var translateY = -minY * scaleFactor + (svgHeight - height * scaleFactor) / 2;
+
+        svgOld.selectAll("*").each(function () {
+            var clone = this.cloneNode(true);
+            d3.select(clone).attr("transform", "translate(" + translateX + "," + translateY + ") scale(" + scaleFactor + ")");
+            miniContent.node().appendChild(clone);
+        });
+
+
+        drawViewportRect(data.zoom, translateX, translateY, scaleFactor);
+    }
+
+
+
+    function drawViewportRect(transform, translateX, translateY, scaleFactora) {
+        var svgWidth = parseInt(d3.select(".container-simple").style("width"));
+        var svgHeight = parseInt(d3.select(".container-simple").style("height"));
+
+        var scaleFactor = transform.k;
+
+        var visibleWidth = svgWidth / scaleFactor;
+        var visibleHeight = svgHeight / scaleFactor;
+        var visibleX = -transform.x / scaleFactor;
+        var visibleY = -transform.y / scaleFactor;
+
+        var g = d3.select(".bird-plugin-container svg g");
+
+        viewportRect = g.append("rect")
+            .attr("class", "viewport-rect")
+            .attr("x", visibleX)
+            .attr("y", visibleY)
+            .attr("width", visibleWidth)
+            .attr("height", visibleHeight)
+            .style("fill", "none")
+            .style("stroke", "red")
+            .style("stroke-width", 5)
+            .attr("transform", "translate(" + translateX + "," + translateY + ") scale(" + scaleFactora + ")");
+    }
+
+
+</script>
+
+</body>
+</html>

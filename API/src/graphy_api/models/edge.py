@@ -1,8 +1,9 @@
+from __future__ import annotations
 from .node import Node
 
 
 class Edge(object):
-    def __init__(self, source: Node, destination: Node, value: str = None):
+    def __init__(self, source: Node, destination: Node, value: str = None) -> None:
         self.__source: Node = source
         self.__destination: Node = destination
         self.__value: str = value
@@ -23,11 +24,17 @@ class Edge(object):
     def value(self, value: str) -> None:
         self.__value = value
 
+    def clone(self) -> Edge:
+        return Edge(self.source.clone(), self.destination.clone(), self.value)
+
+    def reversed(self) -> Edge:
+        return Edge(self.destination.clone(), self.source.clone(), self.value)
+
     def __str__(self) -> str:
-        return f"Grana(<{self.source.id}> <{self.value}> <{self.destination.id}>)"
+        return f"Grana(<{self.source.name}> <{self.value}> <{self.destination.name}>)"
 
     def __repr__(self) -> str:
-        return f"Grana(<{self.source.id}> <{self.value}> <{self.destination.id}>)"
+        return f"Grana(<{self.source.name}> <{self.value}> <{self.destination.name}>)"
 
     def __eq__(self, other) -> bool:
         if isinstance(other, Edge):

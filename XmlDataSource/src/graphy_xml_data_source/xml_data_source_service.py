@@ -14,11 +14,13 @@ class XmlDataSourceService(DataSourceService):
         self.cyclic_graph(graph)
         return graph
 
-    def identifier(self) -> str:
-        return "XmlDataSourceService"
+    @staticmethod
+    def identifier() -> str:
+        return "XML"
 
-    def name(self) -> str:
-        return "XML source"
+    @staticmethod
+    def name() -> str:
+        return "xml data source"
 
     def parse_node(self, root: eT.Element, graph: Graph) -> Node:
         node = Node(root.tag)
@@ -58,8 +60,8 @@ class XmlDataSourceService(DataSourceService):
     def cyclic_graph(self, graph: Graph):
         removed = []
         for node in graph.nodes:
-            if "reference" in node.value:
-                referenced = self.find_reference(node, node.value["reference"])
+            if "reference" in node.properties:
+                referenced = self.find_reference(node, node.properties["reference"])
                 graph.add_edge(Edge(node.parent, referenced))
                 graph.remove_edge(Edge(node.parent, node))
                 removed.append(node)
@@ -77,7 +79,7 @@ class XmlDataSourceService(DataSourceService):
         node_tag = spliced[-1].split("[")[0]
         order = spliced[-1].split('[')[1][:-1]
 
-        filtered = [n for n in kids if n.id == node_tag]
+        filtered = [n for n in kids if n.name == node_tag]
         return filtered[int(order) - 1]
 
     def string_cleanup(self, text: str) -> str:
