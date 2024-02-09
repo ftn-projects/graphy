@@ -6,6 +6,17 @@
         text-anchor: middle;
     }
 
+    .tooltip {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        pointer-events: none;
+        font-family: Montserrat, sans-serif;
+    }
+
     .link.connected {
         stroke: red !important;
         stroke-width: 3;
@@ -26,7 +37,7 @@
         pointer-events: none;
     }
 
-    .link-label{
+    .link-label {
         fill: #353838;
         font-size: 0.8em;
     }
@@ -36,6 +47,7 @@
         height: 100%;
     }
 </style>
+<div class="tooltip" style="display: none;"></div>
 <div class="simple-svg-container">
     <svg id="container-simple" class="container-simple"></svg>
 </div>
@@ -48,6 +60,8 @@
     // Parse the graph data passed from the view function
     console.log('aaaa')
     var graphData = JSON.parse('{{ graph_json | safe }}');
+
+    var tooltip = d3.select(".tooltip");
 
     var svg = d3.select(".container-simple");
     // Create force simulation
@@ -97,15 +111,39 @@
 
         });
 
+
+    node.on("mouseover", function (event, d) {
+        // Show tooltip
+        tooltip.style("display", "block")
+            .html(function () {
+                var html = "Node: " + d.name + "<br>";
+                for (var key in d.properties) {
+                    if (d.properties.hasOwnProperty(key)) {
+                        html += key + ": " + d.properties[key] + "<br>";
+                    }
+                }
+                return html;
+            })
+            .style("left", (event.pageX + 10) + "px")
+            .style("top", (event.pageY - 10) + "px");
+    })
+        .on("mouseout", function () {
+            // Hide tooltip
+            tooltip.style("display", "none");
+        });
+
+
     var edgeLabels = svg
         .selectAll(".link-label")
-        .data(graphData.edges)
+        .data(graphData.edges.filter(function (d) {
+            return d.value !== undefined && d.value !== '' && d.value !== null;
+        }))
         .enter().append("text")
         .attr("class", "link-label")
         .attr("dy", -5)
         .style("text-anchor", "middle")
         .text(function (d) {
-            return "aaaa";
+            return d.value;
         });
 
     var nodeLabels = svg
