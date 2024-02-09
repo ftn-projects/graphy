@@ -50,3 +50,6 @@ class Platform:
         reader = FileSourceReader(filepath)
         self.__source_plugin.set_reader(reader)
         self.__source_plugin.set_util(UtilService())
+
+    def is_not_set(self) -> bool:
+        return self.__source_plugin is None or self.__visualizer_plugin is None

@@ -80,7 +80,7 @@
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <div class="container">
     <div class="search-section-container">
-        Hypothetical Search and Filter Section
+        <button class="search-button" onclick="onSearch()">KLIKNI ME</button>
     </div>
     <div class="all-plugins-container">
         <div class="vertical-plugin-container">
@@ -95,7 +95,18 @@
     </div>
 </div>
 <script>
+    const searchParams = new URLSearchParams(window.location.search);
+    let visualizer = searchParams.get('visualizer');
+
     visualizer_observer.attach(EventType.HTML_CHANGED, on_data_changed);
+
+    function onSearch() {
+        const filepath = 'aaa.xml';
+        const data_source = 'XML';
+        visualizer = visualizer === 'SIMPLE' ? 'BLOCK' : 'SIMPLE';
+
+        document.location.href = 'http://127.0.0.1:8000?filepath=' + filepath + '&data_source=' + data_source + '&visualizer=' + visualizer;
+    }
 
     function on_data_changed(event, data) {
         var svgOld = data.mainSVG;
