@@ -19,5 +19,3 @@
                 <Person reference="../../../../Person[1]"/>
             </owner>
         </address>
-    </Person>
-</com.example.Persons>

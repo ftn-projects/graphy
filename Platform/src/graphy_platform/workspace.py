@@ -34,9 +34,9 @@ visualizer_services = {
 class Workspace:
     def __init__(self):
         self.__id: int = int(time.time())
-        self.__filepath: str | None = None
-        self.__source_plugin: DataSourceService | None = None
-        self.__visualizer_plugin: VisualizerService | None = None
+        self.__filepath: str | None = ''
+        self.__source_plugin: DataSourceService | None = data_source_services['JSON']
+        self.__visualizer_plugin: VisualizerService | None = visualizer_services['SIMPLE']
         self.__graph: Graph | None = None
         self.__initial_graph: Graph | None = None
         self.__applied_queries: List[Command] = []
@@ -65,19 +65,15 @@ class Workspace:
         self.__graph = self.__source_plugin.load()
         self.__initial_graph = self.__source_plugin.load()
 
-    def render_graph(self, request: WSGIRequest) -> HttpResponse:
+    def render_graph_view(self, request: WSGIRequest) -> HttpResponse:
         return self.__visualizer_plugin.create_view(request, self.__graph)
 
-    def render_bird_view(self, request):
-        return render(request, 'bird_view.html')
-
-    def render_tree_view(self, request):
+    def render_tree_view(self, request: WSGIRequest) -> HttpResponse:
         if self.__graph is None:
             graph_data = {'nodes': [], 'edges': []}
             graph_json = json.dumps(graph_data)
             return render(request, 'tree_view.html', {'graph': graph_json})
 
-        last_selected_node = None
         serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties} for node in
                             self.__graph.nodes]
         serialized_edges = [{'source': edge.source.id, 'target': edge.destination.id, 'value': edge.value} for edge in
