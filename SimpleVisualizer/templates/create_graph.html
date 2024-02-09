@@ -161,7 +161,7 @@
     simulation.nodes(graphData.nodes).on("tick", ticked);
     simulation.force("link").links(graphData.edges);
 
-    var zoom = d3.zoom().scaleExtent([0.5, 5]);
+    var zoom = d3.zoom().scaleExtent([0.1, 5]);
 
     svg.call(zoom);
 
