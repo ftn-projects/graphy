@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from typing import List
 import time
 
@@ -34,9 +35,9 @@ visualizer_services = {
 class Workspace:
     def __init__(self):
         self.__id: int = int(time.time())
-        self.__filepath: str | None = None
-        self.__source_plugin: DataSourceService | None = None
-        self.__visualizer_plugin: VisualizerService | None = None
+        self.__filepath: str | None = ''
+        self.__source_plugin: DataSourceService | None = data_source_services['XML']
+        self.__visualizer_plugin: VisualizerService | None = visualizer_services['SIMPLE']
         self.__graph: Graph | None = None
         self.__initial_graph: Graph | None = None
         self.__applied_queries: List[Command] = []
@@ -48,6 +49,10 @@ class Workspace:
     @property
     def filepath(self) -> str:
         return self.__filepath
+
+    @filepath.setter
+    def filepath(self, filepath: str) -> None:
+        self.__filepath = filepath
 
     @property
     def source_plugin(self) -> DataSourceService:
@@ -62,26 +67,32 @@ class Workspace:
         return self.__applied_queries
 
     def load_graph(self) -> None:
+        self.__source_plugin.set_reader(FileSourceReader(self.__filepath))
         self.__graph = self.__source_plugin.load()
         self.__initial_graph = self.__source_plugin.load()
+        print(self.graph_stats)
 
-    def render_graph(self, request: WSGIRequest) -> HttpResponse:
+    def render_graph_view(self, request: WSGIRequest) -> HttpResponse:
         return self.__visualizer_plugin.create_view(request, self.__graph)
 
-    def render_bird_view(self, request):
-        return render(request, 'bird_view.html')
-
-    def render_tree_view(self, request):
+    def render_tree_view(self, request: WSGIRequest) -> HttpResponse:
         if self.__graph is None:
             graph_data = {'nodes': [], 'edges': []}
             graph_json = json.dumps(graph_data)
             return render(request, 'tree_view.html', {'graph': graph_json})
 
-        last_selected_node = None
-        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties} for node in
-                            self.__graph.nodes]
-        serialized_edges = [{'source': edge.source.id, 'target': edge.destination.id, 'value': edge.value} for edge in
-                            self.__graph.edges]
+        formatted_nodes = []
+        for node in self.__graph.nodes:
+            n = node.clone()
+            for k, v in node.properties.items():
+                if isinstance(v, datetime):
+                    n.properties[k] = str(v)
+            formatted_nodes.append(n)
+
+        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties}
+                            for node in formatted_nodes]
+        serialized_edges = [{'source': edge.source.id, 'target': edge.destination.id, 'value': edge.value}
+                            for edge in self.__graph.edges]
         graph_data = {
             'nodes': serialized_nodes,
             'edges': serialized_edges
@@ -90,19 +101,17 @@ class Workspace:
         graph_json = json.dumps(graph_data)
         return render(request, 'tree_view.html', {'graph': graph_json})
 
-    def set_sources(self, filepath: str, data_source: str, visualizer: str):
+    def set_source_plugin(self, data_source: str) -> None:
         if data_source in data_source_services:
             self.__source_plugin = data_source_services[data_source]
         else:
             raise ValueError('unknown data source type')
+
+    def set_visualizer_plugin(self, visualizer: str) -> None:
         if visualizer in visualizer_services:
             self.__visualizer_plugin = visualizer_services[visualizer]
         else:
             raise ValueError('unknown visualizer type')
-
-        reader = FileSourceReader(filepath)
-        self.__source_plugin.set_reader(reader)
-        self.__source_plugin.set_util(UtilService())
 
     def is_not_set(self) -> bool:
         return self.__source_plugin is None or self.__visualizer_plugin is None
@@ -120,3 +129,9 @@ class Workspace:
     def reset_graph(self):
         self.__graph = self.__initial_graph
         self.__applied_queries = []
+
+    @property
+    def graph_stats(self):
+        if self.__graph is not None:
+            return {'nodes': self.__graph.size, 'edges': len(self.__graph.edges)}
+        return {'nodes': 0, 'edges': 0}

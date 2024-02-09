@@ -57,8 +57,9 @@ class Node(object):
 
     def clone(self) -> Node:
         n = Node(self.name)
+        n.id = self.id
         n.properties = {}
-        for k, v in self.properties:
+        for k, v in self.properties.items():
             n.properties[k] = v
         return n
 

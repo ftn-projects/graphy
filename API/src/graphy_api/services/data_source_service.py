@@ -8,7 +8,7 @@ from ..models.graph import Graph
 class DataSourceService(ServiceBase, metaclass=ABCMeta):
     def __init__(self):
         self.__reader: SourceReader | None = None
-        self._util: UtilService | None = None
+        self._util: UtilService | None = UtilService()
 
     def set_reader(self, reader: SourceReader) -> None:
         self.__reader = reader

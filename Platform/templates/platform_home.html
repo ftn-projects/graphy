@@ -44,11 +44,13 @@
 
         .action-button {
             padding: 4px;
+            width: 80px;
+            text-align: center;
         }
 
         .section {
             display: flex;
-            padding: 15px;
+            padding: 8px;
             padding-inline: 50px;
             gap: 40px;
         }
@@ -57,16 +59,25 @@
             height: min-content;
             display: flex;
             flex-direction: row;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
 
         .right-upper-container {
             display: flex;
             flex-direction: column;
+            flex: 1;
         }
 
         .visualizer-section {
             width: 350px;
             row-span: 2;
+            padding-inline: 10px;
+        }
+
+        .visualizer-legend {
+            height: 100%;
+            width: 100%;
         }
 
         .file-browsing-section {
@@ -86,6 +97,10 @@
         }
 
         #path-input {
+            flex: 1;
+        }
+
+        #search-input {
             flex: 1;
         }
 
@@ -126,11 +141,11 @@
 <div class="container">
     <div class="upper-section-container">
         <div class="visualizer-section">
-            <fieldset>
+            <fieldset class="visualizer-legend">
                 <legend>Visualizer type</legend>
-                <input type="radio" id="simple-radio" name="visualizer-group" value="on" checked>
+                <input type="radio" id="simple-radio" name="visualizer-group" onclick="onChangeVisualizer()">
                 <label for="simple-radio">Simple</label>
-                <input type="radio" id="block-radio" name="visualizer-group" value="off">
+                <input type="radio" id="block-radio" name="visualizer-group" onclick="onChangeVisualizer()">
                 <label for="block-radio">Block</label>
             </fieldset>
         </div>
@@ -148,7 +163,8 @@
                         <option value="RDF">RDF</option>
                     </select>
                 </div>
-                <button class="action-button" onclick="onLoad()">Load</button>
+                <button class="action-button" onclick="onLoad()">LOAD</button>
+                <button class="action-button" onclick="onNewTab()">NEW TAB</button>
             </div>
             <div class="search-filter-section section">
 
@@ -176,7 +192,11 @@
                 <button class="action-button" onclick="onSearch()">SEARCH</button>
                 <button class="action-button" onclick="onReset()">RESET</button>
             </div>
-            <label class="section" id="queries">Applied queries: </label>
+            <div class="path-input-container section">
+                <label id="nodes">Nodes: </label>
+                <label id="edges">Edges: </label>
+                <label id="queries">Applied queries: </label>
+            </div>
         </div>
     </div>
     <div class="all-plugins-container">
@@ -195,56 +215,68 @@
 </div>
 <script>
 
-    const searchParams = new URLSearchParams(window.location.search);
-    let filepath = searchParams.get('filepath');
-    let dataSource = searchParams.get('data_source');
-    let visualizer = searchParams.get('visualizer');
-    let applied_queries = {{ applied_queries | safe }}
+    let workspace_id = {{ workspace_id | safe }};
+    let filepath = '{{ filepath | safe }}';
+    let dataSource = '{{ data_source | safe }}';
+    let visualizer = '{{ visualizer | safe}}';
+    let applied_queries = {{ applied_queries | safe }};
 
-    console.log(filepath, dataSource, visualizer);
-    console.log(applied_queries)
+    console.log(workspace_id, filepath, dataSource, visualizer, applied_queries)
 
-    pathInput = d3.select('#path-input');
+    pathInput = document.getElementById('path-input');
     dataSourceSelect = d3.select('#data-sources-select');
-    simpleVisualizer = d3.select('#simple-radio');
-    blockVisualizer = d3.select('#block-radio');
-    queryLabel = document.getElementById("queries")
+    simpleVisualizer = document.getElementById('simple-radio');
+    blockVisualizer = document.getElementById('block-radio');
+    queryLabel = document.getElementById('queries');
 
-    console.log(pathInput, dataSourceSelect, simpleVisualizer, blockVisualizer)
-
-    pathInput.text(filepath);
+    pathInput.text = filepath;
     dataSourceSelect.property('value', dataSource);
-    if (visualizer === 'SIMPLE')
-        simpleVisualizer.checked = true
-    else blockVisualizer.checked = true
 
-    for (let a of applied_queries) {
-        queryLabel.appendChild(document.createTextNode(a + ", "))
+    if (visualizer === 'SIMPLE')
+        simpleVisualizer.checked = true;
+    if (visualizer === 'BLOCK')
+        blockVisualizer.checked = true;
+
+    queryLabel.appendChild(document.createTextNode(applied_queries.join(', ')));
+    document.getElementById('nodes').appendChild(
+        document.createTextNode('{{ node_count | safe }}'));
+    document.getElementById('edges').appendChild(
+        document.createTextNode('{{ edge_count | safe }}'));
+
+    function onChangeVisualizer() {
+        let visualizerType = simpleVisualizer.checked ? 'SIMPLE' : 'BLOCK';
+        document.location.href = baseUrl() + '/changeVisualizer?type=' + visualizerType;
     }
 
     function onLoad() {
-
+        var filepath = d3.select("#path-input").property("value");
+        var sourceType = dataSourceSelect.property("value");
+        document.location.href = baseUrl() + '/load?filepath=' + filepath + '&source_type=' + sourceType;
     }
 
     function onSearch() {
-        {#const filepath = 'aaa.xml';#}
-        {#const data_source = 'XML';#}
-        {#visualizer = visualizer === 'SIMPLE' ? 'BLOCK' : 'SIMPLE';#}
-        {##}
-        {#document.location.href = 'http://127.0.0.1:8000?filepath=' + filepath + '&data_source=' + data_source + '&visualizer=' + visualizer;#}
-
         var search = d3.select("#search-input").property("value");
         var filter = d3.select("#filter-input").property("value");
         var select = d3.select("#select-input").property("value");
         var param = d3.select("#value-input").property("value");
 
-        document.location.href = 'http://127.0.0.1:8000/query?search=' + search + '&attribute=' + filter + '&operator=' + select + '&filter=' + param;
-
-        console.log(search, filter, select, param )
+        document.location.href = baseUrl() + '/search?search=' + search + '&attribute=' + filter + '&operator=' + select + '&filter=' + param;
     }
 
-    function onReset(){
-        document.location.href = 'http://127.0.0.1:8000/clearQuery'
+    function onReset() {
+        document.location.href = baseUrl() + '/clearSearch';
+    }
+
+    function onNewTab() {
+        window.open(hostUrl(), '_blank');
+    }
+
+    function baseUrl() {
+        return hostUrl() + '/' + workspace_id;
+    }
+
+    function hostUrl() {
+        return 'http://127.0.0.1:8000';
     }
 
 </script>

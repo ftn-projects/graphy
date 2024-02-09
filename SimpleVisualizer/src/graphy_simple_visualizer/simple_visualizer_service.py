@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 from django.core.handlers.wsgi import WSGIRequest
 from django.http import HttpResponse
@@ -16,10 +17,18 @@ class SimpleVisualizerService(VisualizerService):
             graph_json = json.dumps(graph_data)
             return render(request, 'create_graph.html', {'graph_json': graph_json})
 
-        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties} for node in graph.nodes]
-        serialized_edges = [{'source': edge.source.id, 'target': edge.destination.id, 'value': edge.value} for edge
-                            in
-                            graph.edges]
+        formatted_nodes = []
+        for node in graph.nodes:
+            n = node.clone()
+            for k, v in node.properties.items():
+                if isinstance(v, datetime):
+                    n.properties[k] = str(v)
+            formatted_nodes.append(n)
+
+        serialized_nodes = [{'id': node.id, 'name': node.name, 'properties': node.properties}
+                            for node in formatted_nodes]
+        serialized_edges = [{'source': edge.source.id, 'target': edge.destination.id, 'value': edge.value}
+                            for edge in graph.edges]
         graph_data = {
             'nodes': serialized_nodes,
             'edges': serialized_edges

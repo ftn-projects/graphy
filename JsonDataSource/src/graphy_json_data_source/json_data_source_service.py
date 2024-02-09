@@ -39,17 +39,17 @@ class JsonDataSourceService(DataSourceService):
 
     def __load_dictionary(self, node: Node, items: iter) -> None:
         for k, v in items:
-            if isinstance(v, str):
-                node.add_property(k, v)
-            else:
+            if isinstance(v, dict) or isinstance(v, list):
                 self.__load_object(k, v, node)
+            else:
+                node.add_property(k, v)
 
     def __load_list(self, node: Node, items: iter) -> None:
         for k, v in items:
-            if isinstance(v, str):
-                self.__create_with_parent(k, node, v)
-            else:
+            if isinstance(v, dict) or isinstance(v, list):
                 self.__load_object(k, v, node, False)
+            else:
+                self.__create_with_parent(k, node, v)
 
     def __create_with_parent(self, key: str, parent, name: str = '') -> Node:
         node = Node(name)

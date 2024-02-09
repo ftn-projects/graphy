@@ -20,9 +20,9 @@ from .views import *
 
 urlpatterns = [
     path('', get_view),
-    path('<int:id>/', get_workspace_view),
-    path('query/', get_query),
-    path('clearQuery/', get_initial),
-    path('load/', load),
-
+    path('<int:workspace_id>/', get_workspace_view),
+    path('<int:workspace_id>/search/', get_search),
+    path('<int:workspace_id>/clearSearch/', get_initial),
+    path('<int:workspace_id>/load/', load),
+    path('<int:workspace_id>/changeVisualizer/', change_visualizer)
 ]
