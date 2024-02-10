@@ -1,0 +1,292 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Home</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .all-plugins-container {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid black;
+        }
+
+        .main-plugin-container {
+            flex: 1;
+        }
+
+        .vertical-plugin-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .action-button {
+            padding: 4px;
+            width: 80px;
+            text-align: center;
+        }
+
+        .section {
+            display: flex;
+            padding: 8px;
+            padding-inline: 50px;
+            gap: 40px;
+        }
+
+        .upper-section-container {
+            height: min-content;
+            display: flex;
+            flex-direction: row;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .right-upper-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .visualizer-section {
+            width: 350px;
+            row-span: 2;
+            padding-inline: 10px;
+        }
+
+        .visualizer-legend {
+            height: 100%;
+            width: 100%;
+        }
+
+        .file-browsing-section {
+            height: min-content;
+        }
+
+        .section>* {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-self: center;
+            gap: 5px;
+        }
+
+        .path-input-container {
+            flex: 1;
+        }
+
+        #path-input {
+            flex: 1;
+        }
+
+        #search-input {
+            flex: 1;
+        }
+
+        .search-filter-section {
+            flex: 1;
+        }
+
+        .tree-plugin-container {
+            border: 1px solid black;
+        }
+
+        .bird-plugin-container {
+            border: 1px solid black;
+        }
+
+        .main-plugin-container {
+            border: 1px solid black;
+        }
+
+        .bird-plugin-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+        }
+
+        .bird-plugin-svg {
+            width: 100%; /* Adjust width as needed */
+            height: 100%; /* Adjust height as needed */
+        }
+
+        .tree-plugin-container{
+            flex: 1;
+            width: 350px;
+            padding: 10px 10px;
+            overflow: scroll;
+        }
+
+    </style>
+</head>
+<body>
+<script src="{% static 'js_observer.js' %}"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<div class="container">
+    <div class="upper-section-container">
+        <div class="visualizer-section">
+            <fieldset class="visualizer-legend">
+                <legend>Visualizer type</legend>
+                <input type="radio" id="simple-radio" name="visualizer-group" onclick="onChangeVisualizer()">
+                <label for="simple-radio">Simple</label>
+                <input type="radio" id="block-radio" name="visualizer-group" onclick="onChangeVisualizer()">
+                <label for="block-radio">Block</label>
+            </fieldset>
+        </div>
+        <div class="right-upper-container">
+            <div class="file-browsing-section section">
+                <div class="path-input-container">
+                    <label for="path-input">Path to file:</label>
+                    <input name="path-input" id="path-input" />
+                </div>
+                <div>
+                    <label for="data-sources-select">Data type:</label>
+                    <select name="data-sources-select" id="data-sources-select">
+                        <option value="JSON">JSON</option>
+                        <option value="XML">XML</option>
+                        <option value="RDF">RDF</option>
+                    </select>
+                </div>
+                <button class="action-button" onclick="onLoad()">LOAD</button>
+                <button class="action-button" onclick="onNewTab()">NEW TAB</button>
+            </div>
+            <div class="search-filter-section section">
+
+                <div class="path-input-container">
+                    <label for="search-input">Search:</label>
+                    <input name="search-input" id="search-input" />
+                </div>
+
+                <div class="path-input-container">
+                    <label for="filter-input">Filter:</label>
+                    <input name="filter-input" id="filter-input" />
+                    <label for="select-input"></label>
+                    <select name="select-input" id="select-input">
+                        <option value="="> = </option>
+                        <option value="!="> != </option>
+                        <option value="<"> < </option>
+                        <option value="<="> <= </option>
+                        <option value=">"> > </option>
+                        <option value=">="> >= </option>
+                    </select>
+                    <label for="value-input"></label>
+                    <input name="value-input" id="value-input" />
+                </div>
+
+                <button class="action-button" onclick="onSearch()">SEARCH</button>
+                <button class="action-button" onclick="onReset()">RESET</button>
+            </div>
+            <div class="path-input-container section">
+                <label id="nodes">Nodes: </label>
+                <label id="edges">Edges: </label>
+                <label id="queries">Applied queries: </label>
+            </div>
+        </div>
+    </div>
+    <div class="all-plugins-container">
+        <div class="vertical-plugin-container">
+            <div class="tree-plugin-container">
+                {{ tree_content|safe }}
+            </div>
+            <div class="bird-plugin-container">
+                {{ bird_content|safe }}
+            </div>
+        </div>
+        <div class="main-plugin-container">
+                {{ plugin_content|safe }}
+        </div>
+    </div>
+</div>
+<script>
+
+    let workspace_id = {{ workspace_id | safe }};
+    let filepath = '{{ filepath | safe }}';
+    let dataSource = '{{ data_source | safe }}';
+    let visualizer = '{{ visualizer | safe}}';
+    let applied_queries = {{ applied_queries | safe }};
+
+    console.log(workspace_id, filepath, dataSource, visualizer, applied_queries)
+
+    pathInput = document.getElementById('path-input');
+    dataSourceSelect = d3.select('#data-sources-select');
+    simpleVisualizer = document.getElementById('simple-radio');
+    blockVisualizer = document.getElementById('block-radio');
+    queryLabel = document.getElementById('queries');
+
+    pathInput.text = filepath;
+    dataSourceSelect.property('value', dataSource);
+
+    if (visualizer === 'SIMPLE')
+        simpleVisualizer.checked = true;
+    if (visualizer === 'BLOCK')
+        blockVisualizer.checked = true;
+
+    queryLabel.appendChild(document.createTextNode(applied_queries.join(', ')));
+    document.getElementById('nodes').appendChild(
+        document.createTextNode('{{ node_count | safe }}'));
+    document.getElementById('edges').appendChild(
+        document.createTextNode('{{ edge_count | safe }}'));
+
+    function onChangeVisualizer() {
+        let visualizerType = simpleVisualizer.checked ? 'SIMPLE' : 'BLOCK';
+        document.location.href = baseUrl() + '/changeVisualizer?type=' + visualizerType;
+    }
+
+    function onLoad() {
+        var filepath = d3.select("#path-input").property("value");
+        var sourceType = dataSourceSelect.property("value");
+        document.location.href = baseUrl() + '/load?filepath=' + filepath + '&source_type=' + sourceType;
+    }
+
+    function onSearch() {
+        var search = d3.select("#search-input").property("value");
+        var filter = d3.select("#filter-input").property("value");
+        var select = d3.select("#select-input").property("value");
+        var param = d3.select("#value-input").property("value");
+
+        document.location.href = baseUrl() + '/search?search=' + search + '&attribute=' + filter + '&operator=' + select + '&filter=' + param;
+    }
+
+    function onReset() {
+        document.location.href = baseUrl() + '/clearSearch';
+    }
+
+    function onNewTab() {
+        window.open(hostUrl(), '_blank');
+    }
+
+    function baseUrl() {
+        return hostUrl() + '/' + workspace_id;
+    }
+
+    function hostUrl() {
+        return 'http://127.0.0.1:8000';
+    }
+
+</script>
+
+</body>
+</html>

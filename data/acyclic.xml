@@ -1,0 +1,652 @@
+<response>
+	<row>
+		<row _id="row-rdwt.b93z.h4nf" _uuid="00000000-0000-0000-4640-2B76E9F47449" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-rdwt.b93z.h4nf">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>8th grade or less</education_level>
+			<race_or_hispanic_origin>Hispanic</race_or_hispanic_origin>
+			<covid_19_deaths>29157</covid_19_deaths>
+			<total_deaths>106285</total_deaths>
+		</row>
+		<row _id="row-37xk_u2h3_4ard" _uuid="00000000-0000-0000-2880-B91017824759" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-37xk_u2h3_4ard">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>8th grade or less</education_level>
+			<race_or_hispanic_origin>Non-Hispanic American Indian or Alaska Native</race_or_hispanic_origin>
+			<covid_19_deaths>706</covid_19_deaths>
+			<total_deaths>3085</total_deaths>
+		</row>
+		<row _id="row-5k56.8qqh~nvdi" _uuid="00000000-0000-0000-510B-E94CF6C3E2C1" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-5k56.8qqh~nvdi">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>8th grade or less</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Asian</race_or_hispanic_origin>
+			<covid_19_deaths>2610</covid_19_deaths>
+			<total_deaths>16283</total_deaths>
+		</row>
+		<row _id="row-nmbm_k3jg.wf4j" _uuid="00000000-0000-0000-D48D-DD7D10BEEA22" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-nmbm_k3jg.wf4j">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>8th grade or less</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Black</race_or_hispanic_origin>
+			<covid_19_deaths>5699</covid_19_deaths>
+			<total_deaths>41437</total_deaths>
+		</row>
+		<row _id="row-s57v~gkng_48gm" _uuid="00000000-0000-0000-870D-FE650E59C6A0" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-s57v~gkng_48gm">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>8th grade or less</education_level>
+			<race_or_hispanic_origin>Non-Hispanic More than one race</race_or_hispanic_origin>
+			<covid_19_deaths>103</covid_19_deaths>
+			<total_deaths>1676</total_deaths>
+		</row>
+		<row _id="row-za8h~8nzx~r2r8" _uuid="00000000-0000-0000-6D32-4604C4D8A61A" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-za8h~8nzx~r2r8">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>8th grade or less</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Native Hawaiian or Other Pacific Islander</race_or_hispanic_origin>
+			<covid_19_deaths>87</covid_19_deaths>
+			<total_deaths>484</total_deaths>
+		</row>
+		<row _id="row-qnh2~pfrf-5q5x" _uuid="00000000-0000-0000-4461-6C14B79412F4" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-qnh2~pfrf-5q5x">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>8th grade or less</education_level>
+			<race_or_hispanic_origin>Non-Hispanic White</race_or_hispanic_origin>
+			<covid_19_deaths>18871</covid_19_deaths>
+			<total_deaths>157236</total_deaths>
+		</row>
+		<row _id="row-zhns.xvee-2tsd" _uuid="00000000-0000-0000-0A8A-642041F6DF71" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-zhns.xvee-2tsd">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>8th grade or less</education_level>
+			<race_or_hispanic_origin>Unknown</race_or_hispanic_origin>
+			<covid_19_deaths>39</covid_19_deaths>
+			<total_deaths>380</total_deaths>
+		</row>
+		<row _id="row-z2q6~tu67-9zci" _uuid="00000000-0000-0000-F21E-294D82376B1E" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-z2q6~tu67-9zci">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>9 -12th grade, with no diploma</education_level>
+			<race_or_hispanic_origin>Hispanic</race_or_hispanic_origin>
+			<covid_19_deaths>7691</covid_19_deaths>
+			<total_deaths>37397</total_deaths>
+		</row>
+		<row _id="row-7zp9.brp9~w8j4" _uuid="00000000-0000-0000-DD03-BABB7388B75A" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-7zp9.brp9~w8j4">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>9 -12th grade, with no diploma</education_level>
+			<race_or_hispanic_origin>Non-Hispanic American Indian or Alaska Native</race_or_hispanic_origin>
+			<covid_19_deaths>662</covid_19_deaths>
+			<total_deaths>3915</total_deaths>
+		</row>
+		<row _id="row-td8h.xqu3_496z" _uuid="00000000-0000-0000-9A51-640FEAD0A58A" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-td8h.xqu3_496z">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>9 -12th grade, with no diploma</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Asian</race_or_hispanic_origin>
+			<covid_19_deaths>907</covid_19_deaths>
+			<total_deaths>5120</total_deaths>
+		</row>
+		<row _id="row-xaqj~37z5~zhwh" _uuid="00000000-0000-0000-ED96-9836275ECBB5" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-xaqj~37z5~zhwh">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>9 -12th grade, with no diploma</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Black</race_or_hispanic_origin>
+			<covid_19_deaths>8177</covid_19_deaths>
+			<total_deaths>64585</total_deaths>
+		</row>
+		<row _id="row-dtnh~rzpm~pe94" _uuid="00000000-0000-0000-7A32-5F360B3069C4" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-dtnh~rzpm~pe94">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>9 -12th grade, with no diploma</education_level>
+			<race_or_hispanic_origin>Non-Hispanic More than one race</race_or_hispanic_origin>
+			<covid_19_deaths>109</covid_19_deaths>
+			<total_deaths>1554</total_deaths>
+		</row>
+		<row _id="row-sbke.sp48-89qf" _uuid="00000000-0000-0000-11AA-B3FAB2865BF5" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-sbke.sp48-89qf">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>9 -12th grade, with no diploma</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Native Hawaiian or Other Pacific Islander</race_or_hispanic_origin>
+			<covid_19_deaths>64</covid_19_deaths>
+			<total_deaths>404</total_deaths>
+		</row>
+		<row _id="row-aq5d.4p2g~b5uk" _uuid="00000000-0000-0000-076B-07026F015689" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-aq5d.4p2g~b5uk">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>9 -12th grade, with no diploma</education_level>
+			<race_or_hispanic_origin>Non-Hispanic White</race_or_hispanic_origin>
+			<covid_19_deaths>20030</covid_19_deaths>
+			<total_deaths>219868</total_deaths>
+		</row>
+		<row _id="row-k87c~45i3~4s5q" _uuid="00000000-0000-0000-24BC-CFFEFAEB6F54" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-k87c~45i3~4s5q">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>9 -12th grade, with no diploma</education_level>
+			<race_or_hispanic_origin>Unknown</race_or_hispanic_origin>
+			<covid_19_deaths>63</covid_19_deaths>
+			<total_deaths>352</total_deaths>
+		</row>
+		<row _id="row-3jzk-g4nv-vacm" _uuid="00000000-0000-0000-36CE-50F151F2BCB4" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-3jzk-g4nv-vacm">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Associate degree</education_level>
+			<race_or_hispanic_origin>Hispanic</race_or_hispanic_origin>
+			<covid_19_deaths>2706</covid_19_deaths>
+			<total_deaths>13716</total_deaths>
+		</row>
+		<row _id="row-7gya-nb4a_9ggw" _uuid="00000000-0000-0000-012F-FD2E95D65217" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-7gya-nb4a_9ggw">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Associate degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic American Indian or Alaska Native</race_or_hispanic_origin>
+			<covid_19_deaths>447</covid_19_deaths>
+			<total_deaths>1949</total_deaths>
+		</row>
+		<row _id="row-3mcf.d6tz~ewk9" _uuid="00000000-0000-0000-C4D0-541904EC579F" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-3mcf.d6tz~ewk9">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Associate degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Asian</race_or_hispanic_origin>
+			<covid_19_deaths>780</covid_19_deaths>
+			<total_deaths>5195</total_deaths>
+		</row>
+		<row _id="row-xfjf.ujys_33wz" _uuid="00000000-0000-0000-4B4C-542F55B112A0" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-xfjf.ujys_33wz">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Associate degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Black</race_or_hispanic_origin>
+			<covid_19_deaths>4198</covid_19_deaths>
+			<total_deaths>29668</total_deaths>
+		</row>
+		<row _id="row-jkmc-qd9w_mr7i" _uuid="00000000-0000-0000-D6C7-065565AF9496" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-jkmc-qd9w_mr7i">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Associate degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic More than one race</race_or_hispanic_origin>
+			<covid_19_deaths>98</covid_19_deaths>
+			<total_deaths>1121</total_deaths>
+		</row>
+		<row _id="row-6aea~y73e_wmn5" _uuid="00000000-0000-0000-4FCD-D5F525AB2770" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-6aea~y73e_wmn5">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Associate degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Native Hawaiian or Other Pacific Islander</race_or_hispanic_origin>
+			<covid_19_deaths>47</covid_19_deaths>
+			<total_deaths>305</total_deaths>
+		</row>
+		<row _id="row-wbw3~yitu~vz5x" _uuid="00000000-0000-0000-FD18-9A770F11D387" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-wbw3~yitu~vz5x">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Associate degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic White</race_or_hispanic_origin>
+			<covid_19_deaths>16024</covid_19_deaths>
+			<total_deaths>173189</total_deaths>
+		</row>
+		<row _id="row-57fe_tszb-n67w" _uuid="00000000-0000-0000-DF10-0A9B7887E1A2" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-57fe_tszb-n67w">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Associate degree</education_level>
+			<race_or_hispanic_origin>Unknown</race_or_hispanic_origin>
+			<covid_19_deaths>29</covid_19_deaths>
+			<total_deaths>178</total_deaths>
+		</row>
+		<row _id="row-gdvd.kycj-vphh" _uuid="00000000-0000-0000-B327-F534B57B867B" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-gdvd.kycj-vphh">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Bachelor’s degree</education_level>
+			<race_or_hispanic_origin>Hispanic</race_or_hispanic_origin>
+			<covid_19_deaths>3351</covid_19_deaths>
+			<total_deaths>16341</total_deaths>
+		</row>
+		<row _id="row-9r2u_x7wx_iwe4" _uuid="00000000-0000-0000-215E-7FA094E3C9B0" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-9r2u_x7wx_iwe4">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Bachelor’s degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic American Indian or Alaska Native</race_or_hispanic_origin>
+			<covid_19_deaths>282</covid_19_deaths>
+			<total_deaths>1276</total_deaths>
+		</row>
+		<row _id="row-667f~54ix_kp8m" _uuid="00000000-0000-0000-40D4-4A0E5171CA77" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-667f~54ix_kp8m">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Bachelor’s degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Asian</race_or_hispanic_origin>
+			<covid_19_deaths>3572</covid_19_deaths>
+			<total_deaths>20688</total_deaths>
+		</row>
+		<row _id="row-bzpv.jch6~98s6" _uuid="00000000-0000-0000-54EB-90676E0CD2E4" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-bzpv.jch6~98s6">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Bachelor’s degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Black</race_or_hispanic_origin>
+			<covid_19_deaths>4265</covid_19_deaths>
+			<total_deaths>30486</total_deaths>
+		</row>
+		<row _id="row-jtyd_xb5n~j28j" _uuid="00000000-0000-0000-E1E9-AFB75AAB65C1" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-jtyd_xb5n~j28j">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Bachelor’s degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic More than one race</race_or_hispanic_origin>
+			<covid_19_deaths>154</covid_19_deaths>
+			<total_deaths>1543</total_deaths>
+		</row>
+		<row _id="row-uwa4.4xms~d6bj" _uuid="00000000-0000-0000-F929-E854513DC218" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-uwa4.4xms~d6bj">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Bachelor’s degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Native Hawaiian or Other Pacific Islander</race_or_hispanic_origin>
+			<covid_19_deaths>45</covid_19_deaths>
+			<total_deaths>318</total_deaths>
+		</row>
+		<row _id="row-p9cj~a8e5-27bm" _uuid="00000000-0000-0000-3991-EA2E66C613DD" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-p9cj~a8e5-27bm">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Bachelor’s degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic White</race_or_hispanic_origin>
+			<covid_19_deaths>29030</covid_19_deaths>
+			<total_deaths>309341</total_deaths>
+		</row>
+		<row _id="row-p39m_qzv6.s5p6" _uuid="00000000-0000-0000-872D-5B1ECB48E731" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-p39m_qzv6.s5p6">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Bachelor’s degree</education_level>
+			<race_or_hispanic_origin>Unknown</race_or_hispanic_origin>
+			<covid_19_deaths>55</covid_19_deaths>
+			<total_deaths>377</total_deaths>
+		</row>
+		<row _id="row-3xun-mic7-qbf2" _uuid="00000000-0000-0000-5A71-413F92B15E34" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-3xun-mic7-qbf2">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Doctorate or Professional Degree</education_level>
+			<race_or_hispanic_origin>Hispanic</race_or_hispanic_origin>
+			<covid_19_deaths>521</covid_19_deaths>
+			<total_deaths>2694</total_deaths>
+		</row>
+		<row _id="row-cnvt_rhm4-amzu" _uuid="00000000-0000-0000-BB0E-F801B1218F31" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-cnvt_rhm4-amzu">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Doctorate or Professional Degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic American Indian or Alaska Native</race_or_hispanic_origin>
+			<covid_19_deaths>12</covid_19_deaths>
+			<total_deaths>97</total_deaths>
+		</row>
+		<row _id="row-z2pa~w9bu~bzhz" _uuid="00000000-0000-0000-EEF4-251E572F95AB" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-z2pa~w9bu~bzhz">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Doctorate or Professional Degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Asian</race_or_hispanic_origin>
+			<covid_19_deaths>510</covid_19_deaths>
+			<total_deaths>3900</total_deaths>
+		</row>
+		<row _id="row-2cnc_6r8h_n33x" _uuid="00000000-0000-0000-5645-4A36CAA7464D" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-2cnc_6r8h_n33x">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Doctorate or Professional Degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Black</race_or_hispanic_origin>
+			<covid_19_deaths>564</covid_19_deaths>
+			<total_deaths>3891</total_deaths>
+		</row>
+		<row _id="row-emzt~q33p~cwjx" _uuid="00000000-0000-0000-7076-EB337D3E9067" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-emzt~q33p~cwjx">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Doctorate or Professional Degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic More than one race</race_or_hispanic_origin>
+			<covid_19_deaths>37</covid_19_deaths>
+			<total_deaths>252</total_deaths>
+		</row>
+		<row _id="row-2v87.zxd9_4x5b" _uuid="00000000-0000-0000-C9DF-439E8A764F93" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-2v87.zxd9_4x5b">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Doctorate or Professional Degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Native Hawaiian or Other Pacific Islander</race_or_hispanic_origin>
+			<covid_19_deaths>3</covid_19_deaths>
+			<total_deaths>21</total_deaths>
+		</row>
+		<row _id="row-sqys.28cs.sue5" _uuid="00000000-0000-0000-E8FC-4C176AB1EE38" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-sqys.28cs.sue5">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Doctorate or Professional Degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic White</race_or_hispanic_origin>
+			<covid_19_deaths>5218</covid_19_deaths>
+			<total_deaths>53865</total_deaths>
+		</row>
+		<row _id="row-grif_brbq.t757" _uuid="00000000-0000-0000-B6BA-BEA28E829DB6" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-grif_brbq.t757">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Doctorate or Professional Degree</education_level>
+			<race_or_hispanic_origin>Unknown</race_or_hispanic_origin>
+			<covid_19_deaths>17</covid_19_deaths>
+			<total_deaths>69</total_deaths>
+		</row>
+		<row _id="row-nmmy~yckb.sdc4" _uuid="00000000-0000-0000-13AF-7CAC1B19CBCE" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-nmmy~yckb.sdc4">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>High school graduate or GED completed</education_level>
+			<race_or_hispanic_origin>Hispanic</race_or_hispanic_origin>
+			<covid_19_deaths>22267</covid_19_deaths>
+			<total_deaths>100481</total_deaths>
+		</row>
+		<row _id="row-z5p2~nq9t~88zm" _uuid="00000000-0000-0000-A20F-B038BD2263B4" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-z5p2~nq9t~88zm">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>High school graduate or GED completed</education_level>
+			<race_or_hispanic_origin>Non-Hispanic American Indian or Alaska Native</race_or_hispanic_origin>
+			<covid_19_deaths>1671</covid_19_deaths>
+			<total_deaths>9556</total_deaths>
+		</row>
+		<row _id="row-wnix-4du9_4b75" _uuid="00000000-0000-0000-1968-957A780B5BAC" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-wnix-4du9_4b75">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>High school graduate or GED completed</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Asian</race_or_hispanic_origin>
+			<covid_19_deaths>4384</covid_19_deaths>
+			<total_deaths>27713</total_deaths>
+		</row>
+		<row _id="row-mbay_kwqz.qj86" _uuid="00000000-0000-0000-32EB-44BA54C2DE54" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-mbay_kwqz.qj86">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>High school graduate or GED completed</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Black</race_or_hispanic_origin>
+			<covid_19_deaths>27922</covid_19_deaths>
+			<total_deaths>197424</total_deaths>
+		</row>
+		<row _id="row-bfdt~w3dd~xuq7" _uuid="00000000-0000-0000-B43F-A9C0365B4F60" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-bfdt~w3dd~xuq7">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>High school graduate or GED completed</education_level>
+			<race_or_hispanic_origin>Non-Hispanic More than one race</race_or_hispanic_origin>
+			<covid_19_deaths>478</covid_19_deaths>
+			<total_deaths>6269</total_deaths>
+		</row>
+		<row _id="row-c8mx_g93q-karc" _uuid="00000000-0000-0000-6FCC-9A84C09EF2D2" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-c8mx_g93q-karc">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>High school graduate or GED completed</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Native Hawaiian or Other Pacific Islander</race_or_hispanic_origin>
+			<covid_19_deaths>334</covid_19_deaths>
+			<total_deaths>2221</total_deaths>
+		</row>
+		<row _id="row-acup_b8ek_ke5i" _uuid="00000000-0000-0000-5498-594E875CC4A4" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-acup_b8ek_ke5i">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>High school graduate or GED completed</education_level>
+			<race_or_hispanic_origin>Non-Hispanic White</race_or_hispanic_origin>
+			<covid_19_deaths>117989</covid_19_deaths>
+			<total_deaths>1145594</total_deaths>
+		</row>
+		<row _id="row-43ma.p3nj.kmty" _uuid="00000000-0000-0000-2159-CA826607461A" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-43ma.p3nj.kmty">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>High school graduate or GED completed</education_level>
+			<race_or_hispanic_origin>Unknown</race_or_hispanic_origin>
+			<covid_19_deaths>245</covid_19_deaths>
+			<total_deaths>1555</total_deaths>
+		</row>
+		<row _id="row-4cmd_mcr9.n9kh" _uuid="00000000-0000-0000-7A90-439E6250A7AB" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-4cmd_mcr9.n9kh">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Master’s degree</education_level>
+			<race_or_hispanic_origin>Hispanic</race_or_hispanic_origin>
+			<covid_19_deaths>922</covid_19_deaths>
+			<total_deaths>5128</total_deaths>
+		</row>
+		<row _id="row-e3gy.g8qd_8gmi" _uuid="00000000-0000-0000-FB24-EBFB260BEAA8" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-e3gy.g8qd_8gmi">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Master’s degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic American Indian or Alaska Native</race_or_hispanic_origin>
+			<covid_19_deaths>90</covid_19_deaths>
+			<total_deaths>448</total_deaths>
+		</row>
+		<row _id="row-qp9a~4cri.r6rt" _uuid="00000000-0000-0000-1411-CFB408D6CB6C" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-qp9a~4cri.r6rt">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Master’s degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Asian</race_or_hispanic_origin>
+			<covid_19_deaths>788</covid_19_deaths>
+			<total_deaths>5803</total_deaths>
+		</row>
+		<row _id="row-9rhc.fjbq_ppkz" _uuid="00000000-0000-0000-ADA2-021F1C736A95" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-9rhc.fjbq_ppkz">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Master’s degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Black</race_or_hispanic_origin>
+			<covid_19_deaths>1941</covid_19_deaths>
+			<total_deaths>14739</total_deaths>
+		</row>
+		<row _id="row-siu8_fdtr-qi63" _uuid="00000000-0000-0000-EEE2-FE05B27E6178" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-siu8_fdtr-qi63">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Master’s degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic More than one race</race_or_hispanic_origin>
+			<covid_19_deaths>63</covid_19_deaths>
+			<total_deaths>595</total_deaths>
+		</row>
+		<row _id="row-qtfy~dw46.bfgj" _uuid="00000000-0000-0000-7F33-C4A3C953C09A" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-qtfy~dw46.bfgj">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Master’s degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Native Hawaiian or Other Pacific Islander</race_or_hispanic_origin>
+			<covid_19_deaths>17</covid_19_deaths>
+			<total_deaths>91</total_deaths>
+		</row>
+		<row _id="row-t5wt~uekq_q6ns" _uuid="00000000-0000-0000-12F6-A66514B3EFE3" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-t5wt~uekq_q6ns">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Master’s degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic White</race_or_hispanic_origin>
+			<covid_19_deaths>12855</covid_19_deaths>
+			<total_deaths>133817</total_deaths>
+		</row>
+		<row _id="row-5ant.c4us_zt4w" _uuid="00000000-0000-0000-C1DD-A8091FDD0EA8" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-5ant.c4us_zt4w">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Master’s degree</education_level>
+			<race_or_hispanic_origin>Unknown</race_or_hispanic_origin>
+			<covid_19_deaths>27</covid_19_deaths>
+			<total_deaths>184</total_deaths>
+		</row>
+		<row _id="row-bt89~nwyx.w8qt" _uuid="00000000-0000-0000-C39E-794A9D3794DE" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-bt89~nwyx.w8qt">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Some college credit, but no degree</education_level>
+			<race_or_hispanic_origin>Hispanic</race_or_hispanic_origin>
+			<covid_19_deaths>5158</covid_19_deaths>
+			<total_deaths>26775</total_deaths>
+		</row>
+		<row _id="row-kmz6.h6bu-d8ue" _uuid="00000000-0000-0000-D088-411DFBBBC6D0" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-kmz6.h6bu-d8ue">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Some college credit, but no degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic American Indian or Alaska Native</race_or_hispanic_origin>
+			<covid_19_deaths>765</covid_19_deaths>
+			<total_deaths>3889</total_deaths>
+		</row>
+		<row _id="row-ge3e-c62r.pkek" _uuid="00000000-0000-0000-F3A8-CFC9BEAE308A" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-ge3e-c62r.pkek">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Some college credit, but no degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Asian</race_or_hispanic_origin>
+			<covid_19_deaths>1279</covid_19_deaths>
+			<total_deaths>8491</total_deaths>
+		</row>
+		<row _id="row-ghwu-rn4z.yxaa" _uuid="00000000-0000-0000-3229-9BF9606F8CFA" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-ghwu-rn4z.yxaa">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Some college credit, but no degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Black</race_or_hispanic_origin>
+			<covid_19_deaths>7108</covid_19_deaths>
+			<total_deaths>56425</total_deaths>
+		</row>
+		<row _id="row-35dw.ibd9~wv5x" _uuid="00000000-0000-0000-DF99-4E1C3CBA357C" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-35dw.ibd9~wv5x">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Some college credit, but no degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic More than one race</race_or_hispanic_origin>
+			<covid_19_deaths>206</covid_19_deaths>
+			<total_deaths>2755</total_deaths>
+		</row>
+		<row _id="row-pp2q_79cj-pxxc" _uuid="00000000-0000-0000-C885-6D0EB7EE69E6" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-pp2q_79cj-pxxc">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Some college credit, but no degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Native Hawaiian or Other Pacific Islander</race_or_hispanic_origin>
+			<covid_19_deaths>111</covid_19_deaths>
+			<total_deaths>659</total_deaths>
+		</row>
+		<row _id="row-7f9x.sde9-w59f" _uuid="00000000-0000-0000-B7C8-BFBBA6616B4D" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-7f9x.sde9-w59f">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Some college credit, but no degree</education_level>
+			<race_or_hispanic_origin>Non-Hispanic White</race_or_hispanic_origin>
+			<covid_19_deaths>28788</covid_19_deaths>
+			<total_deaths>331983</total_deaths>
+		</row>
+		<row _id="row-hmdq~ru23_v7je" _uuid="00000000-0000-0000-2CA0-ACD70EA576B2" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-hmdq~ru23_v7je">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Some college credit, but no degree</education_level>
+			<race_or_hispanic_origin>Unknown</race_or_hispanic_origin>
+			<covid_19_deaths>38</covid_19_deaths>
+			<total_deaths>353</total_deaths>
+		</row>
+		<row _id="row-kvs7~it6n_wpfi" _uuid="00000000-0000-0000-34E9-06BF210894D4" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-kvs7~it6n_wpfi">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Unknown</education_level>
+			<race_or_hispanic_origin>Hispanic</race_or_hispanic_origin>
+			<covid_19_deaths>2703</covid_19_deaths>
+			<total_deaths>9920</total_deaths>
+		</row>
+		<row _id="row-ws47_7g7b.9pgv" _uuid="00000000-0000-0000-E94C-3240613DD996" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-ws47_7g7b.9pgv">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Unknown</education_level>
+			<race_or_hispanic_origin>Non-Hispanic American Indian or Alaska Native</race_or_hispanic_origin>
+			<covid_19_deaths>83</covid_19_deaths>
+			<total_deaths>407</total_deaths>
+		</row>
+		<row _id="row-p7fn.c4uw-frgt" _uuid="00000000-0000-0000-196B-5723700F989C" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-p7fn.c4uw-frgt">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Unknown</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Asian</race_or_hispanic_origin>
+			<covid_19_deaths>543</covid_19_deaths>
+			<total_deaths>2640</total_deaths>
+		</row>
+		<row _id="row-5h86-nxyn~xbgt" _uuid="00000000-0000-0000-45C1-A86EB6681BC2" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-5h86-nxyn~xbgt">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Unknown</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Black</race_or_hispanic_origin>
+			<covid_19_deaths>1772</covid_19_deaths>
+			<total_deaths>10868</total_deaths>
+		</row>
+		<row _id="row-5esk-2bpb-2d59" _uuid="00000000-0000-0000-7A53-B1996ABCE60B" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-5esk-2bpb-2d59">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Unknown</education_level>
+			<race_or_hispanic_origin>Non-Hispanic More than one race</race_or_hispanic_origin>
+			<covid_19_deaths>34</covid_19_deaths>
+			<total_deaths>289</total_deaths>
+		</row>
+		<row _id="row-2w3z-vxde_dtsk" _uuid="00000000-0000-0000-C937-68C0CFF8A30A" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-2w3z-vxde_dtsk">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Unknown</education_level>
+			<race_or_hispanic_origin>Non-Hispanic Native Hawaiian or Other Pacific Islander</race_or_hispanic_origin>
+			<covid_19_deaths>26</covid_19_deaths>
+			<total_deaths>103</total_deaths>
+		</row>
+		<row _id="row-m7nc-8gjz.q47e" _uuid="00000000-0000-0000-AE4A-2D3202B5627B" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-m7nc-8gjz.q47e">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Unknown</education_level>
+			<race_or_hispanic_origin>Non-Hispanic White</race_or_hispanic_origin>
+			<covid_19_deaths>4480</covid_19_deaths>
+			<total_deaths>37739</total_deaths>
+		</row>
+		<row _id="row-86pc~kcjd.7zhz" _uuid="00000000-0000-0000-76BF-DBD82B84CDFB" _position="0" _address="https://data.cdc.gov/resource/i6ej-9eac/row-86pc~kcjd.7zhz">
+			<data_as_of>2021-02-01T00:00:00</data_as_of>
+			<start_date>2020-01-01T00:00:00</start_date>
+			<end_date>2021-01-30T00:00:00</end_date>
+			<education_level>Unknown</education_level>
+			<race_or_hispanic_origin>Unknown</race_or_hispanic_origin>
+			<covid_19_deaths>1169</covid_19_deaths>
+			<total_deaths>6278</total_deaths>
+		</row>
+	</row>
+</response>

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphy-rdf-data-source"
+version = "0.1"
+dependencies = [
+    "rdflib"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
